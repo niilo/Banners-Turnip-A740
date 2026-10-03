@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+# Pre-commit hook. Installed with:  make hooks   (or: git config core.hooksPath .githooks)
+#
+# Blocks a commit that would introduce a secret, or that breaks a repo invariant.
+# It runs the fast checks only - nothing here needs the network or a Mesa checkout,
+# so it stays under a couple of seconds.
+#
+# Scope note: this scans STAGED changes, so it never blocks you for something an
+# older commit already did. `make secrets-history` (and CI) cover the full history.
+#
+# Bypassing it: `git commit --no-verify`. That is a deliberate act; if you need it,
+# say why in the commit body, because CI runs the same checks and will fail anyway.
+set -uo pipefail
+
+repo="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+cd "$repo" || exit 0
+
+red=$'\033[0;31m'; green=$'\033[0;32m'; nocolor=$'\033[0m'
+
+say(){ printf '%s' "$1"; printf '%b\n' "$2"; }
+ok(){  say "${green}" "  hook: $1 ${nocolor}"; }
+block(){ say "${red}" "  hook: BLOCKED - $1 ${nocolor}"; exit 1; }
+
+# --- nothing staged? nothing to check. -----------------------------------------
+if [ -z "$(git diff --cached --name-only)" ]; then
+	exit 0
+fi
+
+# --- 1. secrets ---------------------------------------------------------------
+# The reason this hook exists. Run it first so a leaked credential is reported
+# before any other noise.
+#
+# FAIL-CLOSED: if the scanner is missing the commit is BLOCKED, not waved through.
+# A secret gate that quietly skips itself when its tool is absent is not a gate, it
+# is a comment. Use --no-verify deliberately if you are certain (CI runs the same
+# scan anyway, so the commit cannot land regardless).
+gl="$(command -v gitleaks 2>/dev/null || echo /usr/local/bin/gitleaks)"
+if [ -x "$gl" ]; then
+	if ! "$gl" protect --no-banner --redact --staged >/dev/null 2>&1; then
+		block "a secret is staged. Rotate the credential, do not just delete the line.
+         Run 'make secrets' for the rule and file, and see AGENTS.md section 8."
+	fi
+	ok "no secrets in staged changes"
+else
+	block "gitleaks not found, so the staged content was NOT scanned.
+         Run this hook inside the dev image (make shell), or install gitleaks
+         (pinned version in the Dockerfile), or bypass deliberately with
+         --no-verify knowing that CI will scan the same commit."
+fi
+
+# --- 2. no build output or caches ----------------------------------------------
+# These are gitignored, but `git add -f` and a stray `git add .` in a fresh clone can
+# still stage them, and a 4 GB Mesa tree in a commit is unrecoverable in practice.
+#
+# The pattern is ONE quoted argument on ONE line. Backslash-continuations inside
+# $( ) split the alternation across arguments, and grep then treats each fragment as
+# a filename ("grep: |__pycache__/: No such file or directory") - which fails open.
+build_output_re='(^|/)(mesa|build-android-aarch64|build-wayland|build-linux)/|^turnip_workdir/(android-ndk-r29|bin|ndk)|^wayland_workdir/(termux|build-wayland)|^linux_workdir/(sysroot|build-linux|host|stage)|__pycache__/|\.(so|o|a|pyc|zip|rej|orig)$'
+
+staged="$(git diff --cached --name-only)"
+if [ -n "$staged" ]; then
+	hit="$(printf '%s\n' "$staged" | grep -E "$build_output_re" || true)"
+	if [ -n "$hit" ]; then
+		block "build output staged:
+$(printf '%s\n' "$hit" | head -5 | sed 's/^/           /')
+         See AGENTS.md section 4 - those paths are disposable."
+	fi
+fi
+ok "no build output staged"
+
+# --- 3. the tracked fixtures must stay tracked ---------------------------------
+# turnip_workdir/tu_gen8.patch and its sibling are repo content that lives in a
+# build directory. Losing them from the index is easy to do by accident and breaks
+# the repo's expectations (see AGENTS.md section 4).
+#
+# Use --diff-filter=D, NOT a grep for "D  $f" against --name-only: --name-only emits
+# bare paths with no status letter, so matching on the letter silently never matches.
+for f in turnip_workdir/tu_gen8.patch turnip_workdir/tu_gen8_clean.patch; do
+	if git diff --cached --diff-filter=D --name-only -- "$f" | grep -qx -- "$f"; then
+		block "$f is being deleted. It is tracked repo content, not build output.
+         Restore it with:  git restore --staged --worktree $f"
+	fi
+done
+ok "tracked build-dir fixtures intact"
+
+# --- 4. shell scripts stay executable ------------------------------------------
+# CI invokes ./build_turnip*.sh directly for the Wayland and Linux legs; a 100644
+# mode would break them there.
+for s in build_turnip.sh build_turnip_perf.sh build_turnip_wayland.sh build_turnip_linux.sh; do
+	if git ls-files --error-unmatch "$s" >/dev/null 2>&1; then
+		mode="$(git ls-files -s "$s" | awk '{print $1}')"
+		[ "$mode" = "100755" ] || block "$s is staged as mode $mode, expected 100755 (chmod +x it)"
+	fi
+done
+ok "build scripts remain executable"
+
+exit 0

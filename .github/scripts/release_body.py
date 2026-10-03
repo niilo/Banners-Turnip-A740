@@ -21,6 +21,7 @@ import hashlib
 import json
 import os
 import re
+import subprocess
 import sys
 
 REPO_BLOB = "https://github.com/{repo}/blob/{ref}/{path}"
@@ -90,6 +91,30 @@ def patch_commits(path):
             out.append((subj, author or "unknown"))
             author = None
     return out
+def default_ref():
+    """Branch to point patch links at, derived from the environment.
+
+    Order: GITHUB_REF_NAME, then GITHUB_REF (strip refs/heads/), then the local
+    branch, then "main". Never a hardcoded branch name: this fork ships A740 while
+    upstream ships A8xx, and a link to the wrong branch is a dead link in the
+    published release notes.
+    """
+    ref = os.environ.get("GITHUB_REF_NAME", "").strip()
+    if not ref:
+        ref = os.environ.get("GITHUB_REF", "").strip()
+        if ref.startswith("refs/heads/"):
+            ref = ref[len("refs/heads/"):]
+    if not ref:
+        try:
+            ref = (
+                subprocess.run(
+                    ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                    capture_output=True, text=True, timeout=5,
+                ).stdout.strip()
+            )
+        except (OSError, subprocess.SubprocessError):
+            ref = ""
+    return ref or "main"
 
 
 def main():
@@ -100,7 +125,11 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--assets", required=True)
     ap.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", "The412Banner/Banners-Turnip"))
-    ap.add_argument("--ref", default="A8xx", help="branch the patch links point at")
+    # Branch the patch links point at. Defaults to the branch GitHub Actions is
+    # running on, so a fork on a differently-named branch (this one is A740) does
+    # not emit links to a branch that does not exist there. Falls back to GITHUB_REF
+    # ("refs/heads/A740" -> "A740"), then to "main" only if neither is set.
+    ap.add_argument("--ref", default=default_ref(), help="branch the patch links point at")
     ap.add_argument("--workdir", default=".", help="repo checkout (patch files)")
     a = ap.parse_args()
 

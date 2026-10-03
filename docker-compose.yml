@@ -1,0 +1,63 @@
+# Containerised development environment for Banners-Turnip.
+#
+#   docker compose run --rm dev            # interactive shell (make shell)
+#   docker compose run --rm dev make lint  # one-shot command
+#
+# Why the bind mount is shaped the way it is:
+#
+#   - The repo is bind-mounted read-write so builds and `make clean` operate on your
+#     real checkout, and built ZIPs land on the host where you can find them.
+#   - `:z` relabels the mount for SELinux. Fedora hosts run SELinux Enforcing, and
+#     without this the container cannot read the checkout. On a host without SELinux
+#     the flag is harmless.
+#   - The work directories are bind-mounted individually rather than as one
+#     `turnip_workdir` volume: that directory holds two TRACKED files
+#     (tu_gen8.patch, tu_gen8_clean.patch). Mounting over the whole directory would
+#     hide them from the container and make `git status` report them as deleted.
+#
+# Disk: a leg needs several GB (NDK ~4 GB, Mesa checkout, ninja build dir, and for
+# the Linux leg an Arch Linux ARM sysroot). Give the bind mount room - see
+# docs/DEVELOPMENT.md.
+
+x-common: &common
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: banners-turnip-dev
+  volumes:
+    - .:/work:z
+    # Persist ccache between runs so rebuilds are fast. Not on the bind mount so it
+    # does not pollute the repo or get caught by `make clean`.
+    - turnip-ccache:/cache/ccache
+
+services:
+  # The default: a shell (or a one-shot command) with the full toolchain.
+  dev:
+    <<: *common
+    # Match the host user so files created in the repo are owned by you.
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      HOME: /home/turnip
+      CCACHE_DIR: /cache/ccache
+      # Keeps `git ls-files` etc. happy if the host checkout is owned by another uid.
+      GIT_CONFIG_COUNT: "1"
+      GIT_CONFIG_KEY_0: safe.directory
+      GIT_CONFIG_VALUE_0: /work
+    stdin_open: true
+    tty: true
+    working_dir: /work
+
+  # Static checks. No network, fast - this is the pre-commit gate.
+  lint:
+    <<: *common
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      HOME: /home/turnip
+      GIT_CONFIG_COUNT: "1"
+      GIT_CONFIG_KEY_0: safe.directory
+      GIT_CONFIG_VALUE_0: /work
+    working_dir: /work
+    command: ["make", "lint"]
+
+volumes:
+  turnip-ccache:

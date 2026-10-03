@@ -100,7 +100,60 @@ for r in $refs; do
 done
 [ "$missing" = 0 ] && ok "all $(echo "$refs" | wc -w) workflow-referenced patch files exist"
 
-# --- 5. recipe invariants ------------------------------------------------------
+# --- 5. variant tables must agree ----------------------------------------------
+# The variant -> EXTRA_SCRIPT mapping lives in three places: the CI matrix, the
+# Makefile's scripts_of(), and scripts/test-patches.sh's variant_script(). They
+# drifted once already (test-patches.sh was missed when a740_devname.py was
+# added), so assert they agree instead of trusting the comments.
+devname="patches/a740_devname.py"
+# Both tables are parsed the same way: "<variant> <colon-separated scripts>".
+# The Makefile form is scripts_<variant> := <scripts>, so the variant name has to
+# be put back by the sed; dropping it silently makes every lookup fail.
+mk=$(grep -E "^scripts_[a-z0-9-]+ +:=" Makefile \
+	| sed -E 's/^scripts_([a-z0-9-]+) +:= *(.*)$/\1 \2/' | tr ':' ' ')
+tp=$(sed -n '/^variant_script()/,/^esac; }/p' scripts/test-patches.sh \
+	| sed -nE 's/^[[:space:]]*([a-z0-9-]+)\) +echo "([^"]*)".*/\1 \2/p' \
+	| tr ':' ' ')
+drift=0
+# Delimiter is '|' rather than a tab: with IFS=$'\t' bash collapses the EMPTY
+# middle field (a variant with no extra_patch), which shifts extra_script into the
+# wrong variable and makes every comparison fail for the wrong reason.
+while IFS='|' read -r v _patch scripts; do
+	[ -n "$v" ] || continue
+	# An empty extra_script in CI still gets the fork-local devname override, so
+	# build the expectation without introducing a stray ':'.
+	if [ -n "$scripts" ]; then want="$scripts:$devname"; else want="$devname"; fi
+	for tbl in "$mk" "$tp"; do
+		got=""
+		# Read line by line (no pipe, so no subshell losing counter updates).
+		rest="$tbl"
+		while [ -n "$rest" ]; do
+			line="${rest%%$'\n'*}"
+			if [ "$line" = "$rest" ]; then rest=""; else rest="${rest#*$'\n'}"; fi
+			case "$line" in
+				"$v "*)
+					got="${line#"$v" }"
+					got="$(printf '%s' "$got" | tr ' ' ':')"
+					break
+					;;
+			esac
+		done
+		if [ "$got" != "$want" ]; then
+			fail "variant '$v' scripts differ: expected '$want', table has '$got'"
+			drift=1
+		fi
+	done
+done < <(python3 - "$wf" <<'PY'
+import sys, yaml
+d = yaml.safe_load(open(sys.argv[1]))
+for v in d["jobs"]["build"]["strategy"]["matrix"]["include"]:
+    print("{}|{}|{}".format(
+        v["variant"], v.get("extra_patch") or "", v.get("extra_script") or ""))
+PY
+)
+[ "$drift" = 0 ] && ok "variant tables agree across CI matrix, Makefile and test-patches.sh"
+
+# --- 6. recipe invariants ------------------------------------------------------
 # apply_common.sh hardcodes "exactly 6 patches" in a8xx-winnative and asserts each
 # one reached the tree. A 7th file would silently never be applied.
 n_winnative=$(ls patches/a8xx-winnative/0*.patch 2>/dev/null | wc -l)
@@ -115,7 +168,7 @@ done
 [ "$fails" = 0 ] && ok "tracked build-dir fixtures still tracked"
 
 # Every SOURCE provenance file must exist next to the patches it documents.
-for d in patches/common patches/linux patches/wayland; do
+for d in patches/common patches/linux patches/wayland patches/a740; do
 	[ -f "$d/SOURCE" ] || fail "$d/SOURCE missing (provenance record)"
 done
 [ "$fails" = 0 ] && ok "patch SOURCE provenance files present"
@@ -124,7 +177,7 @@ done
 # ok() and fail() both increment LINT_CHECKS, so it counts checks that actually
 # produced a verdict. If a category silently no-ops (empty file list, skipped
 # loop), the total drops and lint fails instead of reporting a hollow pass.
-expected_checks=7
+expected_checks=8
 actual=${LINT_CHECKS:-0}
 if [ "$actual" -lt "$expected_checks" ]; then
 	fail "only $actual of $expected_checks check categories reported a result - lint did not fully run"

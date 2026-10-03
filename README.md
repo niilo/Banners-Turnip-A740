@@ -6,10 +6,16 @@
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/n8S4G2WZQ4)
 
 
+> **This fork targets the Adreno 740 (Snapdragon 8 Gen 2, SM8550).**
+> We optimise for **sustained** performance — the frame rate still held in minute
+> twenty — measured as **energy per frame**, not peak FPS. Rationale and the
+> verified candidate list: [docs/A740_PROGRAM.md](docs/A740_PROGRAM.md).
+
+
 > Automated, bleeding-edge builds of the [Mesa Turnip](https://docs.mesa3d.org/drivers/freedreno.html) Vulkan driver, compiled directly from the latest upstream Mesa commits. Every release ships each driver three times: for [AdrenoTools](https://github.com/K11MCH1/AdrenoToolsDrivers)-compatible apps (X11), for Bannerlator Wayland containers, and as a glibc ICD for Bannerlator's Linux runtime and native Steam client.
 
-[![Build Turnip (Combined)](https://github.com/The412Banner/Banners-Turnip/actions/workflows/turnip_build_combined.yml/badge.svg?branch=A8xx)](https://github.com/The412Banner/Banners-Turnip/actions/workflows/turnip_build_combined.yml)
-[![Latest Release](https://img.shields.io/github/v/release/The412Banner/Banners-Turnip?label=latest%20release&color=blue)](https://github.com/The412Banner/Banners-Turnip/releases/latest)
+[![Build Turnip (Combined)](https://github.com/niilo/Banners-Turnip-A740/actions/workflows/turnip_build_combined.yml/badge.svg?branch=A740)](https://github.com/niilo/Banners-Turnip-A740/actions/workflows/turnip_build_combined.yml)
+[![Latest Release](https://img.shields.io/github/v/release/niilo/Banners-Turnip-A740?label=latest%20release&color=blue)](https://github.com/niilo/Banners-Turnip-A740/releases/latest)
 
 ---
 
@@ -169,6 +175,27 @@ You can fork this repo and get fully automated builds running with minimal setup
    - **Build Turnip (Combined)** → *Run workflow* — builds and publishes a release immediately without waiting for the watcher
 
 Once those steps are done, the watcher polls Mesa upstream every hour and triggers a fresh build automatically — no further maintenance needed.
+
+---
+
+## Building / Developing
+
+This repo builds Mesa's Turnip Vulkan driver for Qualcomm Adreno GPUs. Automated
+releases are produced by `.github/workflows/`; to work on the recipes themselves:
+
+```bash
+make image     # build the dev container (Ubuntu 24.04, matching CI)
+make lint      # static checks: shellcheck, python, workflow matrix
+make test      # apply the patches to a real Mesa checkout (no full compile)
+make shell     # interactive shell in the container
+make doctor    # what this machine can build, and free disk
+make help      # all targets
+```
+
+A single leg takes 10–40 minutes and several GB of disk. See
+**[docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)** for the full developer loop, and
+**[AGENTS.md](AGENTS.md)** for the conventions any contributor (human or agent)
+should follow before changing a patch or a recipe.
 
 ---
 

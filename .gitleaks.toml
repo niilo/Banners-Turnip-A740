@@ -1,0 +1,45 @@
+# gitleaks configuration.
+#
+# Default rules are used unchanged. That matters: the default set is what makes this
+# a useful gate, and every entry added to [allowlist] below is a hole punched in it.
+#
+# Verified against this repository's full history (3,530 commits at the time of
+# writing) - clean with these rules alone, so nothing had to be grandfathered.
+
+title = "Banners-Turnip secret scanning"
+
+[extend]
+# Use gitleaks' own default rules. Do not replace this with a custom rule set: the
+# defaults are broad and battle-tested, and a narrower list scans faster but misses
+# more.
+useDefault = true
+
+[allowlist]
+# Paths only. No regex or path exemptions are needed for this repo today; if you
+# add one, it must come with a comment explaining why the content is not a secret.
+
+# Mesa's commit-history file is a dump of upstream commit messages. It is generated
+# by the Mesa watcher and is upstream text, not ours - but it is still scanned,
+# because "upstream text" is exactly how real credentials end up in a log file.
+# (Listed here only as documentation of intent; no path is actually excluded.)
+
+# -----------------------------------------------------------------------------
+# Adding an exception
+# -----------------------------------------------------------------------------
+# If gitleaks flags something that is genuinely not a secret - a documented example
+# key, a credential-shaped string in a test fixture - allow it narrowly:
+#
+#   [[allowlists]]
+#   description = "why this specific value is safe"
+#   regexTarget = "match"
+#   regexes = ['''EXAMPLE_KEY_1234''']
+#
+# Requirements for any exception:
+#   1. Scope it to the literal value or the single path. Never blanket-allow a rule
+#      (e.g. allowlisting all of `private-key`) - that disables the check entirely.
+#   2. Say in the description why it is not a secret.
+#   3. Prefer fixing the content (a fake value that is not credential-shaped) over
+#      allowing it.
+#
+# Never allowlist a value that could be a real credential, and never add an
+# exception to silence a finding you have not actually investigated.

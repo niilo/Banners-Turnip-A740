@@ -60,7 +60,8 @@ prepare(){
 
 	log "downloading $ndkver"
 	fetch "https://dl.google.com/android/repository/$ndkver-linux.zip" ndk.zip
-	unzip -q ndk.zip && rm ndk.zip
+	# -o overwrites without prompting (an existing NDK would otherwise abort unzip).
+	unzip -q -o ndk.zip && rm ndk.zip
 	[ -x "$ndk/aarch64-linux-android$api-clang" ] || die "NDK clang for API $api missing"
 
 	# Termux bionic aarch64 packages for what Mesa links against. Resolve the current file names

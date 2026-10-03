@@ -30,7 +30,9 @@ mesasrc="https://gitlab.freedesktop.org/mesa/mesa.git"
 die(){ echo "${red}error${nocolor} $*" >&2; exit 1; }
 
 # The variant table. Kept in sync with the &drivers anchor in
-# .github/workflows/turnip_build_combined.yml; scripts/lint.sh asserts the names match.
+# .github/workflows/turnip_build_combined.yml AND with scripts_of() in the
+# Makefile (which also appends patches/a740_devname.py); scripts/lint.sh asserts
+# all three agree.
 ALL_VARIANTS="regular a8xx 710-720-test 8g2-oneui"
 
 variant_patch(){ case "$1" in
@@ -41,10 +43,10 @@ variant_patch(){ case "$1" in
 	*) die "unknown variant '$1'" ;;
 esac; }
 variant_script(){ case "$1" in
-	regular)       echo "patches/a840v2.py" ;;
-	a8xx)          echo "patches/a8xx_shared_mem.py:patches/a840v2.py" ;;
-	710-720-test)  echo "patches/a710-720.py" ;;
-	8g2-oneui)     echo "patches/a840v2.py:patches/8g2_oneui.py" ;;
+	regular)       echo "patches/a840v2.py:patches/a740_devname.py" ;;
+	a8xx)          echo "patches/a8xx_shared_mem.py:patches/a840v2.py:patches/a740_devname.py" ;;
+	710-720-test)  echo "patches/a710-720.py:patches/a740_devname.py" ;;
+	8g2-oneui)     echo "patches/a840v2.py:patches/8g2_oneui.py:patches/a740_devname.py" ;;
 	*) die "unknown variant '$1'" ;;
 esac; }
 

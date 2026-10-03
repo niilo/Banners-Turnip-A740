@@ -1,1 +1,36 @@
-turnip_workdir
+# Build work directories (Mesa checkout, NDK, sysroot, ninja build dirs).
+# Each is several GB; see docs/DEVELOPMENT.md.
+#
+# turnip_workdir/ is written with a trailing /* (not the bare name) so the two
+# tracked patch fixtures below stay visible to git. They are repo content, not
+# build output, and must never be deleted by a clean or hidden by a bind mount.
+turnip_workdir/*
+!turnip_workdir/tu_gen8.patch
+!turnip_workdir/tu_gen8_clean.patch
+
+# Wayland and Linux legs build into their own work directories.
+wayland_workdir/
+linux_workdir/
+
+# Release bookkeeping produced by the combined workflow / release_body.py.
+release-info/
+report-*.json
+
+# Local caches.
+.cache/
+
+# Credentials. Nothing in this repo reads a .env, so one here is a mistake, not a
+# feature. `make secrets` catches it regardless - this is the cheap first line.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Python bytecode from scripts/lint.sh (py_compile) and the patch scripts.
+__pycache__/
+*.py[cod]

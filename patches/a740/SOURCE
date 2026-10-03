@@ -1,0 +1,79 @@
+A740 program - the target and its optimisation metric.
+This is a decision record, not a patch. No Mesa source is changed by it.
+
+Target
+  Adreno 740 (Snapdragon 8 Gen 2, SM8550). Mesa name FD740, chip_id
+  0x43050A01 (KGSL) / 0xFFFF43050A01 (no-speedbin fallback). Architecture is
+  A7xx generation: CHIP.A7XX, props [a7xx_base, a7xx_gen2].
+
+  Verified in src/freedreno/common/freedreno_devices.py at Mesa 4f554da
+  (FD740 entry, a740_magic_regs, cs_shared_mem_size = 32 * 1024).
+
+Why this metric
+  Sustained performance, not peak FPS. The failure mode that matters is
+  frame-rate collapse once the SoC reaches its thermal limit, which a short
+  benchmark cannot see. The unit of improvement is energy per frame, because
+  peak FPS and sustained FPS move in OPPOSITE directions when you overclock:
+  raising the power ceiling raises the burst and lowers the plateau.
+
+  Consequence recorded as an anti-goal: PWR_MAX-style power pinning and
+  unconditional GMEM forcing are NOT to be enabled. The former guarantees the
+  thermal wall; the latter breaks large render targets that do not fit in GMEM
+  and can cost more energy than it saves.
+
+  Also an anti-goal: tuning the A740 magic registers for performance. They are
+  silicon-quirk workarounds in upstream Mesa (TPL1_DBG_ECO_CNTL,
+  UCHE_CACHE_WAYS, SP_CHICKEN_BITS family), not tuning knobs.
+
+Device identification (cosmetic)
+  patches/a740_devname.py rewrites the Vulkan deviceName in tu_device.cc so this
+  fork reports "Turnip (Banners A740)" instead of Mesa's default
+  "Turnip Adreno (TM) 740". Upstream keys that string off the GPU id, so every
+  A740 Turnip build reports it identically; Balemuni works around the same
+  limitation by overriding the name too.
+
+  Cosmetic only. Two consequences worth knowing:
+    - disk_cache_create(device->name, ...) uses it for the shader-cache
+      directory, so the first run after installing recompiles shaders once.
+    - Nothing else keys off it: no behaviour, feature, or performance change.
+
+  The AdrenoTools / BannerHub driver-list name is a separate field (meta.json
+  "name"), set by META_NAME in the Makefile. The two are independent.
+
+  Not part of the upstream &drivers matrix in turnip_build_combined.yml - the
+  Makefile appends it to scripts_of() on top, so the variant -> patch mapping
+  still matches CI. scripts/lint.sh asserts the two agree.
+
+Reviewed for adoption: Balemuni/Balemunis-Aurora ("Apex Universal V2"), read
+2026. Verdict per claim, checked against Mesa 4f554da:
+
+  IR3 GCM=1        ADOPT as an experiment. Real: ir3_nir.c reads
+                   debug_get_num_option("GCM", 0), default off; 1 enables
+                   nir_opt_gcm with hoisting. Already reachable at runtime via
+                   the env var, so no patch is needed to measure it.
+
+  suballoc 128->512KB
+                   ADOPT as an experiment. Real: tu_device.cc initialises
+                   pipeline_suballoc and kgsl_profiling_suballoc at
+                   128 * 1024. Note upstream already uses 512 * 1024 for
+                   trace_suballoc, so the value is not arbitrary. Must be
+                   measured; it trades memory for fewer allocator round trips.
+
+  shader cache 4GB REJECT as a patch. Upstream does not hardcode 1 GB:
+                   tu_device.cc calls disk_cache_create(..., 0) and
+                   util/disk_cache.c reads MESA_SHADER_CACHE_MAX_SIZE from the
+                   environment. It is a runtime setting. Patching a constant
+                   would patch the wrong thing.
+
+  Zelda TOTK/BOTW REJECT - already upstream. tu_dont_care_as_load and
+  fixes             tu_allow_oob_indirect_ubo_loads are in
+                   src/freedreno/vulkan/00-turnip-defaults.conf, scoped per
+                   engine. Re-implementing them globally would lose that
+                   scoping and could regress non-matching titles.
+
+  Cortex-X3 tuning REJECT - not driver work. CPU instruction selection belongs to
+                   the host app and the OS; Turnip cannot tune a CPU core.
+
+Note on the source: that project publishes prebuilt ZIPs and a README, with no
+patches or source. Nothing was copied from it. Its value was as a list of claims
+to verify, recorded above so the next reader does not repeat the work.

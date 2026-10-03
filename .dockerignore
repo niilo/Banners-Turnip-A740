@@ -1,0 +1,30 @@
+# Keep the build context small and, more importantly, keep build output and the
+# vendored Mesa trees out of the image. The container bind-mounts the repo, so
+# nothing here needs to be copied in.
+#
+# Note the fixtures in turnip_workdir/ are NOT ignored: they are tracked repo
+# content that happens to live in a build directory, and `make clean` inside a
+# bind-mounted checkout operates on them. They are tiny.
+
+.git
+.github
+.cache
+dist
+docs
+logo.png
+Mesa-commit-history.md
+*.patch
+turnip_workdir/*
+!turnip_workdir/tu_gen8.patch
+!turnip_workdir/tu_gen8_clean.patch
+wayland_workdir
+linux_workdir
+release-info
+report-*.json
+
+# Never let a local override leak into a build.
+Dockerfile
+docker-compose.yml
+.dockerignore
+Makefile
+AGENTS.md

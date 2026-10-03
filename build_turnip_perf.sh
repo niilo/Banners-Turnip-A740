@@ -54,7 +54,9 @@ prepare_workdir(){
 	curl -sL https://dl.google.com/android/repository/"$ndkver"-linux.zip --output "$ndkver"-linux.zip &> /dev/null
 
 	echo "Extracting android-ndk..."
-	unzip -q "$ndkver"-linux.zip &> /dev/null
+	# -o overwrites without prompting: without it unzip aborts on an existing NDK
+	# when stdin is closed, so a rebuild in a used workdir would never succeed.
+	unzip -q -o "$ndkver"-linux.zip &> /dev/null
 
 	echo "Downloading mesa source..."
 	git clone $mesasrc --depth=1 -b main $srcfolder

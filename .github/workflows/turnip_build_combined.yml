@@ -424,8 +424,11 @@ jobs:
           mkdir -p zips reports
           echo "Drivers present this run:"; ls -la zips/
           rc=0
+          # --ref: patch links in the release body point at the branch this run is
+          # on, so they resolve on a fork with its own branch name.
           python3 .github/scripts/release_body.py --info release-info --zips zips --reports reports \
-            --out release_body.md --assets release_assets.txt || rc=$?
+            --out release_body.md --assets release_assets.txt \
+            --ref "${{ github.ref_name }}" || rc=$?
           if [ "$rc" != 0 ]; then
             echo "::error::no release: the standard Android driver did not build/verify (release_body.py exit $rc)"
             exit 1
@@ -468,12 +471,18 @@ jobs:
         if: ${{ !inputs.dry_run }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The branch this workflow runs on. Derived from github.ref rather than
+          # hardcoded, so a fork on a differently-named branch (this one is A740)
+          # does not try to check out and push to a branch that does not exist.
+          # release_body.py's patch links take the same value via --ref.
+          BT_BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin A8xx
-          git checkout A8xx
-          git pull --rebase origin A8xx
+          [ -n "$BT_BRANCH" ] || { echo "::error::could not determine the branch"; exit 1; }
+          git fetch origin "$BT_BRANCH"
+          git checkout "$BT_BRANCH"
+          git pull --rebase origin "$BT_BRANCH"
           export BT_TAG=$(cat release-info/tag.txt)
           export BT_MESA_VERSION=$(cat release-info/mesa_version.txt)
           export BT_BUILD_DATE=$(cat release-info/build_date.txt)
@@ -488,8 +497,8 @@ jobs:
           git add README.md Mesa-commit-history.md
           git diff --staged --quiet || git commit -m "docs: update build info [$BT_TAG]"
           for i in 1 2 3; do
-            git push origin A8xx && exit 0
+            git push origin "$BT_BRANCH" && exit 0
             echo "push attempt $i rejected, rebasing"; sleep 5
-            git pull --rebase origin A8xx
+            git pull --rebase origin "$BT_BRANCH"
           done
           exit 1

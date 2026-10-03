@@ -9,6 +9,62 @@ Read this before your first change. It is short on purpose.
 
 ---
 
+## 0. The point of this fork
+
+**This fork builds one driver, for one GPU: the Adreno 740 (Snapdragon 8 Gen 2,
+SM8550).** Mesa calls it `FD740`, chip_id `0x43050A01` / `0xFFFF43050A01`, and it
+is an **A7xx-generation** part (`CHIP.A7XX`, `a7xx_base`/`a7xx_gen2`).
+
+The other variants are inherited from upstream and kept working, but they are not
+the target. If a change cannot be justified for the A740, say so explicitly and
+keep it out of the default variant.
+
+### The metric is energy per frame
+
+We optimise for **sustained** performance — the frame rate still held in minute
+twenty — not peak FPS. These are different problems:
+
+- Overclocking raises peak FPS and **lowers** sustained FPS, because it reaches the
+  thermal limit sooner.
+- Fewer instructions per frame beat faster instructions, because a removed ALU op
+  saves energy every frame.
+- Sysmem traffic costs real watts; GMEM is on-chip and cheap.
+
+**A change that raises peak FPS while pulling sustained FPS down is a regression
+for this fork, even if a benchmark says otherwise.** Do not add `PWR_MAX`-style
+power pinning, do not force GMEM unconditionally, and do not touch the A740 magic
+registers for performance — they are correctness workarounds.
+
+Full rationale, the verified candidate list, and the decision bar:
+**[docs/A740_PROGRAM.md](docs/A740_PROGRAM.md)**. Read it before proposing any
+performance change.
+
+### Known open defect: black boxes with programmable blending
+
+A screen-aligned black rectangle over an occluded character (Uncharted via
+Vita3K, and other framebuffer-fetch titles) appears with Turnip on the A740 but
+**not** with the stock Qualcomm driver. It needs programmable blending
+(subpass input / render feedback).
+
+**This is closed.** Three hypotheses were tested on real hardware and all three
+were falsified; the investigation was abandoned rather than continue guessing.
+
+| Dead lead | Why |
+| :--- | :--- |
+| `enable_tp_ubwc_flag_hint` | Built both ways on device — no effect. |
+| `support_scaled_attribute_formats` | Does not exist in Vulkan Turnip; it is a GL concept. |
+| SUBPASS_FENCE invalidation (2026-09-04 series) | Pre-series driver built and tested — no effect. |
+
+Record and next step (a frame capture, not a flag test):
+**[docs/A740_BLACK_BOX.md](docs/A740_BLACK_BOX.md)**.
+
+Do **not** reopen this by trying another flag. Three plausible mechanisms failed
+on device; the remaining work is RenderDoc/AGI capture of the offending draw,
+diffed against the stock Qualcomm driver. Any change to the UBWC or feedback path
+made without that evidence will produce flickering or corrupted frames.
+
+---
+
 ## 1. What gets built
 
 Four driver variants, each shipped as **three ZIPs**, all from **one** Mesa commit:
@@ -76,18 +132,38 @@ Consequences you must respect:
 ## 3. Before you commit
 
 ```bash
-make lint     # shellcheck + python compile + workflow YAML parse
-make test     # patch-application dry runs against real Mesa (needs network)
+make check     # lint + secret scan: everything fast. Run this before every commit.
+make test      # patch-application dry runs against real Mesa (needs network)
 ```
 
-- `make lint` is a **hard gate**. The scripts are currently shellcheck-clean at
+- `make check` is the **hard gate**. The scripts are currently shellcheck-clean at
   `-S warning`; keep them that way. New shell code follows the style in
   `patches/common/apply_common.sh`: tabs for indentation, `set -eu` (or
   `-eo pipefail`), `die()` for fatal errors, `log()` for progress.
+- Run `make hooks` once per clone to get the pre-commit gate. It checks secrets,
+  staged build output, the tracked fixtures, and the build scripts' executable
+  bits — all without network or a Mesa checkout. See §8.
 - Do **not** commit build output. See §5.
 - `patches/*/SOURCE` files are provenance records — upstream author, commit,
   date, and *why*. If you rebase a patch, update its `SOURCE` entry. That file
   is how a reader knows whether a patch is still needed.
+
+### Performance changes specifically
+
+A patch that claims to improve performance must, in its `SOURCE` entry, state:
+
+1. **The hypothesis in energy-per-frame terms** — not "feels faster".
+2. **The measurement plan** — scene, camera path, duration. Sustained means
+   10+ minutes continuous; a short run cannot see the effect that matters.
+3. **Whether it was measured on an A740**, and what the sustained-FPS and thermal
+   numbers were. If it was not measured, say so and keep it opt-in.
+
+Do not mark something a default performance win without (3). An unmeasured perf
+patch is a documented experiment.
+
+Corollary: every performance change must be **reversible**. Land it behind a
+named knob or its own variant script, never tangled into the common series where
+turning it back means an archaeology exercise.
 
 ### Commit messages
 
@@ -101,10 +177,7 @@ chore: update tracked hashes
 ```
 
 The `docs:`/`chore:` messages are written by CI. **Do not hand-write them** —
-you would fight the auto-updater. The README auto-update step in
-`turnip_build_combined.yml` has `A8xx` hardcoded in four places
-(`git fetch/checkout/pull/push origin A8xx`), but **this branch is `A740`** —
-see §6.
+you would fight the auto-updater.
 
 ---
 
@@ -144,11 +217,16 @@ the NDK is easily **30–40 GB**.
 
 ## 6. Known traps
 
-- **Branch name.** This fork is on `A740`, but `turnip_build_combined.yml`'s
-  README auto-update step pushes to `A8xx` (lines ~474–493). On this branch that
-  step fails. Either keep the branch as `A8xx` or fix those four references.
-  Related: `release_body.py --ref` defaults to `A8xx` because patch links in
-  release notes point at it.
+- **Never hardcode a branch name.** This fork ships `A740`; upstream ships `A8xx`.
+  The README auto-update step and the release body both used to hardcode `A8xx`,
+  which broke on this branch. They now derive the branch from `github.ref_name` /
+  `GITHUB_REF_NAME` / the local git branch. If you add a workflow step that
+  fetches, checks out, or pushes, take the branch from the environment - do not
+  type a name.
+- **`8g2-oneui` does not apply to most A740 hardware.** It enables
+  `enable_tp_ubwc_flag_hint`, which only matches Samsung One UI firmware. On an
+  Ayaneo or other non-One-UI device the hint must stay off (the `regular`
+  variant). See `docs/A740_BLACK_BOX.md` and `patches/8g2_oneui.py`.
 - **`meson` version.** Ubuntu 24.04 ships meson 1.3.2; Mesa 26.x needs **≥1.5**.
   The container and CI both pip-install it. If a build fails in `meson setup`
   with a version error, this is why.
@@ -186,3 +264,73 @@ Without Docker you need the toolchain for the specific leg only — the
 The legs are slow (10–40 min each, Mesa is large). Prefer validating a change
 with `make test` — it exercises patch application against a real Mesa checkout
 without a full compile.
+
+---
+
+## 8. Secrets: never commit one
+
+This repo's CI uses **only** the built-in `GITHUB_TOKEN`; it needs no developer
+credentials. That is a property worth protecting, because a leaked token in a
+patch or a build script is the one mistake here that reaches outside the repo.
+
+**Everything is scanned. There is no way to opt out quietly.**
+
+| Where | What it scans | When |
+| :--- | :--- | :--- |
+| `.githooks/pre-commit` | staged changes | every `git commit` (run `make hooks` once) |
+| `scripts/scan-secrets.sh staged` | staged changes | `make secrets`, and via the hook |
+| `scripts/scan-secrets.sh history` | every reachable commit | `make secrets-history`, and CI |
+| `.github/workflows/ci.yml` | full history | every push and PR |
+
+```bash
+make hooks              # once per clone: install the pre-commit hook
+make check              # lint + staged secret scan - the pre-commit gate
+```
+
+### Rules
+
+- **Never paste a credential into any file.** Not a patch, not a build script, not
+  a test fixture, not a comment. If a driver recipe needs a token, it reads it from
+  `${{ secrets.* }}` or the environment — never a literal.
+- **Findings are redacted everywhere**, including the CI log and any report file.
+  If you paste scanner output into an issue or a commit message, check that the
+  value is not in it. A scanner that prints the secret has leaked it again.
+- **The hook fails closed.** If gitleaks is missing, the commit is *blocked*, not
+  waved through. A gate that skips itself when its tool is absent is not a gate.
+- **`--no-verify` is a deliberate act.** CI scans the same commit, so bypassing the
+  hook only delays the failure. If you must use it, say why in the commit body.
+
+### If something trips
+
+1. **Treat it as real until proven otherwise.** If it is a live credential,
+   **revoke/rotate it first**. That is the only step that actually fixes it.
+2. Then remove it from the working tree.
+3. Do **not** stop there. The value is still in history, and anyone who has cloned
+   this repository still has it. Removing it in a new commit does not remove it.
+   Rewrite history (`git filter-repo`) or, for a public repo, rotate and accept that
+   the old value is dead.
+4. Do **not** "fix" it by adding an allowlist entry. See below.
+
+### False positives
+
+A real false positive (a documented example key, a credential-shaped string in a
+fixture) goes in `.gitleaks.toml`, and narrowly:
+
+- Scope it to the literal value or the one path. Never blanket-allow a rule.
+- Say in the comment why it is not a secret.
+- Prefer changing the content to something that is not credential-shaped.
+
+Before adding an exception, check that it is genuinely not a secret. Every
+allowlist entry is a hole in the gate, and a future reader cannot tell which ones
+were justified.
+
+Current state: the full history (3,530 commits at the time of writing) is clean
+with gitleaks' default rules and no exceptions. Keep it that way — that is what
+makes the gate strict instead of grandfathered.
+
+### `.env` and local files
+
+There is no `.env` in this repo and nothing reads one. If you add one for your own
+convenience, keep it out of git (`make secrets` will catch it, but do not rely on
+the catch). If you ever add a `.env.example` for documentation, use obviously fake
+values.

@@ -1,0 +1,112 @@
+# Repository checks that must pass on every commit: static lint and secret scanning.
+#
+# This is deliberately separate from turnip_build_combined.yml. That workflow builds
+# drivers and publishes releases; it runs on a schedule and on dispatch, takes up to
+# 90 minutes per leg, and needs no secrets. These checks are the opposite: seconds
+# long, on every push and PR, and they decide whether a commit is acceptable at all.
+#
+# Keeping them separate means a lint failure is obvious and immediate rather than
+# something you discover 40 minutes into a release build.
+
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  # Lets you run these checks from another workflow's `workflow_call`.
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            shellcheck python3 python3-yaml git
+          # Ubuntu ships meson 1.3; these checks do not need it, but lint.sh warns
+          # rather than failing when a tool is absent, so keep the run hermetic.
+
+      - name: Lint
+        run: ./scripts/lint.sh
+
+  secrets:
+    name: secret scan (full history)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # fetch-depth: 0 is required. gitleaks scans commit history, and a shallow
+          # clone would silently scan almost nothing and report success - the exact
+          # false pass this gate exists to prevent.
+          fetch-depth: 0
+
+      - name: Scan every commit for secrets
+        # gitleaks/gitleaks-action is the maintained wrapper: it installs the pinned
+        # release, scans history, and fails the job on a finding.
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          # Redact in the log AND in any uploaded report. A scanner that prints the
+          # secret into a build log has leaked it a second time.
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: false
+          GITLEAKS_ENABLE_SUMMARY: true
+          GITLEAKS_REDACT: "100"
+          GITLEAKS_NOTIFY_USER_LIST: ""
+
+      - name: Confirm the scanner actually ran
+        # Cheap, and it closes the "scanner silently no-op'd" hole: a job that skips
+        # or errors must fail loudly rather than pass green.
+        run: |
+          set -euo pipefail
+          if [ ! -x "$(command -v gitleaks 2>/dev/null || echo /nonexistent)" ]; then
+            echo "::error::gitleaks was not available - the scan above did not run"
+            exit 1
+          fi
+          gitleaks version
+          # An independent second opinion on the same tree, using the repo's own
+          # wrapper so the same config and redaction rules apply.
+          ./scripts/scan-secrets.sh history
+
+  # A commit that would break the build scripts themselves: lost executable bits, or
+  # the tracked patch fixtures inside turnip_workdir/ disappearing from the index.
+  invariants:
+    name: repo invariants
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Executable bits and tracked fixtures
+        run: |
+          set -euo pipefail
+          for s in build_turnip.sh build_turnip_perf.sh build_turnip_wayland.sh \
+                   build_turnip_linux.sh patches/common/apply_common.sh; do
+            mode="$(git ls-files -s "$s" | awk '{print $1}')"
+            if [ "$mode" != "100755" ]; then
+              echo "::error::$s has mode $mode, expected 100755"
+              exit 1
+            fi
+          done
+          echo "executable bits ok"
+
+          for f in turnip_workdir/tu_gen8.patch turnip_workdir/tu_gen8_clean.patch; do
+            git ls-files --error-unmatch "$f" >/dev/null 2>&1 || {
+              echo "::error::$f is no longer tracked (AGENTS.md section 4: repo content, not build output)"
+              exit 1
+            }
+          done
+          echo "tracked build-dir fixtures ok"

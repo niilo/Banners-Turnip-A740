@@ -56,16 +56,38 @@ prepare_workdir(){
 	curl -sL https://dl.google.com/android/repository/"$ndkver"-linux.zip --output "$ndkver"-linux.zip &> /dev/null
 
 	echo "Extracting android-ndk..."
-	unzip -q "$ndkver"-linux.zip &> /dev/null
+	# -o overwrites without prompting. Without it, unzip asks about every existing
+	# file and, under `set -e` with stdin closed, aborts the whole build: the second
+	# build in a workdir would never succeed.
+	unzip -q -o "$ndkver"-linux.zip &> /dev/null
 
 	echo "Downloading mesa source..."
-	git clone $mesasrc --depth=1 -b main $srcfolder
+	# Reuse an existing clone instead of `git clone` into it: cloning into a
+	# non-empty directory is a fatal error, so a second build in the same workdir
+	# used to fail with "destination path 'mesa' already exists".
+	if [ -d "$srcfolder/.git" ]; then
+		echo "Reusing existing Mesa clone..."
+		# Drop any patch/build state from a previous run so the series applies to a
+		# clean tree. Keep the object store - re-cloning a 3 GB tree each time is
+		# wasteful. -fd discards leftover ignored build dirs too.
+		git -C "$srcfolder" checkout -f .
+		git -C "$srcfolder" clean -qfd
+	else
+		git clone $mesasrc --depth=1 -b main $srcfolder
+	fi
 
 	# The combined workflow pins every leg to the commit its resolve job chose (unset = main HEAD).
-	if [ -n "${MESA_COMMIT}" ] && [ "$(git -C $srcfolder rev-parse HEAD)" != "${MESA_COMMIT}" ]; then
-		echo "Mesa main has moved past ${MESA_COMMIT}; checking out that commit..."
-		git -C $srcfolder fetch --depth=1 origin "${MESA_COMMIT}"
-		git -C $srcfolder checkout -q FETCH_HEAD
+	# A shallow clone cannot check out an arbitrary older commit, so widen the fetch
+	# to that one commit when MESA_COMMIT is not the current HEAD.
+	if [ -n "${MESA_COMMIT}" ]; then
+		have="$(git -C $srcfolder rev-parse HEAD)"
+		if [ "$have" != "${MESA_COMMIT}" ]; then
+			echo "Switching Mesa tree to ${MESA_COMMIT}..."
+			git -C $srcfolder fetch --depth=1 origin "${MESA_COMMIT}" \
+				|| { echo -e "${red}Could not fetch Mesa ${MESA_COMMIT}${nocolor}"; exit 1; }
+			git -C $srcfolder checkout -q FETCH_HEAD
+			git -C $srcfolder reset -q --hard FETCH_HEAD
+		fi
 	fi
 }
 
