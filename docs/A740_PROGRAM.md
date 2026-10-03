@@ -193,6 +193,67 @@ compiles these defaults in (`-Dxmlconfig=disabled`, reasoning documented at
 ### 4.5 Cortex-X3 CPU tuning  ⚠️ not driver work
 ---
 
+## Experiments to measure (added 2026-10-04)
+
+Both candidates from §4 now exist as **opt-in variants**, so the measurement in §7
+can actually be run. Neither is a default; neither is claimed to be a win.
+
+| Variant | Script | Change |
+| :--- | :--- | :--- |
+| `a740-gcm` | `patches/a740_gcm.py` | `debug_get_num_option("GCM", 0)` → `1` in `ir3_nir.c` (hoisting on) |
+| `a740-suballoc` | `patches/a740_suballoc.py` | `pipeline_suballoc` + `kgsl_profiling_suballoc` 128 KB → 512 KB in `tu_device.cc` |
+| `a740-gcm-suballoc` | both | the combination, so the two effects can be separated |
+
+```bash
+make build-android VARIANT=a740-gcm TAG=exp-gcm
+make build-android VARIANT=a740-suballoc TAG=exp-suballoc
+make build-android VARIANT=a740-gcm-suballoc TAG=exp-both
+```
+
+They are separate variants rather than one flag so a) one experiment cannot ride
+along with another, and b) a build on the device is identifiable by its driver
+name (`Banners Turnip A740-A740-GCM`, etc.).
+
+**Built and on the device: `Turnip-A740-EXP1-GCM-Suballoc.zip`** (the combined
+arm, sha256 `06e71ead…b500d`), alongside the `regular` baseline
+`Turnip-Banners-A740.zip`. Same Mesa `8fc4981`, so the only difference is these two
+changes.
+
+### How to measure
+
+Test each arm against the `regular` baseline on the same scene and camera path.
+To isolate one change, use the single-experiment variants rather than the combined
+one — if the combination is neutral you cannot tell which part cancelled the other.
+
+```bash
+# GCM alone - note the register-pressure caveat in §4.1
+make build-android VARIANT=a740-gcm TAG=exp-gcm
+# Suballoc alone - watch MEMORY, not just FPS
+make build-android VARIANT=a740-suballoc TAG=exp-suballoc
+```
+
+What to record for each arm:
+
+| Measure | Why |
+| :--- | :--- |
+| FPS at t=0 **and** after 10+ min | The gap between them is the whole question. A t=0-only win is not this fork's win. |
+| Thermal behaviour / clock | Confirms you stayed off the thermal wall rather than reaching it sooner. |
+| Memory use (suballoc arm) | §4.2: 4x the reserve. Rising memory with flat FPS means it costs more than it saves. |
+| Visual correctness | GCM changes register allocation. Any artefact is a fail, not a trade-off. |
+| First-run compile time | GCM moves work into the shader compiler. A cold-cache penalty is expected and should not be mistaken for a regression. |
+
+`GCM=0` in the environment still disables GCM on a patched build — the patch
+changes the *default*, it does not lock the value. That makes a single binary
+usable for both arms of the GCM test if you prefer an env-var A/B over two builds.
+
+### If one wins
+
+Do not merge it into `regular`. Per §7 it needs a source entry stating the
+hypothesis, the measurement plan, and the actual measured numbers on A740 —
+`patches/a740/SOURCE` is where that record belongs.
+
+---
+
 ## 5. Optimisations of our own worth pursuing
 
 Aimed at energy per frame, which the borrowed list above mostly misses.

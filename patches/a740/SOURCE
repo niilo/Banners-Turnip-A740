@@ -25,6 +25,39 @@ Why this metric
   silicon-quirk workarounds in upstream Mesa (TPL1_DBG_ECO_CNTL,
   UCHE_CACHE_WAYS, SP_CHICKEN_BITS family), not tuning knobs.
 
+Performance experiments - UNMEASURED, opt-in
+  Two candidates from docs/A740_PROGRAM.md §4 are implemented as separate opt-in
+  variants so they can be measured on real A740 hardware. Neither is a default
+  and neither is claimed to be a win; each must clear the AGENTS.md §3 bar
+  (hypothesis + 10+ min sustained run + device regression check) before promotion.
+
+  patches/a740_gcm.py (variant a740-gcm)
+    ir3_nir.c: debug_get_num_option("GCM", 0) -> 1, enabling nir_opt_gcm with
+    hoisting. Hypothesis: fewer instructions executed per draw is the primary
+    energy lever (A740_PROGRAM.md §1). Risk: hoisting raises register pressure,
+    and the A740 has only 32 KiB cs_shared_mem_size, so occupancy is already
+    capped - watch for spills. The GCM env var still overrides the default, so
+    one binary can serve both arms of the test.
+
+  patches/a740_suballoc.py (variant a740-suballoc)
+    tu_device.cc: pipeline_suballoc and kgsl_profiling_suballoc 128 * 1024 ->
+    512 * 1024. Hypothesis: fewer allocator round trips on the CPU side while the
+    GPU waits is a steady-state win. Cost, from upstream's own comment in
+    tu_suballoc.cc: "fragmentation can be an issue for default_size > PAGE_SIZE
+    and small allocations", and this reserves 4x the memory. Measure MEMORY as
+    well as FPS - rising reserved memory with flat FPS means it loses.
+    autotune_suballoc and trace_suballoc are deliberately untouched.
+
+  Both scripts are idempotent, assert their own result, and refuse to patch if the
+  upstream anchor moved rather than writing something subtly wrong. The
+  a740-gcm-suballoc variant runs both so the two effects can be separated.
+
+  NOT wired into .github/workflows/turnip_build_combined.yml: these are
+  experiment arms, not released drivers. The Makefile appends them to
+  scripts_of(); scripts/lint.sh's three-way table check covers the four released
+  variants only, which is why adding these did not require a matrix change.
+
+Device identification (cosmetic)
 Device identification (cosmetic)
   patches/a740_devname.py rewrites the Vulkan deviceName in tu_device.cc so this
   fork reports "Turnip (Banners A740)" instead of Mesa's default

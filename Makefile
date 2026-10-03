@@ -54,7 +54,32 @@ REUSE ?=
 # re-expand, so it searches for a variable literally called "-A8xx". Naming the
 # intermediate (`name`) and then expanding it works, dashes in the variant name
 # included.
-VARIANTS := regular a8xx 710-720-test 8g2-oneui
+# --- A740 experiment variants --------------------------------------------------
+# Opt-in performance experiments (docs/A740_PROGRAM.md §4). NOT part of the CI
+# matrix and NOT defaults: each is UNMEASURED on A740 hardware and each must pass
+# the AGENTS.md §3 bar (hypothesis + 10 min sustained run + device check) before it
+# can be promoted. They exist so the measurement can be done, and so it is
+# reversible by deleting the variant.
+#
+# Each is a separate variant rather than a flag so one experiment cannot silently
+# ride along with another, and so a build can be identified on the device by its
+# driver name.
+scripts_a740-gcm        := patches/a840v2.py:patches/a740_devname.py:patches/a740_gcm.py
+scripts_a740-suballoc   := patches/a840v2.py:patches/a740_devname.py:patches/a740_suballoc.py
+scripts_a740-gcm-suballoc := patches/a840v2.py:patches/a740_devname.py:patches/a740_gcm.py:patches/a740_suballoc.py
+suffix_a740-gcm          := -A740-GCM
+suffix_a740-suballoc     := -A740-Suballoc
+suffix_a740-gcm-suballoc := -A740-GCM-Suballoc
+patch_a740-gcm        :=
+patch_a740-suballoc   :=
+patch_a740-gcm-suballoc :=
+
+VARIANTS := regular a8xx 710-720-test 8g2-oneui a740-gcm a740-suballoc a740-gcm-suballoc
+
+# The CI matrix does not contain the a740-* experiments, so the three-way table
+# check in scripts/lint.sh only covers the four released variants. Guard the extra
+# ones here instead: every experiment must be listed, and no experiment may point
+# at a patch script that does not exist.
 
 suffix_regular       :=
 suffix_a8xx          := -A8xx
