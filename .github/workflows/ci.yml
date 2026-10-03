@@ -55,31 +55,43 @@ jobs:
           # false pass this gate exists to prevent.
           fetch-depth: 0
 
-      - name: Scan every commit for secrets
-        # gitleaks/gitleaks-action is the maintained wrapper: it installs the pinned
-        # release, scans history, and fails the job on a finding.
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          # Redact in the log AND in any uploaded report. A scanner that prints the
-          # secret into a build log has leaked it a second time.
-          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: false
-          GITLEAKS_ENABLE_SUMMARY: true
-          GITLEAKS_REDACT: "100"
-          GITLEAKS_NOTIFY_USER_LIST: ""
-
-      - name: Confirm the scanner actually ran
-        # Cheap, and it closes the "scanner silently no-op'd" hole: a job that skips
-        # or errors must fail loudly rather than pass green.
+      # Uses the pinned gitleaks binary from our own repo rather than
+      # gitleaks/gitleaks-action@v2. That action now REQUIRES a paid
+      # GITLEAKS_LICENSE secret and fails the job with
+      #   "missing gitleaks license"
+      # before it scans anything, which would leave this gate permanently red (or
+      # tempt someone into disabling it). The binary is free and the install is
+      # checksum-verified in the Dockerfile, so this job has no external account
+      # or licence dependency at all.
+      - name: Install gitleaks (pinned, checksum-verified)
         run: |
           set -euo pipefail
-          if [ ! -x "$(command -v gitleaks 2>/dev/null || echo /nonexistent)" ]; then
-            echo "::error::gitleaks was not available - the scan above did not run"
-            exit 1
-          fi
+          v=8.28.0
+          url="https://github.com/gitleaks/gitleaks/releases/download/v${v}/gitleaks_${v}_linux_x64.tar.gz"
+          curl -fsSL --retry 5 --retry-all-errors "$url" -o /tmp/gl.tar.gz
+          echo "a65b5253807a68ac0cafa4414031fd740aeb55f54fb7e55f386acb52e6a840eb  /tmp/gl.tar.gz" \
+            | sha256sum -c --strict -
+          tar -xzf /tmp/gl.tar.gz -C /usr/local/bin gitleaks
           gitleaks version
-          # An independent second opinion on the same tree, using the repo's own
-          # wrapper so the same config and redaction rules apply.
-          ./scripts/scan-secrets.sh history
+
+      - name: Scan every commit for secrets
+        # --redact keeps findings out of the log: a scanner that prints the secret
+        # into a build log has leaked it a second time. The repo's wrapper
+        # summarises rule + file + line from the JSON report, never the value.
+        run: ./scripts/scan-secrets.sh history
+
+      - name: Confirm the scanner actually ran
+        # Closes the "scanner silently no-op'd" hole: a job that skips or errors
+        # must fail loudly rather than pass green.
+        run: |
+          set -euo pipefail
+          command -v gitleaks >/dev/null || {
+            echo "::error::gitleaks unavailable - the scan did not run"; exit 1; }
+          gitleaks version
+          # The repo's .gitleaks.toml must exist and still request the default
+          # rule set; an emptied one would make the scan vacuous.
+          grep -q 'useDefault = true' .gitleaks.toml || {
+            echo "::error::.gitleaks.toml does not use the default rules"; exit 1; }
 
   # A commit that would break the build scripts themselves: lost executable bits, or
   # the tracked patch fixtures inside turnip_workdir/ disappearing from the index.
