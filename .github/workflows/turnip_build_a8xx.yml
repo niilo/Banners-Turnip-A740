@@ -113,7 +113,10 @@ jobs:
             printf '%s\n\n' '---'
             printf "### What's In This Driver\n\n"
             printf "Base: Mesa \`main\` + A8xx-specific patches. All variants share:\n\n"
-            printf "**Applied via [tu8_kgsl_26.patch](https://github.com/The412Banner/Banners-Turnip/blob/A8xx/patches/tu8_kgsl_26.patch):**\n\n"
+            # Repo and branch from the environment: a hardcoded URL would point at
+            # upstream (The412Banner/A8xx) from this fork's release notes.
+            printf "**Applied via [tu8_kgsl_26.patch](https://github.com/%s/blob/%s/patches/tu8_kgsl_26.patch):**\n\n" \
+              "$GITHUB_REPOSITORY" "${{ github.ref_name }}"
             printf '%s\n' "- **u_gralloc UBWC fix** — disables the \`gmsm\` magic check for Qualcomm gralloc buffer detection, which stopped working in newer gralloc versions."
             printf '%s\n\n' "- **drm-shim entries** — adds A810/A825/A829 to the Mesa drm-shim device table."
             printf "**Applied via \`fix_a8xx_dev_info.py\`:**\n\n"

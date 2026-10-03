@@ -424,11 +424,13 @@ jobs:
           mkdir -p zips reports
           echo "Drivers present this run:"; ls -la zips/
           rc=0
-          # --ref: patch links in the release body point at the branch this run is
-          # on, so they resolve on a fork with its own branch name.
+          # --ref / --repo: patch links in the release body must resolve on THIS
+          # repo and branch. Without --repo the script falls back to the upstream
+          # repo, so every patch link in the published notes would point at
+          # The412Banner instead of this fork.
           python3 .github/scripts/release_body.py --info release-info --zips zips --reports reports \
             --out release_body.md --assets release_assets.txt \
-            --ref "${{ github.ref_name }}" || rc=$?
+            --ref "${{ github.ref_name }}" --repo "$GITHUB_REPOSITORY" || rc=$?
           if [ "$rc" != 0 ]; then
             echo "::error::no release: the standard Android driver did not build/verify (release_body.py exit $rc)"
             exit 1

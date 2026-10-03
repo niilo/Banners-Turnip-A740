@@ -49,7 +49,7 @@ Each release ships four drivers, each as three ZIPs built from the same Mesa com
 - **Linux runtime ZIP:** Bannerlator's **Linux runtime** — the gamescope session running Valve's native ARM64 Steam client. It's a **glibc** Vulkan ICD (KGSL, Wayland + X11 WSI) built by [`build_turnip_linux.sh`](build_turnip_linux.sh) against the same Arch Linux ARM packages that runtime is made of, plus the two KGSL fixes it needs ([`patches/linux/`](patches/linux)) and the fixes every ZIP carries ([`patches/common/`](patches/common)). It draws the Steam client's own UI (OpenGL → Zink → Vulkan) and every game the client launches (D3D → DXVK/VKD3D → Vulkan). The client and its games are glibc processes, so neither bionic ZIP can be loaded by them at all — and this one can't be loaded by an Android app or a Wine container. It ships the ICD and its manifest only; the libraries are the runtime's own.
 - CI checks every ZIP before it's attached. If a Wayland or Linux build fails, the release still ships its X11 ZIPs and the release notes say which ZIP is missing.
 
-[**Download latest →**](https://github.com/The412Banner/Banners-Turnip/releases/latest) · [**Full build history →**](Mesa-commit-history.md)
+[**Download latest →**](https://github.com/niilo/Banners-Turnip-A740/releases/latest) · [**Full build history →**](Mesa-commit-history.md)
 
 ### Fixes in every driver
 
@@ -168,7 +168,17 @@ You can fork this repo and get fully automated builds running with minimal setup
 
 4. **Keep the branch named `A8xx`** — The README auto-update step in `turnip_build_combined.yml` has `A8xx` hardcoded in four places (`git fetch/checkout/pull/push origin A8xx`). If you rename the branch, that step will fail and your README won't auto-update. Either keep the branch as `A8xx` or do a find-and-replace in `.github/workflows/turnip_build_combined.yml` to match your branch name.
 
-5. **Update cosmetic repo references** *(optional)* — A few strings in the workflows reference the original repo: patch links in release note bodies and `"author"` in `meta.json`. Search for `The412Banner` in `.github/` and in `build_turnip*.sh`, and update to your own username/repo if desired. These don't affect build functionality.
+5. **Nothing else to change for the fork.** This fork has already taken care of
+   the repo/branch references that used to need manual edits:
+   - the README auto-update step and `release_body.py` derive the branch from
+     `github.ref_name` / `GITHUB_REF_NAME` (with a git-branch fallback), so
+     nothing is hardcoded to `A8xx` anymore;
+   - `release_body.py` is passed `--repo "$GITHUB_REPOSITORY"`, so patch links in
+     release notes point at your fork rather than upstream.
+
+   Only the `"author"` field in the built `meta.json` still names the upstream
+   author. That is deliberate attribution for the patches you inherited — change it
+   in `build_turnip*.sh` if you would rather it not.
 
 6. **Kick off your first build** — GitHub Actions schedules don't fire automatically on forks until the repo sees some activity. Manually trigger either:
    - **Mesa Upstream Watcher** → *Run workflow* — records the current Mesa HEAD and fires a combined build if it's new
