@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261004](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261004) | 2026-10-04 | [`127b431`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/127b431b9453728c9b29fd2953e0d93b8d5e3a79) | anv: align shader heap size allocation to alignment | Vulkan 1.4.363 |
 | [v26.3.0-20261003-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261003-r2) | 2026-10-03 | [`e5f0687`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e5f0687867f5c5e88619175d9b0442f8560e8d53) | etnaviv: Implement invalidate_resource(..) | Vulkan 1.4.363 |
 | [v26.3.0-20261003-r3](https://github.com/The412Banner/Banners-Turnip/releases/tag/v26.3.0-20261003-r3) | 2026-10-03 | [`a4a4700`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a4a47003a194effad8cabe727f74985e9417476f) | radv: Document default kernel driver for GFX6-7 | Vulkan 1.4.363 |
 | [v26.3.0-20261003-r2](https://github.com/The412Banner/Banners-Turnip/releases/tag/v26.3.0-20261003-r2) | 2026-10-03 | [`8fc4981`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8fc4981d2d25a32732296a90bf9eaa0371f8c715) | util: Add p_atomic_dec_not_one helper | Vulkan 1.4.363 |
