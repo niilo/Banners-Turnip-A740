@@ -171,7 +171,12 @@ Two properties worth knowing:
 If something trips, assume it is real until proven otherwise: revoke the
 credential first, because removing a line in a new commit does not remove it from
 history. Then narrow-allow genuine false positives in `.gitleaks.toml` — never
-blanket-allow a rule. `AGENTS.md` §8 has the full procedure.
+blanket-allow a rule. `AGENTS.md` §8 has the full procedure, and §9 covers the
+wider rules for agents and automated tooling working in this repo.
+
+Run the scan yourself before every commit, in the same session as the edit — the
+hook and CI are backstops, not the plan. Read `git diff --cached` first so you
+know what you are committing; an unreviewed file is how a stray key gets in.
 
 ---
 
