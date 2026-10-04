@@ -43,9 +43,12 @@ prepare_workdir(){
 
 	if [ "${SKIP_SOURCE_DOWNLOAD}" = "1" ]; then
 		echo "Skipping NDK + Mesa download (reusing existing source)..."
+		# Reset to a clean tree, not just checkout: the patch series must apply to a
+		# tree the last run did not touch, or a half-patched tree silently rebuilds
+		# into a subtly wrong driver.
 		if [ -d "$srcfolder/.git" ]; then
 			echo "Resetting Mesa source tree..."
-			git -C "$srcfolder" checkout .
+			git -C "$srcfolder" checkout -f . && git -C "$srcfolder" clean -qfd
 		fi
 		return
 	fi
@@ -59,6 +62,21 @@ prepare_workdir(){
 	unzip -q -o "$ndkver"-linux.zip &> /dev/null
 
 	echo "Downloading mesa source..."
+	# git clone into an existing mesa/ fails fatally ("destination path 'mesa' already
+	# exists"), so a second build in a used workdir could never start. Reuse the
+	# clone and reset it. A requested commit needs a fetch, so only do that when one
+	# was actually asked for.
+	if [ -d "$srcfolder/.git" ]; then
+		echo "Reusing existing Mesa clone, resetting to a clean tree..."
+		git -C "$srcfolder" checkout -f . && git -C "$srcfolder" clean -qfd
+		if [ -n "${MESA_COMMIT:-}" ]; then
+			echo "Switching to MESA_COMMIT=$MESA_COMMIT ..."
+			git -C "$srcfolder" fetch --depth=1 origin "$MESA_COMMIT" \
+				|| { echo "cannot fetch $MESA_COMMIT" >&2; exit 1; }
+			git -C "$srcfolder" checkout -f FETCH_HEAD
+		fi
+		return
+	fi
 	git clone $mesasrc --depth=1 -b main $srcfolder
 }
 
@@ -68,6 +86,36 @@ build_lib_for_android(){
 
 	# KGSL fixes every leg ships (patches/common/SOURCE); fails the build if one does not land.
 	bash ../../patches/common/apply_common.sh . || { echo -e "${red}patches/common did not apply, aborting!${nocolor}"; exit 1; }
+
+	# The variant's own patch and scripts. Without these the perf build silently
+	# differs from the driver it is meant to profile: EXTRA_SCRIPT carries
+	# a740_devname.py (and a740_gcm.py on the GCM arm), so skipping it produced a
+	# binary with no "Banners" marker - a different driver from the release ZIP.
+	if [ -n "${EXTRA_PATCH:-}" ]; then
+		IFS=':' read -ra PATCHES <<< "$EXTRA_PATCH"
+		for p in "${PATCHES[@]}"; do
+			[ -f "../../$p" ] || { echo -e "${red}EXTRA_PATCH $p does not exist${nocolor}"; exit 1; }
+			echo "applying $p"
+			patch -p1 -N --fuzz=3 --no-backup-if-mismatch < "../../$p" \
+				|| { echo -e "${red}$p did not apply cleanly, aborting!${nocolor}"; exit 1; }
+		done
+	fi
+
+	# Fail-hard on a no-op script, like the Wayland and Linux legs: a script that
+	# changed nothing means the anchor moved or the build is not what it claims.
+	if [ -n "${EXTRA_SCRIPT:-}" ]; then
+		IFS=':' read -ra SCRIPTS <<< "$EXTRA_SCRIPT"
+		for s in "${SCRIPTS[@]}"; do
+			[ -f "../../$s" ] || { echo -e "${red}EXTRA_SCRIPT $s does not exist${nocolor}"; exit 1; }
+			before="$(git diff | sha256sum)"
+			echo "running $s"
+			python3 "../../$s" || { echo -e "${red}$s failed, aborting!${nocolor}"; exit 1; }
+			after="$(git diff | sha256sum)"
+			[ "$after" != "$before" ] || { echo -e "${red}$s changed nothing, aborting!${nocolor}"; exit 1; }
+		done
+		python3 -c "compile(open('src/freedreno/common/freedreno_devices.py').read(),'f','exec')" \
+				|| { echo -e "${red}freedreno_devices.py does not parse after the scripts${nocolor}"; exit 1; }
+	fi
 
 	# NDK r29 compatibility fixes
 	sed -i 's/typedef const native_handle_t\* buffer_handle_t;/typedef void\* buffer_handle_t;/g' include/android_stub/cutils/native_handle.h || true

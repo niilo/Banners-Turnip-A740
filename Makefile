@@ -214,6 +214,7 @@ build-perf: validate_variant
 		EXTRA_SCRIPT="$(call scripts_of,$(VARIANT))" \
 		BUILD_SUFFIX="$(call suffix_of,$(VARIANT))" \
 		META_NAME="$(META_NAME)$(call suffix_of,$(VARIANT))" \
+		$(if $(filter 1,$(REUSE)),SKIP_SOURCE_DOWNLOAD=1,) \
 		./build_turnip_perf.sh
 
 # The Wayland and Linux legs require a pinned 40-hex Mesa commit and refuse to guess.
