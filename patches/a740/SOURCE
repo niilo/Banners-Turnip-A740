@@ -110,3 +110,58 @@ Reviewed for adoption: Balemuni/Balemunis-Aurora ("Apex Universal V2"), read
 Note on the source: that project publishes prebuilt ZIPs and a README, with no
 patches or source. Nothing was copied from it. Its value was as a list of claims
 to verify, recorded above so the next reader does not repeat the work.
+
+Reviewed for adoption: WinNative-Emu/Drivers patches/apply_a7xx_gen2_ubwc_hint.py,
+read 2026-10-04. Verdict: REJECT - already covered, and wrong for this hardware.
+
+  The script appends GPUProps(enable_tp_ubwc_flag_hint = True) to the A7xx gen2
+  props list of the FD740 / Adreno X1-85 add_gpus block - the identical edit that
+  patches/8g2_oneui.py already makes.
+
+  Duplicate         REJECT. Ran both scripts against a copy of this repo's Mesa
+                    tree: the two produce a byte-identical freedreno_devices.py.
+                    The X1-85 is the last GPUId in the FD740 block, so upstream's
+                    anchor lands on the same props list. No new coverage.
+
+  No firmware gate  REJECT - this is the substantive blocker. The hint must match
+                    every driver on the device: Mesa leaves it off to match the
+                    stock v6xx system driver, while newer One UI firmware ships a
+                    driver that sets it, so Turnip has to match or the UI flickers.
+                    It is firmware-dependent, not a silicon fix, which is why
+                    patches/8g2_oneui.py is a separate opt-in variant. Upstream has
+                    no such gate, so adding it to EXTRA_SCRIPT would enable the
+                    hint for every A740 / X1-85 and CAUSE the glitch on non-One-UI
+                    hardware (Ayaneo, etc.) - the exact regression AGENTS.md
+                    section 6 warns about.
+
+  Rationale wrong   Upstream's docstring says "A7xx_gen2 inherits a7xx_base,
+                    which does not set enable_tp_ubwc_flag_hint." It does set it.
+                    freedreno_devices.py, a7xx_gen2, upstream:
+                        enable_tp_ubwc_flag_hint = False,
+                    carrying the comment "Most devices with a740 have blob v6xx
+                    which doesn't have this hint set. Match them for better
+                    compatibility by default." That is an explicit upstream
+                    decision to match the stock blob driver, not an omission.
+                    Upstream Mesa also already ships the hint ON for two siblings
+                    of the same generation - X1-45 / FD735 and FD740v3 (Quest 3) -
+                    and off for FD740. The flag varies per part in-tree, which is
+                    what confirms it is not a blanket A7xx-gen2 fix.
+
+  Fails open        Upstream exits 0 with a bare WARNING when the anchor misses.
+                    The fail-hard legs hash git diff around every EXTRA_SCRIPT
+                    (build_turnip_wayland.sh, build_turnip_linux.sh) and would die
+                    with a confusing "$s changed nothing", while the lenient
+                    Android leg would silently ship without the fix.
+                    patches/8g2_oneui.py exits FATAL instead, which is this repo's
+                    convention.
+
+  Symptom scope     Upstream describes vertical-line corruption, which is NOT the
+                    closed black-box defect in docs/A740_BLACK_BOX.md - where this
+                    same flag was built both ways on A740 hardware with no effect.
+                    So it is not directly falsified by that record, but it is the
+                    same flag and the same match-the-blob-driver mechanism, and the
+                    8g2-oneui variant already expresses that answer with the
+                    firmware gate the real fix needs.
+
+  Keep patches/8g2_oneui.py as the single implementation. Nothing was copied from
+  this script.
