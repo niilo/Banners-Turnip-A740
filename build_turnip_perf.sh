@@ -123,13 +123,23 @@ cpu = 'x86_64'
 endian = 'little'
 EOF
 
-	meson setup build-android-aarch64 \
+	# UNSTRIPPED on purpose: this is the profiling build. With -Dstrip=true the
+# shipped .so carries no symbol table and simpleperf can only report driver
+# offsets (+9ea920), which is useless - the KGSL_ZERO_TIMEOUT_POLL investigation
+# could name functions (wait_timestamp_safe, vk_sync_timeline_gc_locked) only
+# because it had symbols. Debug info costs size, not speed: -O3 + ThinLTO still
+# apply, so this arm stays comparable to the release build. The perf ZIP is never
+# published - release ZIPs come from the other legs.
+# NOTE: this note must stay ABOVE the meson invocation. A comment between
+# backslash continuations swallows every argument after it, including -Dstrip
+# itself (verified with printf), which would silently drop the flag.
+meson setup build-android-aarch64 \
 		--cross-file "android-aarch64.txt" \
 		--native-file "native.txt" \
 		--prefix /tmp/turnip-$1 \
 		-Dbuildtype=release \
 		-Db_ndebug=true \
-		-Dstrip=true \
+		-Dstrip=false \
 		-Dplatforms=android \
 		-Dvideo-codecs= \
 		-Dplatform-sdk-version="$sdkver" \
