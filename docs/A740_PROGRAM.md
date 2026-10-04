@@ -198,6 +198,12 @@ compiles these defaults in (`-Dxmlconfig=disabled`, reasoning documented at
 Both candidates from §4 now exist as **opt-in variants**, so the measurement in §7
 can actually be run. Neither is a default; neither is claimed to be a win.
 
+**The procedure is in [A740_MEASUREMENT.md](A740_MEASUREMENT.md)** — device-specific
+sysfs paths, which scenes to use, run duration, and how to read the result. Start
+there; it is written against the Ayaneo Pocket S and records two hard limits of
+that setup (no root, so `simpleperf` cannot attach to a game; no Termux, so FPS
+comes from the emulator's own counter).
+
 | Variant | Script | Change |
 | :--- | :--- | :--- |
 | `a740-gcm` | `patches/a740_gcm.py` | `debug_get_num_option("GCM", 0)` → `1` in `ir3_nir.c` (hoisting on) |

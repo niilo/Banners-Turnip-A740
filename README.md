@@ -10,6 +10,7 @@
 > We optimise for **sustained** performance — the frame rate still held in minute
 > twenty — measured as **energy per frame**, not peak FPS. Rationale and the
 > verified candidate list: [docs/A740_PROGRAM.md](docs/A740_PROGRAM.md).
+> How to actually measure it on a device: [docs/A740_MEASUREMENT.md](docs/A740_MEASUREMENT.md).
 
 
 > Automated, bleeding-edge builds of the [Mesa Turnip](https://docs.mesa3d.org/drivers/freedreno.html) Vulkan driver, compiled directly from the latest upstream Mesa commits. Every release ships each driver three times: for [AdrenoTools](https://github.com/K11MCH1/AdrenoToolsDrivers)-compatible apps (X11), for Bannerlator Wayland containers, and as a glibc ICD for Bannerlator's Linux runtime and native Steam client.
