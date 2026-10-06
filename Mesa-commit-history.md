@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261006](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006) | 2026-10-06 | [`755de2b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/755de2b7768f702d7e867656cc15359e4f8b26f9) | kraid: Set lower_hadd64 | Vulkan 1.4.363 |
 | [v26.3.0-20261005](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261005) | 2026-10-05 | [`b39d173`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b39d173ca9369c19fda2635be6655d308067e52d) | ci: disable Igalia's farm due to maintenance | Vulkan 1.4.363 |
 | [v26.3.0-20261004-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261004-r2) | 2026-10-04 | [`c126acd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c126acd85a645728bcecaa164d7d7c928438e842) | people: sync Alyssa with .mailmap | Vulkan 1.4.363 |
 | [v26.3.0-20261004](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261004) | 2026-10-04 | [`127b431`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/127b431b9453728c9b29fd2953e0d93b8d5e3a79) | anv: align shader heap size allocation to alignment | Vulkan 1.4.363 |
