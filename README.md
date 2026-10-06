@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`755de2b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/755de2b7768f702d7e867656cc15359e4f8b26f9) |
+| **Commit** | [`d3023c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d3023c86bc56162b83c50e6ea0cdde35bd3cdfc9) |
 | **Commit date** | 2026-10-06 |
-| **Commit title** | kraid: Set lower_hadd64 |
+| **Commit title** | virtio/vdrm: Enable -Werror=gnu-pointer-arith |
 | **Build date** | 20261006 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 2 ZIPs · Linux runtime: 2 ZIPs |
-| **Release** | [v26.3.0-20261006](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006) |
+| **Release** | [v26.3.0-20261006-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261006-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006-r2) | 2026-10-06 | [`d3023c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d3023c86bc56162b83c50e6ea0cdde35bd3cdfc9) | virtio/vdrm: Enable -Werror=gnu-pointer-arith | Vulkan 1.4.363 |
 | [v26.3.0-20261006](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006) | 2026-10-06 | [`755de2b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/755de2b7768f702d7e867656cc15359e4f8b26f9) | kraid: Set lower_hadd64 | Vulkan 1.4.363 |
 | [v26.3.0-20261005](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261005) | 2026-10-05 | [`b39d173`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b39d173ca9369c19fda2635be6655d308067e52d) | ci: disable Igalia's farm due to maintenance | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
