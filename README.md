@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`b28ca99`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b28ca99142c7b2771a9bb48d4382d4d8516dd2db) |
+| **Commit** | [`bfe063f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bfe063f723d436e5cdef8a98f058d4e44a64810c) |
 | **Commit date** | 2026-10-06 |
-| **Commit title** | etnaviv: Add some CPU tracepoints |
-| **Build date** | 20261006 |
+| **Commit title** | pco: Enable IMAD32 fusion in NIR |
+| **Build date** | 20261007 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 2 ZIPs · Linux runtime: 2 ZIPs |
-| **Release** | [v26.3.0-20261006-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006-r4) |
+| **Release** | [v26.3.0-20261007](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261007) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261007](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261007) | 2026-10-07 | [`bfe063f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bfe063f723d436e5cdef8a98f058d4e44a64810c) | pco: Enable IMAD32 fusion in NIR | Vulkan 1.4.363 |
 | [v26.3.0-20261006-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006-r4) | 2026-10-06 | [`b28ca99`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b28ca99142c7b2771a9bb48d4382d4d8516dd2db) | etnaviv: Add some CPU tracepoints | Vulkan 1.4.363 |
 | [v26.3.0-20261006-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006-r3) | 2026-10-06 | [`81d14f3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/81d14f3f116c5c2f3e2ccd27b7c4bd8877fee0f8) | kraid/legalize: 64-bit sources always use 64-bit FAUs | Vulkan 1.4.363 |
 | [v26.3.0-20261006-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261006-r2) | 2026-10-06 | [`d3023c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d3023c86bc56162b83c50e6ea0cdde35bd3cdfc9) | virtio/vdrm: Enable -Werror=gnu-pointer-arith | Vulkan 1.4.363 |
