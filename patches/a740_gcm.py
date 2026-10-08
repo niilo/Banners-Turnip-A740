@@ -3,14 +3,28 @@
 A740 experiment: enable IR3 Global Code Motion (GCM) by default.
 
 Hypothesis (energy per frame)
-  `nir_opt_gcm` with hoisting lifts loop-invariant instructions and common
-  subexpressions out of shader hot paths. Fewer instructions executed per draw
-  is the primary energy lever in `docs/A740_PROGRAM.md` §1, so if this shrinks
-  hot shaders it should hold frame rate longer at a given clock - or reach the
-  same frame rate at a lower one.
+  Full global value numbering eliminates provably-redundant computation and
+  relocates loop-invariant work. Fewer instructions executed per draw is the
+  primary energy lever in `docs/A740_PROGRAM.md` §1, so if this shrinks hot
+  shaders it should hold frame rate longer at a given clock - or reach the same
+  frame rate at a lower one.
 
-  Measured: NO. This variant exists to be measured on real A740 hardware. Do not
-  ship it as a default without the numbers (AGENTS.md §3, performance changes).
+  The second argument of `nir_opt_gcm(shader, value_number)` is NOT "hoisting".
+  Mode 1 sets value_number=true = FULL GVN. Mode 2 is the weak GVN that only
+  moves identical ALU across an if/else. Earlier notes in this file and in
+  A740_PROGRAM.md called mode 1 "hoisting"; that was wrong. Mesa's own comment
+  in nir_opt_gcm.c says full GVN "can be too aggressive, moving values far away
+  and extending their live ranges" - a register pressure cost that matters on a
+  part with only 32 KiB cs_shared_mem_size.
+
+  MEASURED 2026-10-09: CORRECTNESS FAILURE. On an Adreno A32 (not an A740),
+  MotorStorm: Pacific Rift under armx3 ran clean on the GCM-off arm and showed
+  periodic full-screen black on the GCM-on arm, same session and ISO, the only
+  build difference being this default. No FPS or thermal data: the telemetry
+  captures taken alongside were unusable. Visual correctness disqualifies it
+  regardless of speed. Full record in patches/a740/SOURCE.
+
+  Unmeasured on a real A740. Do not ship as a default.
 
 What it touches
   src/freedreno/ir3/ir3_nir.c, upstream:

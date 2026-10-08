@@ -32,12 +32,32 @@ Performance experiments - UNMEASURED, opt-in
   (hypothesis + 10+ min sustained run + device regression check) before promotion.
 
   patches/a740_gcm.py (variant a740-gcm)
-    ir3_nir.c: debug_get_num_option("GCM", 0) -> 1, enabling nir_opt_gcm with
-    hoisting. Hypothesis: fewer instructions executed per draw is the primary
-    energy lever (A740_PROGRAM.md §1). Risk: hoisting raises register pressure,
-    and the A740 has only 32 KiB cs_shared_mem_size, so occupancy is already
-    capped - watch for spills. The GCM env var still overrides the default, so
-    one binary can serve both arms of the test.
+    ir3_nir.c: debug_get_num_option("GCM", 0) -> 1. NOTE the second argument of
+    nir_opt_gcm(shader, value_number) is not "hoisting" as earlier notes here
+    said: mode 1 sets value_number=true = FULL global value numbering; mode 2 is
+    the weak GVN that only moves identical ALU across an if/else. Mesa's own
+    comment in nir_opt_gcm.c is that full GVN "can be too aggressive, moving
+    values far away and extending their live ranges", which is a register
+    pressure cost on a part with only 32 KiB cs_shared_mem_size.
+
+    MEASURED 2026-10-09 - CORRECTNESS FAILURE, DO NOT ENABLE BY DEFAULT.
+    Device: Ayaneo Pocket S, an Adreno A32 (fd_name FDA32, chip_id 0x43050a00),
+    NOT an A740 - same A7xx gen2 core, different magic-register set. Workload:
+    MotorStorm: Pacific Rift (PS3) under armx3. A/B built from Mesa 3172302832,
+    regular variant, differing ONLY in the GCM default:
+      OFF arm (gcmtest-OFF): clean, no multi-second black.
+      ON  arm (gcmtest-ON):  periodic full-screen black, single title, same
+                             session, same ISO.
+    That is a correctness regression, not a performance trade-off, so no FPS
+    number can rescue it. NOT measured: frame rate, sustained profile, thermals.
+    The 15-minute telemetry captures taken alongside were both unusable - the ON
+    one was cut short by a driver swap mid-capture, and the OFF one averaged
+    14.6% GPU busy (mostly idle, not a gameplay load).
+    The firmware confound was ruled out: armx3 logged BOOT_FAILED/FirmwareMissing
+    at one point, but the OFF arm demonstrably booted and ran the same ISO.
+    Conclusion for this part: GCM=1 is disqualified on visual correctness grounds
+    alone. It remains opt-in and unpromoted. Re-testing on a real A740 requires a
+    fresh A/B and a clean sustained capture, not this result.
 
   patches/a740_suballoc.py (variant a740-suballoc)
     tu_device.cc: pipeline_suballoc and kgsl_profiling_suballoc 128 * 1024 ->

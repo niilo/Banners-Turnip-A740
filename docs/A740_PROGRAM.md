@@ -113,7 +113,9 @@ any shipped variant. See §6 — one of them is actively counter to this goal.
 
 Each was checked against the real Mesa tree, not taken on trust.
 
-### 4.1 IR3 Global Code Motion — `GCM=1`  ✅ verified
+### 4.1 IR3 Global Code Motion — `GCM=1`  ❌ correctness failure
+
+**Status: tested 2026-10-09 and rejected on visual correctness. Do not enable.**
 
 `src/freedreno/ir3/ir3_nir.c`:
 
@@ -122,24 +124,39 @@ static int gcm = -1;
 if (gcm == -1)
    gcm = debug_get_num_option("GCM", 0);
 if (gcm == 1)
-   progress |= OPT(s, nir_opt_gcm, true);   /* hoisting = true */
+   progress |= OPT(s, nir_opt_gcm, true);   /* value_number = true */
 else if (gcm == 2)
-   progress |= OPT(s, nir_opt_gcm, false);  /* hoisting = false */
+   progress |= OPT(s, nir_opt_gcm, false);  /* weak GVN */
 ```
 
-Upstream default is **0 (off)**. `GCM=1` enables `nir_opt_gcm` with hoisting, which
-lifts loop-invariant and common subexpressions out of shader hot paths.
+Upstream default is **0 (off)**. Correction to this section as it was previously
+written: the second argument is `value_number`, **not** "hoisting". `GCM=1` selects
+**full global value numbering**; `GCM=2` is the weak GVN that only moves identical
+ALU across an `if/else`. Full GVN is the aggressive form. Mesa's own comment in
+`nir_opt_gcm.c` is that it "can be too aggressive, moving values far away and
+extending their live ranges" — i.e. it trades registers for removed work, which is
+exactly the wrong direction on a part capped at 32 KiB `cs_shared_mem_size`.
 
-**Assessment: the strongest lead in this list.** It reduces instructions executed
-per draw — the primary energy lever. Two caveats:
+**Result.** On an Ayaneo Pocket S (Adreno A32, **not** an A740), MotorStorm: Pacific
+Rift under armx3 ran clean on the GCM-off arm and produced **periodic full-screen
+black** on the GCM-on arm — same session, same ISO, the builds differing only in
+this default. Correctness beats speed: no frame-rate result can rescue a pass that
+renders nothing.
 
-- `hoisting=true` is the aggressive form; it can increase register pressure. On a
-  part where occupancy already depends on `cs_shared_mem_size`, watch for spills.
-- It moves work out of loops, so the win scales with how loop-heavy the shader is.
-  Expect gains on compute/geometry-heavy scenes, less on trivial shaders.
+**Not measured:** frame rate, sustained profile, thermals. The two 15-minute
+telemetry captures taken alongside were both unusable — the GCM-on run was cut
+short by a driver swap mid-capture, and the GCM-off run averaged 14.6 % GPU busy,
+i.e. mostly idle rather than gameplay.
 
-**Test it as a runtime env var first** (`GCM=1`), before patching anything. It is
-already plumbed upstream — no patch needed to evaluate it.
+This disqualifies GCM on *this part*. It says nothing about a real A740, which
+would need its own clean A/B and a proper sustained capture before anyone
+reconsiders it. Full record in
+[`patches/a740/SOURCE`](../patches/a740/SOURCE) and in `patches/a740_gcm.py`.
+
+**Note on the earlier advice:** GCM is still reachable at runtime without any patch
+(`debug.gcm=1` as a system property, or `GCM=1` in the environment), which is how
+you can re-test it on real A740 hardware. Do that before building a patched
+variant.
 
 ### 4.2 Suballocator block sizes 128 KB → 512 KB  ✅ verified
 
