@@ -276,20 +276,20 @@ def main():
     def link(path):
         return f"[`{os.path.basename(path)}`]({REPO_BLOB.format(repo=a.repo, ref=a.ref, path=path)})"
 
-    w("**🩹 Fixes in every driver** (bugs still in Mesa `main`; every zip carries them, see "
-      + link("patches/common/SOURCE") + "):")
+    w("**🩹 Fixes in every driver** (both KGSL bugs this fork used to patch are now in Mesa `main`; every zip "
+      "carries them via Mesa itself, see " + link("patches/common/SOURCE") + "):")
     w("")
-    w("- **DirectX 12 no longer waits on the GPU every frame** (" + link("patches/common/kgsl-zero-timeout-poll.patch")
+    w("- **DirectX 12 no longer waits on the GPU every frame** (Mesa `e984ef294ea`)"
       + "). A quick \"is the GPU done yet?\" check was sent to the kernel as \"wait until it's done\", so the CPU "
       "and GPU took turns with VKD3D-Proton. Now it answers at once. On an Adreno 750, a DirectX 12 demo went from "
       "378 to 1422 fps on X11 and from 588 to 3449 fps on Wayland ([report](" + REPO_BLOB.format(repo=a.repo, ref=a.ref,
       path="docs/KGSL_ZERO_TIMEOUT_POLL.md") + ")).")
-    w("- **No crash when a frame waits on two kinds of sync at once** (" + link("patches/common/kgsl-syncobj-merge-ts-fd.patch")
+    w("- **No crash when a frame waits on two kinds of sync at once** (Mesa `1da50a1b940`"
       + "). Cemu crashed on its first frame; proven fixed with Cemu, RPCS3 and Dolphin.")
     w("")
     wn = "patches/a8xx-winnative/"
     w("**🧩 A8xx driver only:** Max's WinNative series (MaxsTechReview, " + link(wn + "0001-tu-Emulate-VK_EXT_mesh_shader-with-compute.patch")
-      + " … " + link(wn + "0006-tu-kgsl-Cache-retired-A8XX-IB-storage.patch") + "). The A6xx / A7xx drivers carry only the fixes above.")
+      + " … " + link(wn + "0006-tu-kgsl-Cache-retired-A8XX-IB-storage.patch") + "). The A6xx / A7xx drivers carry none of it.")
     w("")
     w("- **DirectX 12 Ultimate: mesh shaders + wave32** (0001, 0002). `VK_EXT_mesh_shader` is emulated with compute, "
       "so VKD3D-Proton can offer mesh shaders to games that need them (FINAL FANTASY VII REBIRTH, Alan Wake 2); "

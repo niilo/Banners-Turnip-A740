@@ -2,28 +2,48 @@ Fixes every leg applies (build_turnip.sh, build_turnip_perf.sh, build_turnip_way
 build_turnip_linux.sh) through apply_common.sh, before the variant's own EXTRA_PATCH/EXTRA_SCRIPT.
 They are KGSL-backend bugs, so Android builds carry them too.
 
-kgsl-syncobj-merge-ts-fd.patch (DroidDeck, 2026-09-26; still in Mesa main)
-  kgsl_syncobj_merge converted the wrong syncobj when a timestamp result met a
-  sync-file: it called kgsl_syncobj_ts_to_fd on the fd syncobj, which has no queue
-  (NULL dereference in release builds, an assert in debug ones), and the
-  two-queues branch merged an fd the timestamp result never had. A submit that
-  waits on two semaphores of the two kinds - Cemu's every frame: the previous
-  command buffer plus the swapchain acquire - crashed on the first frame. Now the
-  timestamp side becomes the fence and is merged with the fd.
-  Device-proven on the Linux leg (Cemu SM3DW/Deus Ex/Wipeout 3; RPCS3, Dolphin,
-  Steam unchanged). Drop it once Mesa main carries an equivalent fix.
+DROPPED 2026-10-08: both KGSL patches this directory used to carry are now in Mesa main,
+part of MR44838 (Danylo Piliaiev, Igalia), verified present at our pin 3172302832:
+
+  1da50a1b940  tu/kgsl: Correctly merge timestamps and sync files  (2026-10-01)
+    Replaces kgsl-syncobj-merge-ts-fd.patch (DroidDeck, 2026-09-26). Ours fixed the NULL
+    dereference by converting the timestamp side to a fence before merging; upstream
+    rewrote kgsl_syncobj_merge outright, converting ret via kgsl_syncobj_ts_to_fd(&ret)
+    exactly as we did, and additionally propagates fd errors instead of asserting. Strictly
+    a superset of our fix, so the patch was deleted rather than rebased - it no longer
+    applied at all, since the function it patched is gone.
+
+  e984ef294ea  tu/kgsl: Prevent indefinite wait times for 0 timeout waits  (2026-09-30)
+    Replaces kgsl-zero-timeout-poll.patch (The412Banner, 2026-09-29; upstream credits him
+    by name). Same mechanism: a zero/already-past timeout reads
+    IOCTL_KGSL_CMDSTREAM_READTIMESTAMP_CTXTID with KGSL_TIMESTAMP_RETIRED and answers
+    VK_SUCCESS/VK_TIMEOUT instead of reaching the wait ioctl that KGSL reads as "forever".
+    Upstream's kgsl_poll_timestamp takes struct tu_device *; ours took a raw int fd.
+
+    This one is worth recording because it did not fail loudly. After upstream changed
+    wait_timestamp_safe's signature, our patch still "applied" at --fuzz 3 and inserted
+    kgsl_timestamp_retired(fd, ...) into a function whose parameter is now `device` - a
+    compile error, shadowing the identical branch upstream had already added. apply_common.sh
+    asserted on a string the fuzzed result did contain, so the gate passed on code that
+    could not build. A green build is not evidence a patch is correct.
+
+  Consequence: the A6xx/A7xx series is now empty and this layer no longer guards the A740.
+  That is correct - Mesa carries both fixes - but do not read apply_common.sh as a
+  correctness gate for that driver any more. The probes below still assert tu_mesh.cc does
+  not reach a non-A8xx build, which is the one thing this layer still checks.
 
 A8XX DRIVER ONLY (since 2026-09-30, after r7): ../a8xx-winnative/0001-0006 are applied by
 apply_common.sh only when EXTRA_PATCH is the gen8 stack. 0001 (mesh) and 0002 (wave32) also switch
 on for A7xx (0002 for A6xx gen4 too: has_getfiberid), where they can steer DX12 games onto
 emulated paths (compute mesh + forced sysmem, half-wave subgroups); a user felt A7xx slower on
-r6/r7. The A6xx/A7xx drivers therefore carry only kgsl-syncobj-merge-ts-fd + kgsl-zero-timeout-poll,
-and apply_common.sh fails if tu_mesh.cc reaches a non-A8xx driver.
+r6/r7. The A6xx/A7xx drivers therefore carry none of it, and apply_common.sh fails if
+tu_mesh.cc reaches a non-A8xx driver.
 
 a8xx-winnative/0001-0006 (Max / MaxsTechReview, WinNative-Emu/Drivers linux/patches, GPL-3.0;
   0001-0005 2026-09-27/28, 0006 c71f600a 2026-09-29). Kept under Max's own names and numbers so
   they can be diffed against his repo; they build on each other and apply in that order, after
-  kgsl-syncobj-merge-ts-fd and before kgsl-zero-timeout-poll. Replaces our earlier renamed copies of
+  kgsl-syncobj-merge-ts-fd and before kgsl-zero-timeout-poll (both since dropped as upstream, see
+  above). Replaces our earlier renamed copies of
   0003-0005 (a8xx-*.patch, 2026-09-28), which had 0004 adapted because 0001 was missing.
   - 0001 mesh shaders: VK_EXT_mesh_shader emulated with compute. Task/mesh shaders write into a
     device ring that a generated vertex shader draws; render passes with mesh draws use sysmem.
@@ -49,13 +69,13 @@ a8xx-winnative/0001-0006 (Max / MaxsTechReview, WinNative-Emu/Drivers linux/patc
   When Mesa moves and one stops applying, rebase it here (or pull Max's rebase) - never drop it
   silently.
 
-kgsl-zero-timeout-poll.patch (The412Banner, 2026-09-29; still in Mesa main)
+Dropped-patch measurement record, kept because it explains what e984ef294ea fixes and what
+  it was worth on our hardware (kgsl-zero-timeout-poll.patch, The412Banner, 2026-09-29):
   wait_timestamp_safe() turned a poll (a timeout that is zero or already past) into
   IOCTL_KGSL_DEVICE_WAITTIMESTAMP_CTXTID with timeout 0, which KGSL treats as "wait
   forever". Mesa's emulated timeline semaphores poll from vk_sync_timeline_gc_locked on
   every submit that signals a timeline, while holding the timeline mutex, so vkd3d-proton
   (a timeline signal per submit plus a fence thread on the same mutex) ran CPU and GPU in
-  lock-step. A poll now reads IOCTL_KGSL_CMDSTREAM_READTIMESTAMP_CTXTID (retired) and
-  answers VK_SUCCESS / VK_TIMEOUT without waiting. Found on Bannerlator's Wayland adapter
-  (Pocket FIT A750): a D3D12 demo capped at ~615 fps went to 4335 fps with the same answer
-  given from outside the driver; X11 D3D12 (809 fps) had the same stall, milder.
+  lock-step. Found on Bannerlator's Wayland adapter (Pocket FIT A750): a D3D12 demo capped
+  at ~615 fps went to 4335 fps with the same answer given from outside the driver; X11 D3D12
+  (809 fps) had the same stall, milder. See docs/KGSL_ZERO_TIMEOUT_POLL.md.

@@ -87,13 +87,21 @@ Carried over from upstream and verified against Mesa `4f554da`:
 | Change | Where | Why |
 | :--- | :--- | :--- |
 | `enable_tp_ubwc_flag_hint` | `patches/8g2_oneui.py` | A740-specific. **Correctness, not speed** — without it the UI flickers next to a system driver that sets the hint. |
-| KGSL syncobj merge fix | `patches/common/kgsl-syncobj-merge-ts-fd.patch` | Correctness: a NULL deref on a two-semaphore submit — i.e. most frames. |
-| KGSL zero-timeout poll | `patches/common/kgsl-zero-timeout-poll.patch` | Correctness under load. |
 | deviceName override | `patches/a740_devname.py` | Identity: reports `Turnip (Banners A740)` so a driver list or Vulkan overlay shows *this build* is loaded. Cosmetic — but the name also keys the disk shader-cache directory, so the first run recompiles once. |
 
-The KGSL timestamp fix has a direct performance dimension: a wait that asserts
+The two KGSL correctness fixes this fork used to patch are **not** in this table
+any more: Mesa main carries both as of `1da50a1b940` (syncobj merge) and
+`e984ef294ea` (zero-timeout poll), verified present at our pin `3172302832`, and
+both local patches were deleted on 2026-10-08. They were not dropped for being
+redundant-in-principle — upstream's versions are the same fixes, and the syncobj
+one adds the error handling ours asserted instead of checking. See
+[`patches/common/SOURCE`](../patches/common/SOURCE) for the record.
+
+The zero-timeout fix has a direct performance dimension: a wait that blocks
 instead of returning `VK_TIMEOUT` stalls the queue, and a stalled queue wastes the
-thermal budget it was holding.
+thermal budget it was holding. It is still worth knowing it is there, because the
+fix now arrives with a Mesa update rather than from us — a driver built before
+`e984ef294ea` pays that stall on every frame.
 
 `PWR_MAX` (`patches/apply_mtr_pwr_max.py`) and force-GMEM
 (`patches/apply_mtr_gmem_force.py`) exist in this repo but are **not** wired into
