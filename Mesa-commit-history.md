@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261008](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261008) | 2026-10-07 | [`4e1e469`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4e1e46921e19f071437d67caaeaa0aa91da8a536) | nir: Silence coverity warning about integer overflow | Vulkan 1.4.363 |
 | [v26.3.0-20261007-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261007-r4) | 2026-10-07 | [`f1a6b0d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f1a6b0d71ade2b1304cc9b466ae6d27402b7e7c8) | intel/compiler: Remove uses_is_indexed_draw field from prog_data | Vulkan 1.4.363 |
 | [v26.3.0-20261007-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261007-r3) | 2026-10-07 | [`ad885a8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ad885a85bd34b9a8d9301e4d84c9a3117235920e) | zink/kopper: fix invalid read during swapchain teardown | Vulkan 1.4.363 |
 | [v26.3.0-20261007-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261007-r2) | 2026-10-07 | [`0b2fa04`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0b2fa0445c2cdf6ab5e3a00214954670f0e0d2af) | kraid/ra: Prefer not moving source registers for vectors | Vulkan 1.4.363 |
