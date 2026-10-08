@@ -12,6 +12,10 @@ mesasrc="https://gitlab.freedesktop.org/mesa/mesa"
 srcfolder="mesa"
 
 run_all(){
+	# TAG arrives already prefixed ("v26.3.0-20261008-r3", the same string CI uses for
+	# the release). Strip it once here so the names below do not double it up into
+	# "Vv26.3.0...". CI renames the finished ZIP via a glob, so it never saw this.
+	BUILD_VERSION="${BUILD_VERSION#v}"
 	echo -e "${green}====== Begin building TU V${BUILD_VERSION}! ======${nocolor}"
 	check_deps
 	prepare_workdir
@@ -203,7 +207,9 @@ EOF
 	echo "Making the archive..."
 	cd /tmp/turnip-$1/lib
 
-	_meta_name="${META_NAME:-Mesa Turnip v${BUILD_VERSION}-${GITHASH}}"
+	# The 'v' below is this script's own prefix; run_all() has already stripped TAG's,
+# so the two cannot double up.
+_meta_name="${META_NAME:-Mesa Turnip v${BUILD_VERSION}-${GITHASH}}"
 	_meta_desc="${META_DESC:-A6xx/A7xx Turnip driver from Mesa main (git ${GITHASH}). KGSL build. A8xx experimental.}"
 	_zip_suffix="${BUILD_SUFFIX:+-${BUILD_SUFFIX}}"
 	_zip_name="mesa-turnip-$1${_zip_suffix}-V${BUILD_VERSION}.zip"

@@ -12,6 +12,9 @@ mesasrc="https://gitlab.freedesktop.org/mesa/mesa"
 srcfolder="mesa"
 
 run_all(){
+	# TAG arrives already prefixed ("v26.3.0-..."); strip it so names do not double it
+	# into "Vv...". CI overrides BUILD_VERSION with the run number, which has no 'v'.
+	BUILD_VERSION="${BUILD_VERSION#v}"
 	echo -e "${green}====== Begin building TU Perf V${BUILD_VERSION}! ======${nocolor}"
 	check_deps
 	prepare_workdir
