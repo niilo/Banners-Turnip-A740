@@ -30,7 +30,8 @@ TAG ?= dev-$(shell git rev-parse --short HEAD 2>/dev/null || echo local)
 # META_NAME: the driver name shown in AdrenoTools / BannerHub / Winlator driver
 # lists (meta.json "name"). Separate from the Vulkan deviceName, which
 # patches/a740_devname.py sets to "Turnip (Banners A740)" for apps that report
-# VkPhysicalDeviceProperties. The variant suffix is appended automatically, so the
+# VkPhysicalDeviceProperties - on an A740 only; other GPUs keep Mesa's own name.
+# The variant suffix is appended automatically, so the
 # four variants stay distinguishable in a list.
 META_NAME ?= Banners Turnip A740
 # PACKAGE_VERSION: meta.json packageVersion (CI uses the daily build number)

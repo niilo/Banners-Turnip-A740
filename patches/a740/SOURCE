@@ -58,16 +58,35 @@ Performance experiments - UNMEASURED, opt-in
   variants only, which is why adding these did not require a matrix change.
 
 Device identification (cosmetic)
-Device identification (cosmetic)
-  patches/a740_devname.py rewrites the Vulkan deviceName in tu_device.cc so this
-  fork reports "Turnip (Banners A740)" instead of Mesa's default
+  patches/a740_devname.py rewrites the Vulkan deviceName in tu_device.cc so that on an
+  Adreno 740 this fork reports "Turnip (Banners A740)" instead of Mesa's default
   "Turnip Adreno (TM) 740". Upstream keys that string off the GPU id, so every
   A740 Turnip build reports it identically; Balemuni works around the same
   limitation by overriding the name too.
 
+  SCOPED TO FD740 (2026-10-08). Earlier revisions matched every "FD*" device, so the
+  fork name was claimed on parts that merely resemble the 740. The Ayaneo Pocket S is
+  the concrete case: an Adreno A32 (fd_name "FDA32", chip_id 0x43050a00) that
+  persist.sys.fake.gpu makes the stock driver advertise as "Adreno (TM) 740", so this
+  driver was reporting itself as a Banners A740 on hardware it is not a build for.
+  Mesa already selects the correct chip entry for it - FDA32 carries its own magic
+  registers from blob v676.0, and TPL1_DBG_ECO_CNTL1 differs from the A740's
+  (0x00000700 vs 0x00040724) - so only this string was wrong, and only it needed
+  fixing. Anything else reporting "Adreno (TM) 740" on that device is the same
+  upstream spoof, not a Turnip bug.
+
+  The override is now an strcmp against "FD740" placed in front of Mesa's own branch,
+  which is left intact; every other FD device keeps "Turnip Adreno (TM) <model>". The
+  script also migrates the old every-FD-device form, since a tree already carrying it
+  would otherwise fail to re-anchor - verified byte-identical to a fresh patch.
+  Cost of the scoping: on a non-740 GPU this build no longer announces itself in a
+  driver list. That is the honest answer.
+
   Cosmetic only. Two consequences worth knowing:
     - disk_cache_create(device->name, ...) uses it for the shader-cache
       directory, so the first run after installing recompiles shaders once.
+      Note the directory name now depends on the GPU, so the same ZIP gives
+      different cache dirs on a 740 and on other parts.
     - Nothing else keys off it: no behaviour, feature, or performance change.
 
   The AdrenoTools / BannerHub driver-list name is a separate field (meta.json

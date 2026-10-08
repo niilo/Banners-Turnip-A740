@@ -87,7 +87,7 @@ Carried over from upstream and verified against Mesa `4f554da`:
 | Change | Where | Why |
 | :--- | :--- | :--- |
 | `enable_tp_ubwc_flag_hint` | `patches/8g2_oneui.py` | A740-specific. **Correctness, not speed** — without it the UI flickers next to a system driver that sets the hint. |
-| deviceName override | `patches/a740_devname.py` | Identity: reports `Turnip (Banners A740)` so a driver list or Vulkan overlay shows *this build* is loaded. Cosmetic — but the name also keys the disk shader-cache directory, so the first run recompiles once. |
+| deviceName override | `patches/a740_devname.py` | Identity: on an A740, reports `Turnip (Banners A740)` so a driver list or Vulkan overlay shows *this build* is loaded. Scoped to `fd_name == "FD740"`, so parts that merely resemble the 740 — e.g. the Ayaneo Pocket S's Adreno A32, which `persist.sys.fake.gpu` makes the stock driver advertise as a 740 — keep Mesa's own name. Cosmetic, but the name also keys the disk shader-cache directory, so the first run recompiles once. |
 
 The two KGSL correctness fixes this fork used to patch are **not** in this table
 any more: Mesa main carries both as of `1da50a1b940` (syncobj merge) and
