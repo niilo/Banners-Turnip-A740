@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`8b5f635`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8b5f63523670cf03fdc7f9e22be43429cc751062) |
-| **Commit date** | 2026-10-08 |
-| **Commit title** | intel/gen: Add sendg EOT handling to gen_find_shader_size_xe() |
+| **Commit** | [`8f65701`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8f65701c41f63e851c4696712de24e367ffcb061) |
+| **Commit date** | 2026-10-09 |
+| **Commit title** | radv: clear unnecessary depth/stencil dynamic states correctly |
 | **Build date** | 20261009 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 2 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v26.3.0-20261009](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009) |
+| **Release** | [v26.3.0-20261009-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261009-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r2) | 2026-10-09 | [`8f65701`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8f65701c41f63e851c4696712de24e367ffcb061) | radv: clear unnecessary depth/stencil dynamic states correctly | Vulkan 1.4.363 |
 | [v26.3.0-20261009](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009) | 2026-10-09 | [`8b5f635`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8b5f63523670cf03fdc7f9e22be43429cc751062) | intel/gen: Add sendg EOT handling to gen_find_shader_size_xe() | Vulkan 1.4.363 |
 | [v26.3.0-20261008-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261008-r3) | 2026-10-08 | [`5d4c4bd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5d4c4bd553a4f0d0d2fe0c0f07f866803be44ecc) | nir/algebraic: Don't generate 64-bit iadd3 when not supported | Vulkan 1.4.363 |
-| [v26.3.0-20261008-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261008-r2) | 2026-10-08 | [`88d2d56`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/88d2d56a02f62edbab6cfd8be6b41e8728f24aa8) | kraid: Fix sub-reg temporaries in legalize_src_swizzles() | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
