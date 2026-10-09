@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261009-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r4) | 2026-10-09 | [`3b10bd8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3b10bd85729d12639a00216f386dfd8fa56039bb) | spirv: fix MSVC Release unused locals used only in assert | Vulkan 1.4.363 |
 | [v26.3.0-20261009-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r3) | 2026-10-09 | [`ed458ff`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ed458ffac6f410e6f03e54d17f47e8aeb55fe3a1) | anv/video: Move common BRC tables to new C file. | Vulkan 1.4.363 |
 | [v26.3.0-20261009-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r2) | 2026-10-09 | [`8f65701`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8f65701c41f63e851c4696712de24e367ffcb061) | radv: clear unnecessary depth/stencil dynamic states correctly | Vulkan 1.4.363 |
 | [v26.3.0-20261009](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009) | 2026-10-08 | [`8b5f635`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8b5f63523670cf03fdc7f9e22be43429cc751062) | intel/gen: Add sendg EOT handling to gen_find_shader_size_xe() | Vulkan 1.4.363 |
