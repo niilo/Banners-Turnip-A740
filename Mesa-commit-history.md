@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261010-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r3) | 2026-10-10 | [`5c80eda`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c80eda3f1c0ac7cb80b0597473ae83da4b97c08) | spirv,panfrost: emit precise OpenCL log/log2/exp2 as hardware transcendentals | Vulkan 1.4.363 |
 | [v26.3.0-20261010-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r2) | 2026-10-10 | [`cf0b979`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cf0b979229f3dc77eb28dd3b0a232ae37d787b1d) | r300/ci: remove nonexistent tests | Vulkan 1.4.363 |
 | [v26.3.0-20261010](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010) | 2026-10-09 | [`35b085c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/35b085c4c067f198ce0b6437d94678e47b9c645f) | iris: Free compute compilation context on failure | Vulkan 1.4.363 |
 | [v26.3.0-20261009-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r5) | 2026-10-09 | [`57fd112`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/57fd11256bdf0ec1ff1908277e4963180252491f) | radeonsi: invalidate I$/SMEM$/VMEM$ at IB start on all gfx levels | Vulkan 1.4.363 |

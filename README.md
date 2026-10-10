@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`cf0b979`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cf0b979229f3dc77eb28dd3b0a232ae37d787b1d) |
+| **Commit** | [`5c80eda`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c80eda3f1c0ac7cb80b0597473ae83da4b97c08) |
 | **Commit date** | 2026-10-10 |
-| **Commit title** | r300/ci: remove nonexistent tests |
+| **Commit title** | spirv,panfrost: emit precise OpenCL log/log2/exp2 as hardware transcendentals |
 | **Build date** | 20261010 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 2 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v26.3.0-20261010-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r2) |
+| **Release** | [v26.3.0-20261010-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,11 +129,11 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261010-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r3) | 2026-10-10 | [`5c80eda`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c80eda3f1c0ac7cb80b0597473ae83da4b97c08) | spirv,panfrost: emit precise OpenCL log/log2/exp2 as hardware transcendentals | Vulkan 1.4.363 |
 | [v26.3.0-20261010-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r2) | 2026-10-10 | [`cf0b979`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cf0b979229f3dc77eb28dd3b0a232ae37d787b1d) | r300/ci: remove nonexistent tests | Vulkan 1.4.363 |
 | [v26.3.0-20261010](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010) | 2026-10-10 | [`35b085c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/35b085c4c067f198ce0b6437d94678e47b9c645f) | iris: Free compute compilation context on failure | Vulkan 1.4.363 |
 | [v26.3.0-20261009-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r5) | 2026-10-10 | [`57fd112`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/57fd11256bdf0ec1ff1908277e4963180252491f) | radeonsi: invalidate I$/SMEM$/VMEM$ at IB start on all gfx levels | Vulkan 1.4.363 |
 | [v26.3.0-20261009-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r4) | 2026-10-09 | [`3b10bd8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3b10bd85729d12639a00216f386dfd8fa56039bb) | spirv: fix MSVC Release unused locals used only in assert | Vulkan 1.4.363 |
-| [v26.3.0-20261009-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261009-r3) | 2026-10-09 | [`ed458ff`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ed458ffac6f410e6f03e54d17f47e8aeb55fe3a1) | anv/video: Move common BRC tables to new C file. | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
