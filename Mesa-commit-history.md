@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261011-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011-r2) | 2026-10-11 | [`745709a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/745709a000482a4a24c91faef5c5a40bd653a863) | util/tc: reset end_call when rp info is reused after sync | Vulkan 1.4.363 |
 | [v26.3.0-20261011](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011) | 2026-10-11 | [`275dc48`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/275dc488dff3812e7487f8fc5578f8bddafe3438) | zink: check the unowned buffers before returning early | Vulkan 1.4.363 |
 | [v26.3.0-20261010-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r4) | 2026-10-10 | [`bffd919`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bffd91947efc1932da99aca69fc540d6d4201b0c) | nvk: Use meta gfx for depth copies | Vulkan 1.4.363 |
 | [v26.3.0-20261010-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r3) | 2026-10-10 | [`5c80eda`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c80eda3f1c0ac7cb80b0597473ae83da4b97c08) | spirv,panfrost: emit precise OpenCL log/log2/exp2 as hardware transcendentals | Vulkan 1.4.363 |

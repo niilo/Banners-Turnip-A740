@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`275dc48`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/275dc488dff3812e7487f8fc5578f8bddafe3438) |
+| **Commit** | [`745709a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/745709a000482a4a24c91faef5c5a40bd653a863) |
 | **Commit date** | 2026-10-11 |
-| **Commit title** | zink: check the unowned buffers before returning early |
+| **Commit title** | util/tc: reset end_call when rp info is reused after sync |
 | **Build date** | 20261011 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 2 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v26.3.0-20261011](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011) |
+| **Release** | [v26.3.0-20261011-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261011-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011-r2) | 2026-10-11 | [`745709a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/745709a000482a4a24c91faef5c5a40bd653a863) | util/tc: reset end_call when rp info is reused after sync | Vulkan 1.4.363 |
 | [v26.3.0-20261011](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011) | 2026-10-11 | [`275dc48`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/275dc488dff3812e7487f8fc5578f8bddafe3438) | zink: check the unowned buffers before returning early | Vulkan 1.4.363 |
 | [v26.3.0-20261010-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r4) | 2026-10-10 | [`bffd919`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bffd91947efc1932da99aca69fc540d6d4201b0c) | nvk: Use meta gfx for depth copies | Vulkan 1.4.363 |
-| [v26.3.0-20261010-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261010-r3) | 2026-10-10 | [`5c80eda`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c80eda3f1c0ac7cb80b0597473ae83da4b97c08) | spirv,panfrost: emit precise OpenCL log/log2/exp2 as hardware transcendentals | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
