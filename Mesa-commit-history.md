@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261012-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261012-r2) | 2026-10-12 | [`d14541b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d14541b8e0feb88f8391d3a52c048a410a537f50) | zink: add ci flakes | Vulkan 1.4.363 |
 | [v26.3.0-20261012](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261012) | 2026-10-12 | [`1f49528`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1f4952878d78caba95afcb4efa1a1dfaf4fbc692) | ac/nir/meta: fix determining if sparse loads must be scalarized | Vulkan 1.4.363 |
 | [v26.3.0-20261011-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011-r2) | 2026-10-11 | [`745709a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/745709a000482a4a24c91faef5c5a40bd653a863) | util/tc: reset end_call when rp info is reused after sync | Vulkan 1.4.363 |
 | [v26.3.0-20261011](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261011) | 2026-10-11 | [`275dc48`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/275dc488dff3812e7487f8fc5578f8bddafe3438) | zink: check the unowned buffers before returning early | Vulkan 1.4.363 |
