@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261013-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261013-r3) | 2026-10-13 | [`e3f10ea`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e3f10eabb6620eeb5957df2faea2f0c43be05c1a) | kk: Adopt new input attachment intrinsics | Vulkan 1.4.363 |
 | [v26.3.0-20261013-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261013-r2) | 2026-10-13 | [`e0ef5f7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e0ef5f7650dbf7f007dd775497af9fb144e481ce) | anv: track the query pool copies for resets | Vulkan 1.4.363 |
 | [v26.3.0-20261013](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261013) | 2026-10-13 | [`9a50e25`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9a50e25c64b941dfc03e5462d0533feda58cabe6) | intel/isl: shrink struct isl_tile_info by 8 bytes | Vulkan 1.4.363 |
 | [v26.3.0-20261012-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261012-r2) | 2026-10-12 | [`d14541b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d14541b8e0feb88f8391d3a52c048a410a537f50) | zink: add ci flakes | Vulkan 1.4.363 |
