@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`7c648ed`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c648edb36af2c692d454a01c4dbf338756805b1) |
+| **Commit** | [`c35d53c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c35d53cf8215901a19ed9f7fc9ae09f538c1152c) |
 | **Commit date** | 2026-10-14 |
-| **Commit title** | panfrost: correctly report immortalis |
+| **Commit title** | nir/opt_varyings_tests: Move dead_input/output code body into the class. |
 | **Build date** | 20261014 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v26.3.0-20261014-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r4) |
+| **Release** | [v26.3.0-20261014-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r5) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261014-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r5) | 2026-10-14 | [`c35d53c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c35d53cf8215901a19ed9f7fc9ae09f538c1152c) | nir/opt_varyings_tests: Move dead_input/output code body into the class. | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r4) | 2026-10-14 | [`7c648ed`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c648edb36af2c692d454a01c4dbf338756805b1) | panfrost: correctly report immortalis | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r3) | 2026-10-14 | [`ae0845a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae0845a8c6e04dd0d3b8a16423a43600697b8dde) | rusticl/event: allow to create events without any work | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r2) | 2026-10-14 | [`1e4fa8d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1e4fa8d05d142f9ce7d87cec75cc609e22355df2) | radv: stop waiting for individual queries with vkCmdCopyQueryPoolResults() | Vulkan 1.4.363 |
