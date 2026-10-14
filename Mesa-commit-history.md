@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261014-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r2) | 2026-10-14 | [`1e4fa8d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1e4fa8d05d142f9ce7d87cec75cc609e22355df2) | radv: stop waiting for individual queries with vkCmdCopyQueryPoolResults() | Vulkan 1.4.363 |
 | [v26.3.0-20261014](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014) | 2026-10-14 | [`1df51f3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1df51f350aefee6f4afa435cea8efd8ca53cb4ec) | nv30/ci: update nv43 piglit results | Vulkan 1.4.363 |
 | [v26.3.0-20261013-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261013-r4) | 2026-10-13 | [`ea89518`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ea89518c50dd59ec0076b8b1874015d15508a419) | amd: switch to nir_opt_uadd_carry | Vulkan 1.4.363 |
 | [v26.3.0-20261013-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261013-r3) | 2026-10-13 | [`e3f10ea`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e3f10eabb6620eeb5957df2faea2f0c43be05c1a) | kk: Adopt new input attachment intrinsics | Vulkan 1.4.363 |
