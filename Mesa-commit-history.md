@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261015-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r2) | 2026-10-15 | [`e793bd0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e793bd0fa9580da35def95a47d265fee225c023d) | llvmpipe: handle indirect geometry shader inputs | Vulkan 1.4.363 |
 | [v26.3.0-20261015](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015) | 2026-10-15 | [`2521913`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/25219134d356b2e2e0d408ab17b8a95a81a05623) | util/u_queue: add a flag to wake blocked producers at half-empty | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r5) | 2026-10-14 | [`c35d53c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c35d53cf8215901a19ed9f7fc9ae09f538c1152c) | nir/opt_varyings_tests: Move dead_input/output code body into the class. | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r4) | 2026-10-14 | [`7c648ed`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c648edb36af2c692d454a01c4dbf338756805b1) | panfrost: correctly report immortalis | Vulkan 1.4.363 |
