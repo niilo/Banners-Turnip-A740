@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`988a767`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/988a767d797a0fb6876901491e45b896ab2745e1) |
+| **Commit** | [`cf98950`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cf98950a3f548751301091ae4a224b8c8f59d988) |
 | **Commit date** | 2026-10-15 |
-| **Commit title** | radeonsi/sqtt: allow submit-based capture |
+| **Commit title** | panvk: fix allow_merging_workgroups logic |
 | **Build date** | 20261015 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v26.3.0-20261015-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r3) |
+| **Release** | [v26.3.0-20261015-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r4) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,12 +129,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261015-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r4) | 2026-10-15 | [`cf98950`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cf98950a3f548751301091ae4a224b8c8f59d988) | panvk: fix allow_merging_workgroups logic | Vulkan 1.4.363 |
 | [v26.3.0-20261015-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r3) | 2026-10-15 | [`988a767`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/988a767d797a0fb6876901491e45b896ab2745e1) | radeonsi/sqtt: allow submit-based capture | Vulkan 1.4.363 |
 | [v26.3.0-20261015-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r2) | 2026-10-15 | [`e793bd0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e793bd0fa9580da35def95a47d265fee225c023d) | llvmpipe: handle indirect geometry shader inputs | Vulkan 1.4.363 |
 | [v26.3.0-20261015](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015) | 2026-10-15 | [`2521913`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/25219134d356b2e2e0d408ab17b8a95a81a05623) | util/u_queue: add a flag to wake blocked producers at half-empty | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r5) | 2026-10-14 | [`c35d53c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c35d53cf8215901a19ed9f7fc9ae09f538c1152c) | nir/opt_varyings_tests: Move dead_input/output code body into the class. | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r4) | 2026-10-14 | [`7c648ed`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c648edb36af2c692d454a01c4dbf338756805b1) | panfrost: correctly report immortalis | Vulkan 1.4.363 |
-| [v26.3.0-20261014-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r3) | 2026-10-14 | [`ae0845a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae0845a8c6e04dd0d3b8a16423a43600697b8dde) | rusticl/event: allow to create events without any work | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
