@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 26.3.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`c35d53c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c35d53cf8215901a19ed9f7fc9ae09f538c1152c) |
-| **Commit date** | 2026-10-14 |
-| **Commit title** | nir/opt_varyings_tests: Move dead_input/output code body into the class. |
-| **Build date** | 20261014 |
+| **Commit** | [`2521913`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/25219134d356b2e2e0d408ab17b8a95a81a05623) |
+| **Commit date** | 2026-10-15 |
+| **Commit title** | util/u_queue: add a flag to wake blocked producers at half-empty |
+| **Build date** | 20261015 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v26.3.0-20261014-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r5) |
+| **Release** | [v26.3.0-20261015](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,12 +129,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v26.3.0-20261015](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015) | 2026-10-15 | [`2521913`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/25219134d356b2e2e0d408ab17b8a95a81a05623) | util/u_queue: add a flag to wake blocked producers at half-empty | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r5) | 2026-10-14 | [`c35d53c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c35d53cf8215901a19ed9f7fc9ae09f538c1152c) | nir/opt_varyings_tests: Move dead_input/output code body into the class. | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r4) | 2026-10-14 | [`7c648ed`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c648edb36af2c692d454a01c4dbf338756805b1) | panfrost: correctly report immortalis | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r3) | 2026-10-14 | [`ae0845a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae0845a8c6e04dd0d3b8a16423a43600697b8dde) | rusticl/event: allow to create events without any work | Vulkan 1.4.363 |
 | [v26.3.0-20261014-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014-r2) | 2026-10-14 | [`1e4fa8d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1e4fa8d05d142f9ce7d87cec75cc609e22355df2) | radv: stop waiting for individual queries with vkCmdCopyQueryPoolResults() | Vulkan 1.4.363 |
 | [v26.3.0-20261014](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261014) | 2026-10-14 | [`1df51f3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1df51f350aefee6f4afa435cea8efd8ca53cb4ec) | nv30/ci: update nv43 piglit results | Vulkan 1.4.363 |
-| [v26.3.0-20261013-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261013-r4) | 2026-10-13 | [`ea89518`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ea89518c50dd59ec0076b8b1874015d15508a419) | amd: switch to nir_opt_uadd_carry | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
