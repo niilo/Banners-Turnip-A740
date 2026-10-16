@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261016-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r3) | 2026-10-16 | [`c7e599a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c7e599ad60d7dc49e61ad181cd94cd619fde008a) | radeonsi/mm: Increase obu_size length to 2 bytes in AV1 sequence header | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r2) | 2026-10-16 | [`65515be`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/65515beda974e5dc7aad12ff5f3478fa16b1c3cb) | vl/kopper: zero-initialize kopper_loader_info | Vulkan 1.4.363 |
 | [v27.0.0-20261016](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016) | 2026-10-16 | [`c486896`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4868963fe414a45be6bcef29b7ca0e38a7d9de1) | llvmpipe/fs: drop is_1d param description | Vulkan 1.4.363 |
 | [v26.3.0-20261015-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r6) | 2026-10-15 | [`827d538`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/827d538ed9eb53e0a3c23f01ba68f858cdfdbcb3) | panfrost: add ai-policy | Vulkan 1.4.363 |
