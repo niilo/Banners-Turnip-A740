@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261016](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016) | 2026-10-16 | [`c486896`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4868963fe414a45be6bcef29b7ca0e38a7d9de1) | llvmpipe/fs: drop is_1d param description | Vulkan 1.4.363 |
 | [v26.3.0-20261015-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r6) | 2026-10-15 | [`827d538`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/827d538ed9eb53e0a3c23f01ba68f858cdfdbcb3) | panfrost: add ai-policy | Vulkan 1.4.363 |
 | [v26.3.0-20261015-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r5) | 2026-10-15 | [`6a5e6fa`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6a5e6fadd8fbd1520334a36f04b0b9f8cad12398) | gbm/dri: enable native YUYV format support in GBM and DRI format tables | Vulkan 1.4.363 |
 | [v26.3.0-20261015-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v26.3.0-20261015-r4) | 2026-10-15 | [`cf98950`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cf98950a3f548751301091ae4a224b8c8f59d988) | panvk: fix allow_merging_workgroups logic | Vulkan 1.4.363 |
