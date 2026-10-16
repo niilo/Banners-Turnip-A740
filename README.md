@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`c7e599a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c7e599ad60d7dc49e61ad181cd94cd619fde008a) |
+| **Commit** | [`0f737d4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0f737d4e20d9aabc5164d04c94edf6488db003c5) |
 | **Commit date** | 2026-10-16 |
-| **Commit title** | radeonsi/mm: Increase obu_size length to 2 bytes in AV1 sequence header |
+| **Commit title** | nvk: fix color_write_enable |
 | **Build date** | 20261016 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261016-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r3) |
+| **Release** | [v27.0.0-20261016-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r4) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261016-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r4) | 2026-10-16 | [`0f737d4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0f737d4e20d9aabc5164d04c94edf6488db003c5) | nvk: fix color_write_enable | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r3) | 2026-10-16 | [`c7e599a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c7e599ad60d7dc49e61ad181cd94cd619fde008a) | radeonsi/mm: Increase obu_size length to 2 bytes in AV1 sequence header | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r2) | 2026-10-16 | [`65515be`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/65515beda974e5dc7aad12ff5f3478fa16b1c3cb) | vl/kopper: zero-initialize kopper_loader_info | Vulkan 1.4.363 |
 | [v27.0.0-20261016](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016) | 2026-10-16 | [`c486896`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4868963fe414a45be6bcef29b7ca0e38a7d9de1) | llvmpipe/fs: drop is_1d param description | Vulkan 1.4.363 |
