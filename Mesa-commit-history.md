@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261017](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017) | 2026-10-16 | [`14a19dd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/14a19dd6c167d0d5fd0126688318ed5461022588) | nak: fix extra . when printing membar | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r6) | 2026-10-16 | [`af2f67b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af2f67b2b3671ce4d5f95bba611a01e7eae3c84f) | intel/compiler: Fix cooperative matrix conversion signedness | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r5) | 2026-10-16 | [`27479e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/27479e202444ed64f058db1e1c2d4d8d82eaf3bc) | zink/video: decode interlaced H.264 | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r4) | 2026-10-16 | [`0f737d4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0f737d4e20d9aabc5164d04c94edf6488db003c5) | nvk: fix color_write_enable | Vulkan 1.4.363 |
