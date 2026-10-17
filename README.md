@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`14a19dd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/14a19dd6c167d0d5fd0126688318ed5461022588) |
-| **Commit date** | 2026-10-16 |
-| **Commit title** | nak: fix extra . when printing membar |
+| **Commit** | [`335d569`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/335d5698dca1d1b9d11ef18cf5f523cc0f7f58fb) |
+| **Commit date** | 2026-10-17 |
+| **Commit title** | kk: Fix miptail computation due to behaviour difference in OS versions |
 | **Build date** | 20261017 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261017](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017) |
+| **Release** | [v27.0.0-20261017-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,13 +129,13 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261017-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017-r2) | 2026-10-17 | [`335d569`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/335d5698dca1d1b9d11ef18cf5f523cc0f7f58fb) | kk: Fix miptail computation due to behaviour difference in OS versions | Vulkan 1.4.363 |
 | [v27.0.0-20261017](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017) | 2026-10-17 | [`14a19dd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/14a19dd6c167d0d5fd0126688318ed5461022588) | nak: fix extra . when printing membar | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r6) | 2026-10-16 | [`af2f67b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af2f67b2b3671ce4d5f95bba611a01e7eae3c84f) | intel/compiler: Fix cooperative matrix conversion signedness | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r5) | 2026-10-16 | [`27479e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/27479e202444ed64f058db1e1c2d4d8d82eaf3bc) | zink/video: decode interlaced H.264 | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r4) | 2026-10-16 | [`0f737d4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0f737d4e20d9aabc5164d04c94edf6488db003c5) | nvk: fix color_write_enable | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r3) | 2026-10-16 | [`c7e599a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c7e599ad60d7dc49e61ad181cd94cd619fde008a) | radeonsi/mm: Increase obu_size length to 2 bytes in AV1 sequence header | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r2) | 2026-10-16 | [`65515be`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/65515beda974e5dc7aad12ff5f3478fa16b1c3cb) | vl/kopper: zero-initialize kopper_loader_info | Vulkan 1.4.363 |
-| [v27.0.0-20261016](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016) | 2026-10-16 | [`c486896`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4868963fe414a45be6bcef29b7ca0e38a7d9de1) | llvmpipe/fs: drop is_1d param description | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
