@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261018](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018) | 2026-10-17 | [`d1e369d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d1e369d8a63eb82ba277e4e25d35982ce2760204) | util: Fix NSEC_PER_SEC macro-redefined warning on macOS | Vulkan 1.4.363 |
 | [v27.0.0-20261017-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017-r2) | 2026-10-17 | [`335d569`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/335d5698dca1d1b9d11ef18cf5f523cc0f7f58fb) | kk: Fix miptail computation due to behaviour difference in OS versions | Vulkan 1.4.363 |
 | [v27.0.0-20261017](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017) | 2026-10-16 | [`14a19dd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/14a19dd6c167d0d5fd0126688318ed5461022588) | nak: fix extra . when printing membar | Vulkan 1.4.363 |
 | [v27.0.0-20261016-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261016-r6) | 2026-10-16 | [`af2f67b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af2f67b2b3671ce4d5f95bba611a01e7eae3c84f) | intel/compiler: Fix cooperative matrix conversion signedness | Vulkan 1.4.363 |
