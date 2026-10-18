@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`d1e369d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d1e369d8a63eb82ba277e4e25d35982ce2760204) |
-| **Commit date** | 2026-10-17 |
-| **Commit title** | util: Fix NSEC_PER_SEC macro-redefined warning on macOS |
+| **Commit** | [`4c12390`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4c12390be306fb73b9b8e6e9445a3102a39ced77) |
+| **Commit date** | 2026-10-18 |
+| **Commit title** | zink: make MoltenVK headers and support optional on macOS |
 | **Build date** | 20261018 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261018](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018) |
+| **Release** | [v27.0.0-20261018-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,8 +129,8 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261018-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r2) | 2026-10-18 | [`4c12390`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4c12390be306fb73b9b8e6e9445a3102a39ced77) | zink: make MoltenVK headers and support optional on macOS | Vulkan 1.4.363 |
 | [v27.0.0-20261018](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018) | 2026-10-18 | [`d1e369d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d1e369d8a63eb82ba277e4e25d35982ce2760204) | util: Fix NSEC_PER_SEC macro-redefined warning on macOS | Vulkan 1.4.363 |
-| [v27.0.0-20261017-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261017-r2) | 2026-10-17 | [`335d569`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/335d5698dca1d1b9d11ef18cf5f523cc0f7f58fb) | kk: Fix miptail computation due to behaviour difference in OS versions | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
