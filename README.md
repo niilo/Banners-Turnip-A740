@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`f8f26e7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f8f26e737f1cf79f53dc83104359610b1961704e) |
+| **Commit** | [`44fd0fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/44fd0fde8187b5bb1e919625f1ba24cb36c18cbc) |
 | **Commit date** | 2026-10-19 |
-| **Commit title** | v3d: implement the dual_color_blend_by_location driconf workaround |
+| **Commit title** | gfxstream: expose VK_KHR_device_group |
 | **Build date** | 20261019 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261019-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r2) |
+| **Release** | [v27.0.0-20261019-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261019-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r3) | 2026-10-19 | [`44fd0fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/44fd0fde8187b5bb1e919625f1ba24cb36c18cbc) | gfxstream: expose VK_KHR_device_group | Vulkan 1.4.363 |
 | [v27.0.0-20261019-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r2) | 2026-10-19 | [`f8f26e7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f8f26e737f1cf79f53dc83104359610b1961704e) | v3d: implement the dual_color_blend_by_location driconf workaround | Vulkan 1.4.363 |
 | [v27.0.0-20261019](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019) | 2026-10-19 | [`a2b6d50`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a2b6d5096ebee791427214cba47282788ef4e048) | panvk: Advertise VK_EXT_vertex_attribute_robustness | Vulkan 1.4.363 |
-| [v27.0.0-20261018-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r3) | 2026-10-18 | [`c823a83`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c823a83e8f373a5c36c2b9ed1d7dc98a4f3360ee) | brw: Use devinfo in size_read() for DPAS | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
