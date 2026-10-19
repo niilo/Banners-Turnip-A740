@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261019-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r2) | 2026-10-19 | [`f8f26e7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f8f26e737f1cf79f53dc83104359610b1961704e) | v3d: implement the dual_color_blend_by_location driconf workaround | Vulkan 1.4.363 |
 | [v27.0.0-20261019](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019) | 2026-10-19 | [`a2b6d50`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a2b6d5096ebee791427214cba47282788ef4e048) | panvk: Advertise VK_EXT_vertex_attribute_robustness | Vulkan 1.4.363 |
 | [v27.0.0-20261018-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r3) | 2026-10-18 | [`c823a83`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c823a83e8f373a5c36c2b9ed1d7dc98a4f3360ee) | brw: Use devinfo in size_read() for DPAS | Vulkan 1.4.363 |
 | [v27.0.0-20261018-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r2) | 2026-10-18 | [`4c12390`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4c12390be306fb73b9b8e6e9445a3102a39ced77) | zink: make MoltenVK headers and support optional on macOS | Vulkan 1.4.363 |
