@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`c823a83`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c823a83e8f373a5c36c2b9ed1d7dc98a4f3360ee) |
-| **Commit date** | 2026-10-18 |
-| **Commit title** | brw: Use devinfo in size_read() for DPAS |
-| **Build date** | 20261018 |
+| **Commit** | [`a2b6d50`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a2b6d5096ebee791427214cba47282788ef4e048) |
+| **Commit date** | 2026-10-19 |
+| **Commit title** | panvk: Advertise VK_EXT_vertex_attribute_robustness |
+| **Build date** | 20261019 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261018-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r3) |
+| **Release** | [v27.0.0-20261019](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261019](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019) | 2026-10-19 | [`a2b6d50`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a2b6d5096ebee791427214cba47282788ef4e048) | panvk: Advertise VK_EXT_vertex_attribute_robustness | Vulkan 1.4.363 |
 | [v27.0.0-20261018-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r3) | 2026-10-18 | [`c823a83`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c823a83e8f373a5c36c2b9ed1d7dc98a4f3360ee) | brw: Use devinfo in size_read() for DPAS | Vulkan 1.4.363 |
 | [v27.0.0-20261018-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018-r2) | 2026-10-18 | [`4c12390`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4c12390be306fb73b9b8e6e9445a3102a39ced77) | zink: make MoltenVK headers and support optional on macOS | Vulkan 1.4.363 |
-| [v27.0.0-20261018](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261018) | 2026-10-18 | [`d1e369d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d1e369d8a63eb82ba277e4e25d35982ce2760204) | util: Fix NSEC_PER_SEC macro-redefined warning on macOS | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
