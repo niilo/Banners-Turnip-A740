@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`255ecc7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/255ecc7e5837b2824d56f2d24ce500ae96313a83) |
+| **Commit** | [`36bb11d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/36bb11df1c4fbdbad452cfa9c9b0c447a69c8bab) |
 | **Commit date** | 2026-10-20 |
-| **Commit title** | v3dv: advertise VK_EXT_host_image_copy |
+| **Commit title** | radeonsi: re-emit the sqtt pipeline when shader states are emitted |
 | **Build date** | 20261020 |
-| **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261020-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r4) |
+| **Downloads** | X11 / AdrenoTools: 1 ZIP · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
+| **Release** | [v27.0.0-20261020-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r5) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,11 +129,11 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261020-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r5) | 2026-10-20 | [`36bb11d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/36bb11df1c4fbdbad452cfa9c9b0c447a69c8bab) | radeonsi: re-emit the sqtt pipeline when shader states are emitted | Vulkan 1.4.363 |
 | [v27.0.0-20261020-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r4) | 2026-10-20 | [`255ecc7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/255ecc7e5837b2824d56f2d24ce500ae96313a83) | v3dv: advertise VK_EXT_host_image_copy | Vulkan 1.4.363 |
 | [v27.0.0-20261020-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r3) | 2026-10-20 | [`53270be`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/53270be47d28ea50b5620c3014678175ed9a2b05) | ac/sqtt: exclude VMEMEXEC/ALUEXEC tokens by default | Vulkan 1.4.363 |
 | [v27.0.0-20261020-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r2) | 2026-10-20 | [`e51bda9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e51bda9fa440bd0e506047ebe4a451cdd88b34f8) | jay: Use stderr for debug output instead of stdout | Vulkan 1.4.363 |
 | [v27.0.0-20261020](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020) | 2026-10-20 | [`4b0f64c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b0f64ceac6a86af38c1e69cd38cf29f84ba611d) | jay: Handle load/store_global_block_intel | Vulkan 1.4.363 |
-| [v27.0.0-20261019-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r3) | 2026-10-19 | [`44fd0fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/44fd0fde8187b5bb1e919625f1ba24cb36c18cbc) | gfxstream: expose VK_KHR_device_group | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
