@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261020](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020) | 2026-10-19 | [`4b0f64c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b0f64ceac6a86af38c1e69cd38cf29f84ba611d) | jay: Handle load/store_global_block_intel | Vulkan 1.4.363 |
 | [v27.0.0-20261019-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r3) | 2026-10-19 | [`44fd0fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/44fd0fde8187b5bb1e919625f1ba24cb36c18cbc) | gfxstream: expose VK_KHR_device_group | Vulkan 1.4.363 |
 | [v27.0.0-20261019-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019-r2) | 2026-10-19 | [`f8f26e7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f8f26e737f1cf79f53dc83104359610b1961704e) | v3d: implement the dual_color_blend_by_location driconf workaround | Vulkan 1.4.363 |
 | [v27.0.0-20261019](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261019) | 2026-10-19 | [`a2b6d50`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a2b6d5096ebee791427214cba47282788ef4e048) | panvk: Advertise VK_EXT_vertex_attribute_robustness | Vulkan 1.4.363 |
