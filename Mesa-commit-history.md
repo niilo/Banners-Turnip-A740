@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261021-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261021-r5) | 2026-10-21 | [`33bec4b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/33bec4b8899759b83ecea265f79b63c51f87478e) | iris: update nir information within iris_force_dual_color_blend | Vulkan 1.4.363 |
 | [v27.0.0-20261021-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261021-r4) | 2026-10-21 | [`687304e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/687304e237c27d9f9b9f964db2c6dd929ff85749) | radv: fix non-32bit cooperative matrix strides | Vulkan 1.4.363 |
 | [v27.0.0-20261021-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261021-r3) | 2026-10-21 | [`af17d14`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af17d141f62c7b7dd5fa2aec10fe746b2888d73d) | jay: use skip helpers more aggressively | Vulkan 1.4.363 |
 | [v27.0.0-20261021-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261021-r2) | 2026-10-21 | [`c01f844`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c01f84441bcda172ad1dc372be477181213681ba) | gfxstream/guest: use kumquat by default on Apple | Vulkan 1.4.363 |
