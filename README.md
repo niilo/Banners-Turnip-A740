@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`36bb11d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/36bb11df1c4fbdbad452cfa9c9b0c447a69c8bab) |
-| **Commit date** | 2026-10-20 |
-| **Commit title** | radeonsi: re-emit the sqtt pipeline when shader states are emitted |
-| **Build date** | 20261020 |
-| **Downloads** | X11 / AdrenoTools: 1 ZIP · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261020-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r5) |
+| **Commit** | [`0d5349b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0d5349b411faab40e43d7b9bffb40e4d68974edf) |
+| **Commit date** | 2026-10-21 |
+| **Commit title** | pan: Default to always use Kraid |
+| **Build date** | 20261021 |
+| **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
+| **Release** | [v27.0.0-20261021](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261021) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261021](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261021) | 2026-10-21 | [`0d5349b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0d5349b411faab40e43d7b9bffb40e4d68974edf) | pan: Default to always use Kraid | Vulkan 1.4.363 |
 | [v27.0.0-20261020-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r5) | 2026-10-20 | [`36bb11d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/36bb11df1c4fbdbad452cfa9c9b0c447a69c8bab) | radeonsi: re-emit the sqtt pipeline when shader states are emitted | Vulkan 1.4.363 |
 | [v27.0.0-20261020-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r4) | 2026-10-20 | [`255ecc7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/255ecc7e5837b2824d56f2d24ce500ae96313a83) | v3dv: advertise VK_EXT_host_image_copy | Vulkan 1.4.363 |
 | [v27.0.0-20261020-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261020-r3) | 2026-10-20 | [`53270be`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/53270be47d28ea50b5620c3014678175ed9a2b05) | ac/sqtt: exclude VMEMEXEC/ALUEXEC tokens by default | Vulkan 1.4.363 |
