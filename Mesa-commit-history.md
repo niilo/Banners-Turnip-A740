@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261023](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023) | 2026-10-23 | [`dbf73b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/dbf73b1dca74b6f692675f1c234070db2441854c) | radv: remove the fallback from radv_image_get_cmask_clear_copy_buffer_range | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r6) | 2026-10-22 | [`73244ce`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/73244ce974816fb41ccfb2fb3440cb8049b0dbed) | llvmpipe: avoid running helper invocations when not needed | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r5) | 2026-10-22 | [`0ac3efa`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0ac3efa9f4f99ece07971de98360f339a1dc8803) | panvk: write_image_view_desc deals with images, not samplers | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r4) | 2026-10-22 | [`83c3e5a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/83c3e5adecd1bc25e769b105be995bd9e5d5a25b) | panvk: Advertise VK_KHR_extended_flags | Vulkan 1.4.363 |
