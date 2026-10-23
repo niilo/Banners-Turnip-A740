@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`dbf73b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/dbf73b1dca74b6f692675f1c234070db2441854c) |
+| **Commit** | [`056bcae`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/056bcaeb8531580f13862db87530bcff07bbed9a) |
 | **Commit date** | 2026-10-23 |
-| **Commit title** | radv: remove the fallback from radv_image_get_cmask_clear_copy_buffer_range |
+| **Commit title** | v3dv: keep descriptors aligned after inline uniform blocks |
 | **Build date** | 20261023 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261023](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023) |
+| **Release** | [v27.0.0-20261023-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,12 +129,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261023-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023-r2) | 2026-10-23 | [`056bcae`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/056bcaeb8531580f13862db87530bcff07bbed9a) | v3dv: keep descriptors aligned after inline uniform blocks | Vulkan 1.4.363 |
 | [v27.0.0-20261023](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023) | 2026-10-23 | [`dbf73b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/dbf73b1dca74b6f692675f1c234070db2441854c) | radv: remove the fallback from radv_image_get_cmask_clear_copy_buffer_range | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r6) | 2026-10-23 | [`73244ce`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/73244ce974816fb41ccfb2fb3440cb8049b0dbed) | llvmpipe: avoid running helper invocations when not needed | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r5) | 2026-10-22 | [`0ac3efa`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0ac3efa9f4f99ece07971de98360f339a1dc8803) | panvk: write_image_view_desc deals with images, not samplers | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r4) | 2026-10-22 | [`83c3e5a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/83c3e5adecd1bc25e769b105be995bd9e5d5a25b) | panvk: Advertise VK_KHR_extended_flags | Vulkan 1.4.363 |
 | [v27.0.0-20261022-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r3) | 2026-10-22 | [`9b32095`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9b3209540c0c229e4f366faca32a27740c9e300a) | util: Fix misaligned address for 'gc_slab' | Vulkan 1.4.363 |
-| [v27.0.0-20261022-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261022-r2) | 2026-10-22 | [`73a6222`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/73a62223796ae3231e662436ae53083f529a9c6b) | radeonsi/vpe: add support for filters | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
