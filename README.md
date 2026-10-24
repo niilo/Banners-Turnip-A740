@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`0deb51c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0deb51ca86e8c6fc8a0472a3ceb07241f1cf2546) |
+| **Commit** | [`c515ec0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c515ec0fe77da9f42f390e442379f2d0629d908c) |
 | **Commit date** | 2026-10-24 |
-| **Commit title** | zink/ci: Update VA-API results on ANV |
+| **Commit title** | docs: update the list of drivers in the u_trace docs |
 | **Build date** | 20261024 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261024-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r3) |
+| **Release** | [v27.0.0-20261024-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r4) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261024-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r4) | 2026-10-24 | [`c515ec0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c515ec0fe77da9f42f390e442379f2d0629d908c) | docs: update the list of drivers in the u_trace docs | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r3) | 2026-10-24 | [`0deb51c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0deb51ca86e8c6fc8a0472a3ceb07241f1cf2546) | zink/ci: Update VA-API results on ANV | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r2) | 2026-10-24 | [`19a1352`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/19a135296672f24ec1699ada244d5b80ced371da) | venus: avoid casting vulkan handles | Vulkan 1.4.363 |
 | [v27.0.0-20261024](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024) | 2026-10-24 | [`5e4bcb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5e4bcb1c791fcfa6e9257e3fef33314cf6f7b92a) | nak,nvk: Increase nir_opt_peephole limit | Vulkan 1.4.363 |
