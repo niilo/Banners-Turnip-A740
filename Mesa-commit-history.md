@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261024-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r5) | 2026-10-24 | [`7c130cb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c130cb0f8d7b9db81cd1037135061d41db95b79) | spirv: use vtn_zalloc_array for OpTypeStruct fields | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r4) | 2026-10-24 | [`c515ec0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c515ec0fe77da9f42f390e442379f2d0629d908c) | docs: update the list of drivers in the u_trace docs | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r3) | 2026-10-24 | [`0deb51c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0deb51ca86e8c6fc8a0472a3ceb07241f1cf2546) | zink/ci: Update VA-API results on ANV | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r2) | 2026-10-23 | [`19a1352`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/19a135296672f24ec1699ada244d5b80ced371da) | venus: avoid casting vulkan handles | Vulkan 1.4.363 |
