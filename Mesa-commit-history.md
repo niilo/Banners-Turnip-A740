@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261024-r7](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r7) | 2026-10-24 | [`02f1337`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/02f13375231bf0a9ed20b09cb21171351053be52) | mesa: don't read past the name when matching a resource without its [0] | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r6) | 2026-10-24 | [`e2ab668`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e2ab6687d5ad700cc2b856af684aa014f9dae943) | mesa: zero pipe_memory_info before querying it | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r5) | 2026-10-24 | [`7c130cb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c130cb0f8d7b9db81cd1037135061d41db95b79) | spirv: use vtn_zalloc_array for OpTypeStruct fields | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r4) | 2026-10-24 | [`c515ec0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c515ec0fe77da9f42f390e442379f2d0629d908c) | docs: update the list of drivers in the u_trace docs | Vulkan 1.4.363 |
