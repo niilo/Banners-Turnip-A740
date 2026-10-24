@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261024-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r2) | 2026-10-23 | [`19a1352`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/19a135296672f24ec1699ada244d5b80ced371da) | venus: avoid casting vulkan handles | Vulkan 1.4.363 |
 | [v27.0.0-20261024](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024) | 2026-10-23 | [`5e4bcb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5e4bcb1c791fcfa6e9257e3fef33314cf6f7b92a) | nak,nvk: Increase nir_opt_peephole limit | Vulkan 1.4.363 |
 | [v27.0.0-20261023-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023-r5) | 2026-10-23 | [`5cfde4b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5cfde4b0c52a3c97b9276205b3a531fccc3b4e58) | lvp: unhide import-only dmabuf support from zink | Vulkan 1.4.363 |
 | [v27.0.0-20261023-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023-r4) | 2026-10-23 | [`09a9fae`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/09a9fae26d5df276a23b3f66050cd0d1d227800a) | gfxstream: check for guest process death in decoder loop | Vulkan 1.4.363 |
