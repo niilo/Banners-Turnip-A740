@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`7c130cb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c130cb0f8d7b9db81cd1037135061d41db95b79) |
+| **Commit** | [`e2ab668`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e2ab6687d5ad700cc2b856af684aa014f9dae943) |
 | **Commit date** | 2026-10-24 |
-| **Commit title** | spirv: use vtn_zalloc_array for OpTypeStruct fields |
+| **Commit title** | mesa: zero pipe_memory_info before querying it |
 | **Build date** | 20261024 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261024-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r5) |
+| **Release** | [v27.0.0-20261024-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r6) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,13 +129,13 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261024-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r6) | 2026-10-24 | [`e2ab668`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e2ab6687d5ad700cc2b856af684aa014f9dae943) | mesa: zero pipe_memory_info before querying it | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r5) | 2026-10-24 | [`7c130cb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c130cb0f8d7b9db81cd1037135061d41db95b79) | spirv: use vtn_zalloc_array for OpTypeStruct fields | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r4) | 2026-10-24 | [`c515ec0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c515ec0fe77da9f42f390e442379f2d0629d908c) | docs: update the list of drivers in the u_trace docs | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r3) | 2026-10-24 | [`0deb51c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0deb51ca86e8c6fc8a0472a3ceb07241f1cf2546) | zink/ci: Update VA-API results on ANV | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r2) | 2026-10-24 | [`19a1352`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/19a135296672f24ec1699ada244d5b80ced371da) | venus: avoid casting vulkan handles | Vulkan 1.4.363 |
 | [v27.0.0-20261024](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024) | 2026-10-24 | [`5e4bcb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5e4bcb1c791fcfa6e9257e3fef33314cf6f7b92a) | nak,nvk: Increase nir_opt_peephole limit | Vulkan 1.4.363 |
 | [v27.0.0-20261023-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023-r5) | 2026-10-23 | [`5cfde4b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5cfde4b0c52a3c97b9276205b3a531fccc3b4e58) | lvp: unhide import-only dmabuf support from zink | Vulkan 1.4.363 |
-| [v27.0.0-20261023-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261023-r4) | 2026-10-23 | [`09a9fae`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/09a9fae26d5df276a23b3f66050cd0d1d227800a) | gfxstream: check for guest process death in decoder loop | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
