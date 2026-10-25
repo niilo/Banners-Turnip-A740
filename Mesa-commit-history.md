@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261025-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261025-r2) | 2026-10-25 | [`837ab0e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/837ab0e30740abb9ebb60bcd40a5114c68c673d9) | freedreno/decode : Add new test for crashdec with devcore dump with mempool | Vulkan 1.4.363 |
 | [v27.0.0-20261025](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261025) | 2026-10-25 | [`18879c9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/18879c94176c777064cbc5223a7206468c7a00a7) | docs: fix typo in no-gpl extension name | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r7](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r7) | 2026-10-24 | [`02f1337`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/02f13375231bf0a9ed20b09cb21171351053be52) | mesa: don't read past the name when matching a resource without its [0] | Vulkan 1.4.363 |
 | [v27.0.0-20261024-r6](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261024-r6) | 2026-10-24 | [`e2ab668`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/e2ab6687d5ad700cc2b856af684aa014f9dae943) | mesa: zero pipe_memory_info before querying it | Vulkan 1.4.363 |
