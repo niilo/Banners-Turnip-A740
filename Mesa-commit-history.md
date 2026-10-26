@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261026-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r3) | 2026-10-26 | [`66b64b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/66b64b1b04130db25b28be4be0d7497e86151272) | vulkan/wsi/wayland: Support wl-dmabuf v6 | Vulkan 1.4.363 |
 | [v27.0.0-20261026-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r2) | 2026-10-26 | [`f7dd61f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f7dd61f78f83c9ffb3dc9c980cd9b303a5ce58b1) | docs: Fix new_features.txt after rebase issue | Vulkan 1.4.363 |
 | [v27.0.0-20261026](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026) | 2026-10-26 | [`197b513`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/197b513e30dfae49bcad4ce48cdd4c80184ae884) | v3dv: Fix early-ez on v71 | Vulkan 1.4.363 |
 | [v27.0.0-20261025-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261025-r3) | 2026-10-25 | [`ab1502f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ab1502fd1606633e910212da185e92fa6bd4cde1) | asahi: Fix GL_EXT_semaphore[_fd]. | Vulkan 1.4.363 |
