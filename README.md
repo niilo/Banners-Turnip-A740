@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`06583a8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/06583a8396c87a19c46dcfe1cc473760ff1194d4) |
+| **Commit** | [`7736adc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7736adc682e8660482f4ad7bfafeadff9dcb0bc2) |
 | **Commit date** | 2026-10-27 |
-| **Commit title** | v3d: implement clear_buffer with TFU constant colour |
+| **Commit title** | meson: update link to sanitizer flags issue |
 | **Build date** | 20261027 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261027-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r4) |
+| **Release** | [v27.0.0-20261027-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r5) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,11 +129,11 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261027-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r5) | 2026-10-27 | [`7736adc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7736adc682e8660482f4ad7bfafeadff9dcb0bc2) | meson: update link to sanitizer flags issue | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r4) | 2026-10-27 | [`06583a8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/06583a8396c87a19c46dcfe1cc473760ff1194d4) | v3d: implement clear_buffer with TFU constant colour | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r3) | 2026-10-27 | [`03054bc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/03054bc2ed496e9e01241c4df723055caf9f6134) | docs/broadcom: document V3D(V)_MAX_BO_CACHE_SIZE | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r2) | 2026-10-27 | [`5823e3b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5823e3b464cd77f615d0f9999452b501738532e6) | nir/opt_algebraic: Add fmulz variants to distribute_src_mods. | Vulkan 1.4.363 |
 | [v27.0.0-20261027](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027) | 2026-10-27 | [`724c52c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/724c52ca7799169d286f5537fc3a298c894fd494) | mesa: revalidate driver state when a buffer reallocation fails | Vulkan 1.4.363 |
-| [v27.0.0-20261026-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r3) | 2026-10-26 | [`66b64b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/66b64b1b04130db25b28be4be0d7497e86151272) | vulkan/wsi/wayland: Support wl-dmabuf v6 | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
