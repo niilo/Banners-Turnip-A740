@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261027-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r2) | 2026-10-27 | [`5823e3b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5823e3b464cd77f615d0f9999452b501738532e6) | nir/opt_algebraic: Add fmulz variants to distribute_src_mods. | Vulkan 1.4.363 |
 | [v27.0.0-20261027](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027) | 2026-10-26 | [`724c52c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/724c52ca7799169d286f5537fc3a298c894fd494) | mesa: revalidate driver state when a buffer reallocation fails | Vulkan 1.4.363 |
 | [v27.0.0-20261026-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r3) | 2026-10-26 | [`66b64b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/66b64b1b04130db25b28be4be0d7497e86151272) | vulkan/wsi/wayland: Support wl-dmabuf v6 | Vulkan 1.4.363 |
 | [v27.0.0-20261026-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r2) | 2026-10-26 | [`f7dd61f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f7dd61f78f83c9ffb3dc9c980cd9b303a5ce58b1) | docs: Fix new_features.txt after rebase issue | Vulkan 1.4.363 |
