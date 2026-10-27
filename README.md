@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`66b64b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/66b64b1b04130db25b28be4be0d7497e86151272) |
+| **Commit** | [`724c52c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/724c52ca7799169d286f5537fc3a298c894fd494) |
 | **Commit date** | 2026-10-26 |
-| **Commit title** | vulkan/wsi/wayland: Support wl-dmabuf v6 |
-| **Build date** | 20261026 |
+| **Commit title** | mesa: revalidate driver state when a buffer reallocation fails |
+| **Build date** | 20261027 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261026-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r3) |
+| **Release** | [v27.0.0-20261027](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261027](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027) | 2026-10-27 | [`724c52c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/724c52ca7799169d286f5537fc3a298c894fd494) | mesa: revalidate driver state when a buffer reallocation fails | Vulkan 1.4.363 |
 | [v27.0.0-20261026-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r3) | 2026-10-26 | [`66b64b1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/66b64b1b04130db25b28be4be0d7497e86151272) | vulkan/wsi/wayland: Support wl-dmabuf v6 | Vulkan 1.4.363 |
 | [v27.0.0-20261026-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026-r2) | 2026-10-26 | [`f7dd61f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f7dd61f78f83c9ffb3dc9c980cd9b303a5ce58b1) | docs: Fix new_features.txt after rebase issue | Vulkan 1.4.363 |
 | [v27.0.0-20261026](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261026) | 2026-10-26 | [`197b513`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/197b513e30dfae49bcad4ce48cdd4c80184ae884) | v3dv: Fix early-ez on v71 | Vulkan 1.4.363 |
-| [v27.0.0-20261025-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261025-r3) | 2026-10-25 | [`ab1502f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ab1502fd1606633e910212da185e92fa6bd4cde1) | asahi: Fix GL_EXT_semaphore[_fd]. | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
