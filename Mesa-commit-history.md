@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261028-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r5) | 2026-10-28 | [`5510fc7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5510fc760a29c94dc1f441e83ba61e97b30e6925) | zink/ci: mark pv-waveletvolume-v2 as flaky on vangogh | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r4) | 2026-10-28 | [`087e1fe`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/087e1fe4e6a5e1d30f30538112fd8cd62f4167f6) | panvk: fix mark_all_access_non_uniform metadata preservation | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r3) | 2026-10-28 | [`0af57c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0af57c3a99171880b177592d916b24e24aa0c53d) | freedreno/a2xx: use per-tile restore texture coordinates | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r2) | 2026-10-28 | [`4b985c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b985c3d2dad5224c24e9e7f1e352872136351fc) | egl/wsi/wayland: ignore default_dmabuf_feedback_done | Vulkan 1.4.363 |
