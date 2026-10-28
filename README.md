@@ -113,13 +113,13 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | | |
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
-| **Vulkan version** | Vulkan 1.4.363 |
-| **Commit** | [`4b985c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b985c3d2dad5224c24e9e7f1e352872136351fc) |
+| **Vulkan version** | Vulkan 1.4.366 |
+| **Commit** | [`0af57c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0af57c3a99171880b177592d916b24e24aa0c53d) |
 | **Commit date** | 2026-10-28 |
-| **Commit title** | egl/wsi/wayland: ignore default_dmabuf_feedback_done |
+| **Commit title** | freedreno/a2xx: use per-tile restore texture coordinates |
 | **Build date** | 20261028 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261028-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r2) |
+| **Release** | [v27.0.0-20261028-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,11 +129,11 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261028-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r3) | 2026-10-28 | [`0af57c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0af57c3a99171880b177592d916b24e24aa0c53d) | freedreno/a2xx: use per-tile restore texture coordinates | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r2) | 2026-10-28 | [`4b985c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b985c3d2dad5224c24e9e7f1e352872136351fc) | egl/wsi/wayland: ignore default_dmabuf_feedback_done | Vulkan 1.4.363 |
 | [v27.0.0-20261028](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028) | 2026-10-28 | [`f01e9b0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f01e9b07a91f7e7ab730edfbb383b083f146067b) | aco: fix packing negated 16-bit constants in neg_mul_to_i16_cb | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r5) | 2026-10-27 | [`7736adc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7736adc682e8660482f4ad7bfafeadff9dcb0bc2) | meson: update link to sanitizer flags issue | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r4) | 2026-10-27 | [`06583a8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/06583a8396c87a19c46dcfe1cc473760ff1194d4) | v3d: implement clear_buffer with TFU constant colour | Vulkan 1.4.363 |
-| [v27.0.0-20261027-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r3) | 2026-10-27 | [`03054bc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/03054bc2ed496e9e01241c4df723055caf9f6134) | docs/broadcom: document V3D(V)_MAX_BO_CACHE_SIZE | Vulkan 1.4.363 |
 <!-- RECENT_BUILDS_END -->
 
 ---
