@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261028-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r4) | 2026-10-28 | [`087e1fe`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/087e1fe4e6a5e1d30f30538112fd8cd62f4167f6) | panvk: fix mark_all_access_non_uniform metadata preservation | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r3) | 2026-10-28 | [`0af57c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0af57c3a99171880b177592d916b24e24aa0c53d) | freedreno/a2xx: use per-tile restore texture coordinates | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r2) | 2026-10-28 | [`4b985c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b985c3d2dad5224c24e9e7f1e352872136351fc) | egl/wsi/wayland: ignore default_dmabuf_feedback_done | Vulkan 1.4.363 |
 | [v27.0.0-20261028](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028) | 2026-10-27 | [`f01e9b0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f01e9b07a91f7e7ab730edfbb383b083f146067b) | aco: fix packing negated 16-bit constants in neg_mul_to_i16_cb | Vulkan 1.4.363 |
