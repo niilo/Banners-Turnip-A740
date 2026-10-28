@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261028-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r2) | 2026-10-28 | [`4b985c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b985c3d2dad5224c24e9e7f1e352872136351fc) | egl/wsi/wayland: ignore default_dmabuf_feedback_done | Vulkan 1.4.363 |
 | [v27.0.0-20261028](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028) | 2026-10-27 | [`f01e9b0`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f01e9b07a91f7e7ab730edfbb383b083f146067b) | aco: fix packing negated 16-bit constants in neg_mul_to_i16_cb | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r5) | 2026-10-27 | [`7736adc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7736adc682e8660482f4ad7bfafeadff9dcb0bc2) | meson: update link to sanitizer flags issue | Vulkan 1.4.363 |
 | [v27.0.0-20261027-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261027-r4) | 2026-10-27 | [`06583a8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/06583a8396c87a19c46dcfe1cc473760ff1194d4) | v3d: implement clear_buffer with TFU constant colour | Vulkan 1.4.363 |
