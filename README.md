@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.366 |
-| **Commit** | [`4b0d67e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b0d67e19365c50d1a60e8ada444323c4c82c458) |
+| **Commit** | [`daa925c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/daa925c3bc78697cc214317ee330a39d1acda19f) |
 | **Commit date** | 2026-10-29 |
-| **Commit title** | libagx: Fix libagx_memcpy_to_aligned handling of unaligned start |
+| **Commit title** | anv: stricter check for companion_rcs_cmd_buffer when chaining |
 | **Build date** | 20261029 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261029-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261029-r2) |
+| **Release** | [v27.0.0-20261029-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261029-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,11 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261029-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261029-r3) | 2026-10-29 | [`daa925c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/daa925c3bc78697cc214317ee330a39d1acda19f) | anv: stricter check for companion_rcs_cmd_buffer when chaining | Vulkan 1.4.366 |
 | [v27.0.0-20261029-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261029-r2) | 2026-10-29 | [`4b0d67e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4b0d67e19365c50d1a60e8ada444323c4c82c458) | libagx: Fix libagx_memcpy_to_aligned handling of unaligned start | Vulkan 1.4.366 |
 | [v27.0.0-20261029](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261029) | 2026-10-29 | [`1c3a936`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1c3a936490f9f0951188218e136cd03bca497386) | Replace `reallocarray` with `realloc` in lp_scene.c | Vulkan 1.4.366 |
 | [v27.0.0-20261028-r5](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r5) | 2026-10-28 | [`5510fc7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5510fc760a29c94dc1f441e83ba61e97b30e6925) | zink/ci: mark pv-waveletvolume-v2 as flaky on vangogh | Vulkan 1.4.366 |
-| [v27.0.0-20261028-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r4) | 2026-10-28 | [`087e1fe`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/087e1fe4e6a5e1d30f30538112fd8cd62f4167f6) | panvk: fix mark_all_access_non_uniform metadata preservation | Vulkan 1.4.366 |
-| [v27.0.0-20261028-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261028-r3) | 2026-10-28 | [`0af57c3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0af57c3a99171880b177592d916b24e24aa0c53d) | freedreno/a2xx: use per-tile restore texture coordinates | Vulkan 1.4.366 |
 <!-- RECENT_BUILDS_END -->
 
 ---
