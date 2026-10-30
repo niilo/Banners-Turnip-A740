@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261030-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r3) | 2026-10-30 | [`fb453fb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/fb453fb92282aa8cc59ed1693eb86308cb44f36a) | zink: copy the spirv when compiling injected tcs | Vulkan 1.4.366 |
 | [v27.0.0-20261030-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r2) | 2026-10-30 | [`54925da`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/54925da2f53d90eeb1305bc0a6b86fe2f78d8d33) | ac/llvm: use atomicrmw for floating-point atomics with newer LLVM | Vulkan 1.4.366 |
 | [v27.0.0-20261030](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030) | 2026-10-30 | [`77452b9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/77452b9092cc44d76d92180a12d3aaaf27a98382) | radeonsi: dirty DB_Z_INFO when the sample count changes without Z/S | Vulkan 1.4.366 |
 | [v27.0.0-20261029-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261029-r3) | 2026-10-29 | [`daa925c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/daa925c3bc78697cc214317ee330a39d1acda19f) | anv: stricter check for companion_rcs_cmd_buffer when chaining | Vulkan 1.4.366 |
