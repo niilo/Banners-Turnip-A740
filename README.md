@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.366 |
-| **Commit** | [`fb453fb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/fb453fb92282aa8cc59ed1693eb86308cb44f36a) |
+| **Commit** | [`367aea1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/367aea118c1b54615151e283ecce969a31954a4a) |
 | **Commit date** | 2026-10-30 |
-| **Commit title** | zink: copy the spirv when compiling injected tcs |
+| **Commit title** | hk: Add hk_geometry_heap_size_mb drirc option |
 | **Build date** | 20261030 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261030-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r3) |
+| **Release** | [v27.0.0-20261030-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r4) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261030-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r4) | 2026-10-30 | [`367aea1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/367aea118c1b54615151e283ecce969a31954a4a) | hk: Add hk_geometry_heap_size_mb drirc option | Vulkan 1.4.366 |
 | [v27.0.0-20261030-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r3) | 2026-10-30 | [`fb453fb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/fb453fb92282aa8cc59ed1693eb86308cb44f36a) | zink: copy the spirv when compiling injected tcs | Vulkan 1.4.366 |
 | [v27.0.0-20261030-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030-r2) | 2026-10-30 | [`54925da`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/54925da2f53d90eeb1305bc0a6b86fe2f78d8d33) | ac/llvm: use atomicrmw for floating-point atomics with newer LLVM | Vulkan 1.4.366 |
 | [v27.0.0-20261030](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261030) | 2026-10-30 | [`77452b9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/77452b9092cc44d76d92180a12d3aaaf27a98382) | radeonsi: dirty DB_Z_INFO when the sample count changes without Z/S | Vulkan 1.4.366 |
