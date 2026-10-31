@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261031-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031-r4) | 2026-10-31 | [`44989e5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/44989e5a489c0ddbc79d2019f2c236699251c69e) | zink: enable subgroups even if shaderFloat64 is not exposed | Vulkan 1.4.366 |
 | [v27.0.0-20261031-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031-r3) | 2026-10-31 | [`b27d00d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b27d00d7612910455111102bd284e36afafd69c8) | r300: remove backend deadcode pass | Vulkan 1.4.366 |
 | [v27.0.0-20261031-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031-r2) | 2026-10-31 | [`fd8ef2b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/fd8ef2befafd01190e33f12dbfd109b924c8ebc3) | asahi: drop NIR_PASS from poly_nir_lower_gs calls | Vulkan 1.4.366 |
 | [v27.0.0-20261031](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031) | 2026-10-31 | [`553844b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/553844bf54c818c06a3a05e657fc0a31b6114a98) | gfxstream: emulate DRM_FORMAT_MOD_LINEAR with VK_IMAGE_TILING_OPTIMAL | Vulkan 1.4.366 |
