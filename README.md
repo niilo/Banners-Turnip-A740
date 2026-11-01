@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.366 |
-| **Commit** | [`cc5680b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cc5680bbcdc5c033b545295281142e19403a17e7) |
+| **Commit** | [`1d4b5ef`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1d4b5ef4a5562b6e2dba2cb5aacd60787979ba86) |
 | **Commit date** | 2026-11-01 |
-| **Commit title** | freedreno/a5xx: enable EXT_demote_to_helper_invocation |
+| **Commit title** | nv30: invalidate currently bound sampler during clear |
 | **Build date** | 20261101 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261101](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261101) |
+| **Release** | [v27.0.0-20261101-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261101-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261101-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261101-r2) | 2026-11-01 | [`1d4b5ef`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/1d4b5ef4a5562b6e2dba2cb5aacd60787979ba86) | nv30: invalidate currently bound sampler during clear | Vulkan 1.4.366 |
 | [v27.0.0-20261101](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261101) | 2026-11-01 | [`cc5680b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cc5680bbcdc5c033b545295281142e19403a17e7) | freedreno/a5xx: enable EXT_demote_to_helper_invocation | Vulkan 1.4.366 |
 | [v27.0.0-20261031-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031-r4) | 2026-10-31 | [`44989e5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/44989e5a489c0ddbc79d2019f2c236699251c69e) | zink: enable subgroups even if shaderFloat64 is not exposed | Vulkan 1.4.366 |
 | [v27.0.0-20261031-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031-r3) | 2026-10-31 | [`b27d00d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b27d00d7612910455111102bd284e36afafd69c8) | r300: remove backend deadcode pass | Vulkan 1.4.366 |
-| [v27.0.0-20261031-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261031-r2) | 2026-10-31 | [`fd8ef2b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/fd8ef2befafd01190e33f12dbfd109b924c8ebc3) | asahi: drop NIR_PASS from poly_nir_lower_gs calls | Vulkan 1.4.366 |
 <!-- RECENT_BUILDS_END -->
 
 ---
