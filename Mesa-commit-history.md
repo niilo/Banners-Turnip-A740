@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261102-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261102-r2) | 2026-11-02 | [`074d26a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/074d26af357f590faf6a0e6c6318bea7694933f7) | gfxstream: only reset test connection when the last VkInstance is destroyed | Vulkan 1.4.367 |
 | [v27.0.0-20261102](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261102) | 2026-11-01 | [`ac27171`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ac271714ff58086430a3817554a4b9ac0e5929d9) | ci: Build apitrace in a few build-only jobs | Vulkan 1.4.366 |
 | [v27.0.0-20261101-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261101-r4) | 2026-11-01 | [`ae9e17f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae9e17fc684b2fe0ee55fe0d32584e0834a1759f) | venus: terminate pNext properly in vn_fix_command_buffer_begin_info | Vulkan 1.4.366 |
 | [v27.0.0-20261101-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261101-r3) | 2026-11-01 | [`01bab93`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/01bab9302a6bf0a082c7ba8c49d74427cf10b0cf) | llvmpipe: hash cpu caps up to num_L3_caches, not 5 dwords | Vulkan 1.4.366 |
