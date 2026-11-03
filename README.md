@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`a1c0542`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a1c054214a4a3fdd260e7925429a0221614f7207) |
-| **Commit date** | 2026-11-02 |
-| **Commit title** | nir/algebraic: filter automaton states by source position |
+| **Commit** | [`6cc24a9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6cc24a9478470c83dba5612e8a9be6a82319e6cf) |
+| **Commit date** | 2026-11-03 |
+| **Commit title** | docs: list v3dv rasterization order attachment access |
 | **Build date** | 20261103 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261103](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103) |
+| **Release** | [v27.0.0-20261103-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261103-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103-r2) | 2026-11-03 | [`6cc24a9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6cc24a9478470c83dba5612e8a9be6a82319e6cf) | docs: list v3dv rasterization order attachment access | Vulkan 1.4.367 |
 | [v27.0.0-20261103](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103) | 2026-11-03 | [`a1c0542`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a1c054214a4a3fdd260e7925429a0221614f7207) | nir/algebraic: filter automaton states by source position | Vulkan 1.4.367 |
 | [v27.0.0-20261102-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261102-r2) | 2026-11-02 | [`074d26a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/074d26af357f590faf6a0e6c6318bea7694933f7) | gfxstream: only reset test connection when the last VkInstance is destroyed | Vulkan 1.4.367 |
-| [v27.0.0-20261102](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261102) | 2026-11-02 | [`ac27171`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ac271714ff58086430a3817554a4b9ac0e5929d9) | ci: Build apitrace in a few build-only jobs | Vulkan 1.4.366 |
 <!-- RECENT_BUILDS_END -->
 
 ---
