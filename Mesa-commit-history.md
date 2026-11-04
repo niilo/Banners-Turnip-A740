@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261104](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104) | 2026-11-04 | [`ae47f65`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae47f65f7de25c3d1f3035fcefacfc57a1156202) | intel/compiler: Archive shader binaries as separate MDA objects | Vulkan 1.4.367 |
 | [v27.0.0-20261103-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103-r4) | 2026-11-03 | [`eead8dc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/eead8dcf02fc055f22a993f1e21f4674459efea3) | ac/gpu_info: fix the value of spi_cu_en_has_effect | Vulkan 1.4.367 |
 | [v27.0.0-20261103-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103-r3) | 2026-11-03 | [`c2ed980`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c2ed980665902916acf10375c8a2cd99107c4680) | radv: stop storing shader binaries separately for shader objects | Vulkan 1.4.367 |
 | [v27.0.0-20261103-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103-r2) | 2026-11-03 | [`6cc24a9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6cc24a9478470c83dba5612e8a9be6a82319e6cf) | docs: list v3dv rasterization order attachment access | Vulkan 1.4.367 |
