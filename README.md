@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`6780bd4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6780bd4f916d90901fffec2c06ea3b5bfe51840a) |
+| **Commit** | [`4f071f8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4f071f891d63396c799b267172c19ba6b0301682) |
 | **Commit date** | 2026-11-04 |
-| **Commit title** | vulkan: implement a new workaround for Metro Exodus |
+| **Commit title** | iris: fix double free in iris_bufmgr |
 | **Build date** | 20261104 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261104-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r3) |
+| **Release** | [v27.0.0-20261104-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r4) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261104-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r4) | 2026-11-04 | [`4f071f8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4f071f891d63396c799b267172c19ba6b0301682) | iris: fix double free in iris_bufmgr | Vulkan 1.4.367 |
 | [v27.0.0-20261104-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r3) | 2026-11-04 | [`6780bd4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6780bd4f916d90901fffec2c06ea3b5bfe51840a) | vulkan: implement a new workaround for Metro Exodus | Vulkan 1.4.367 |
 | [v27.0.0-20261104-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r2) | 2026-11-04 | [`d9e8f2d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d9e8f2dc01ed4a23999e8d3a53ccc77ea3d711b8) | anv: use ANV_VID_MEM_ADDR in the HuC BRC code | Vulkan 1.4.367 |
 | [v27.0.0-20261104](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104) | 2026-11-04 | [`ae47f65`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ae47f65f7de25c3d1f3035fcefacfc57a1156202) | intel/compiler: Archive shader binaries as separate MDA objects | Vulkan 1.4.367 |
-| [v27.0.0-20261103-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261103-r4) | 2026-11-03 | [`eead8dc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/eead8dcf02fc055f22a993f1e21f4674459efea3) | ac/gpu_info: fix the value of spi_cu_en_has_effect | Vulkan 1.4.367 |
 <!-- RECENT_BUILDS_END -->
 
 ---
