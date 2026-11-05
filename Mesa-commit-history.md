@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261105](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261105) | 2026-11-05 | [`0848c37`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0848c37191edeb6572363577a351fb6ab2d2c4f8) | rusticl: implement cl_khr_external_memory | Vulkan 1.4.367 |
 | [v27.0.0-20261104-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r4) | 2026-11-04 | [`4f071f8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4f071f891d63396c799b267172c19ba6b0301682) | iris: fix double free in iris_bufmgr | Vulkan 1.4.367 |
 | [v27.0.0-20261104-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r3) | 2026-11-04 | [`6780bd4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6780bd4f916d90901fffec2c06ea3b5bfe51840a) | vulkan: implement a new workaround for Metro Exodus | Vulkan 1.4.367 |
 | [v27.0.0-20261104-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r2) | 2026-11-04 | [`d9e8f2d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d9e8f2dc01ed4a23999e8d3a53ccc77ea3d711b8) | anv: use ANV_VID_MEM_ADDR in the HuC BRC code | Vulkan 1.4.367 |
