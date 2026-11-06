@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`7641983`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/76419839238922803b96db1ddf59e1daf2c732c9) |
+| **Commit** | [`30eaefb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/30eaefb90c31ec31d4e9b27c506993d4d336f1dd) |
 | **Commit date** | 2026-11-05 |
-| **Commit title** | panvk: Increase maxUniformBufferRange for v9+ |
-| **Build date** | 20261105 |
+| **Commit title** | nir/intel: Derive push-data divergence from its offset |
+| **Build date** | 20261106 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261105-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261105-r3) |
+| **Release** | [v27.0.0-20261106](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261106](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106) | 2026-11-06 | [`30eaefb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/30eaefb90c31ec31d4e9b27c506993d4d336f1dd) | nir/intel: Derive push-data divergence from its offset | Vulkan 1.4.367 |
 | [v27.0.0-20261105-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261105-r3) | 2026-11-05 | [`7641983`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/76419839238922803b96db1ddf59e1daf2c732c9) | panvk: Increase maxUniformBufferRange for v9+ | Vulkan 1.4.367 |
 | [v27.0.0-20261105-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261105-r2) | 2026-11-05 | [`14ef09e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/14ef09ef07bf52efbc4dd26a4082df51a7dbe46e) | radv: remove radv_nir_opt_fs_builtins | Vulkan 1.4.367 |
 | [v27.0.0-20261105](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261105) | 2026-11-05 | [`0848c37`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0848c37191edeb6572363577a351fb6ab2d2c4f8) | rusticl: implement cl_khr_external_memory | Vulkan 1.4.367 |
-| [v27.0.0-20261104-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261104-r4) | 2026-11-04 | [`4f071f8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/4f071f891d63396c799b267172c19ba6b0301682) | iris: fix double free in iris_bufmgr | Vulkan 1.4.367 |
 <!-- RECENT_BUILDS_END -->
 
 ---
