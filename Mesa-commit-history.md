@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261106-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r4) | 2026-11-06 | [`8fc45e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8fc45e20c6b4495fd1696ed386af54d6c2b4b077) | jay: set up pushed compute payload before Gfx12.5 | Vulkan 1.4.367 |
 | [v27.0.0-20261106-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r3) | 2026-11-06 | [`57d6e2f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/57d6e2fb8d484d82d47d05a32bc3654e64d34dcf) | kk: Align index buffers to 4 bytes on macOS 26 | Vulkan 1.4.367 |
 | [v27.0.0-20261106-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r2) | 2026-11-06 | [`a802621`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a8026212a8c3b7bc9d377b7014a75dc377ae4dfa) | ci: bump meson version to enable rusticl tests | Vulkan 1.4.367 |
 | [v27.0.0-20261106](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106) | 2026-11-05 | [`30eaefb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/30eaefb90c31ec31d4e9b27c506993d4d336f1dd) | nir/intel: Derive push-data divergence from its offset | Vulkan 1.4.367 |

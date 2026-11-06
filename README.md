@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`57d6e2f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/57d6e2fb8d484d82d47d05a32bc3654e64d34dcf) |
+| **Commit** | [`8fc45e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8fc45e20c6b4495fd1696ed386af54d6c2b4b077) |
 | **Commit date** | 2026-11-06 |
-| **Commit title** | kk: Align index buffers to 4 bytes on macOS 26 |
+| **Commit title** | jay: set up pushed compute payload before Gfx12.5 |
 | **Build date** | 20261106 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261106-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r3) |
+| **Release** | [v27.0.0-20261106-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r4) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261106-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r4) | 2026-11-06 | [`8fc45e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8fc45e20c6b4495fd1696ed386af54d6c2b4b077) | jay: set up pushed compute payload before Gfx12.5 | Vulkan 1.4.367 |
 | [v27.0.0-20261106-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r3) | 2026-11-06 | [`57d6e2f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/57d6e2fb8d484d82d47d05a32bc3654e64d34dcf) | kk: Align index buffers to 4 bytes on macOS 26 | Vulkan 1.4.367 |
 | [v27.0.0-20261106-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r2) | 2026-11-06 | [`a802621`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a8026212a8c3b7bc9d377b7014a75dc377ae4dfa) | ci: bump meson version to enable rusticl tests | Vulkan 1.4.367 |
 | [v27.0.0-20261106](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106) | 2026-11-06 | [`30eaefb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/30eaefb90c31ec31d4e9b27c506993d4d336f1dd) | nir/intel: Derive push-data divergence from its offset | Vulkan 1.4.367 |
-| [v27.0.0-20261105-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261105-r3) | 2026-11-05 | [`7641983`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/76419839238922803b96db1ddf59e1daf2c732c9) | panvk: Increase maxUniformBufferRange for v9+ | Vulkan 1.4.367 |
 <!-- RECENT_BUILDS_END -->
 
 ---
