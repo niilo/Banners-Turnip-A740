@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261107-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r4) | 2026-11-07 | [`c0235ef`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c0235eff650720faff05452a06a0a09479b3621f) | freedreno/a5xx: program the 2D source and use BLIT_OP_SCALE | Vulkan 1.4.367 |
 | [v27.0.0-20261107-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r3) | 2026-11-07 | [`2648b20`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/2648b2059f1a412d64a8700dbbb75bbb4a768b0e) | freedreno/a5xx: program the guard band and ignore the viewport clip codes | Vulkan 1.4.367 |
 | [v27.0.0-20261107-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r2) | 2026-11-07 | [`482dee6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/482dee68a4bbce675c03e0f9587c13f342a8e999) | AGENTS: add poly to the no-AI list | Vulkan 1.4.367 |
 | [v27.0.0-20261107](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107) | 2026-11-07 | [`3a2cd12`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3a2cd129ca41d87267b3cd4262fc4280f3f63176) | d3d12: Fix hash lookup for command signatures | Vulkan 1.4.367 |
