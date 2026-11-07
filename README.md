@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`482dee6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/482dee68a4bbce675c03e0f9587c13f342a8e999) |
+| **Commit** | [`2648b20`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/2648b2059f1a412d64a8700dbbb75bbb4a768b0e) |
 | **Commit date** | 2026-11-07 |
-| **Commit title** | AGENTS: add poly to the no-AI list |
+| **Commit title** | freedreno/a5xx: program the guard band and ignore the viewport clip codes |
 | **Build date** | 20261107 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261107-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r2) |
+| **Release** | [v27.0.0-20261107-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261107-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r3) | 2026-11-07 | [`2648b20`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/2648b2059f1a412d64a8700dbbb75bbb4a768b0e) | freedreno/a5xx: program the guard band and ignore the viewport clip codes | Vulkan 1.4.367 |
 | [v27.0.0-20261107-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r2) | 2026-11-07 | [`482dee6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/482dee68a4bbce675c03e0f9587c13f342a8e999) | AGENTS: add poly to the no-AI list | Vulkan 1.4.367 |
 | [v27.0.0-20261107](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107) | 2026-11-07 | [`3a2cd12`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3a2cd129ca41d87267b3cd4262fc4280f3f63176) | d3d12: Fix hash lookup for command signatures | Vulkan 1.4.367 |
 | [v27.0.0-20261106-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261106-r4) | 2026-11-06 | [`8fc45e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8fc45e20c6b4495fd1696ed386af54d6c2b4b077) | jay: set up pushed compute payload before Gfx12.5 | Vulkan 1.4.367 |
