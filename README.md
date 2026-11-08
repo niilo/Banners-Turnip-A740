@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`ea7b37b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ea7b37b4e8e6bfd08a4529522840b5f43fa0d7b3) |
+| **Commit** | [`3160097`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/316009797d8de1efdda53646f527821d2993ce24) |
 | **Commit date** | 2026-11-08 |
-| **Commit title** | zink: fix the staging range assert in zink_transfer_flush_region |
+| **Commit title** | brw: Remove required flush on NVL-P (B0+) |
 | **Build date** | 20261108 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261108-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108-r2) |
+| **Release** | [v27.0.0-20261108-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261108-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108-r3) | 2026-11-08 | [`3160097`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/316009797d8de1efdda53646f527821d2993ce24) | brw: Remove required flush on NVL-P (B0+) | Vulkan 1.4.367 |
 | [v27.0.0-20261108-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108-r2) | 2026-11-08 | [`ea7b37b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ea7b37b4e8e6bfd08a4529522840b5f43fa0d7b3) | zink: fix the staging range assert in zink_transfer_flush_region | Vulkan 1.4.367 |
 | [v27.0.0-20261108](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108) | 2026-11-08 | [`6384fd6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6384fd6037871b44784d78bf63369bdf05708965) | Revert "rusticl: support cl_khr_icd_unloadable" | Vulkan 1.4.367 |
 | [v27.0.0-20261107-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261107-r4) | 2026-11-07 | [`c0235ef`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c0235eff650720faff05452a06a0a09479b3621f) | freedreno/a5xx: program the 2D source and use BLIT_OP_SCALE | Vulkan 1.4.367 |
