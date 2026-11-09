@@ -113,13 +113,13 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | | |
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
-| **Vulkan version** | Vulkan 1.4.367 |
-| **Commit** | [`586fd4d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/586fd4de6e1959848bc82415973893fb57fc312a) |
-| **Commit date** | 2026-11-08 |
-| **Commit title** | radeonsi: remove old radeonsi_zerovram option |
+| **Vulkan version** | Vulkan 1.4.368 |
+| **Commit** | [`27ed298`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/27ed298845b0ae86a37c233835acfa2850ea3255) |
+| **Commit date** | 2026-11-09 |
+| **Commit title** | radv: advertise VK_EXT_vertex_address_binding_unrestricted |
 | **Build date** | 20261109 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261109](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261109) |
+| **Release** | [v27.0.0-20261109-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261109-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261109-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261109-r2) | 2026-11-09 | [`27ed298`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/27ed298845b0ae86a37c233835acfa2850ea3255) | radv: advertise VK_EXT_vertex_address_binding_unrestricted | Vulkan 1.4.368 |
 | [v27.0.0-20261109](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261109) | 2026-11-09 | [`586fd4d`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/586fd4de6e1959848bc82415973893fb57fc312a) | radeonsi: remove old radeonsi_zerovram option | Vulkan 1.4.367 |
 | [v27.0.0-20261108-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108-r3) | 2026-11-08 | [`3160097`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/316009797d8de1efdda53646f527821d2993ce24) | brw: Remove required flush on NVL-P (B0+) | Vulkan 1.4.367 |
 | [v27.0.0-20261108-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108-r2) | 2026-11-08 | [`ea7b37b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ea7b37b4e8e6bfd08a4529522840b5f43fa0d7b3) | zink: fix the staging range assert in zink_transfer_flush_region | Vulkan 1.4.367 |
-| [v27.0.0-20261108](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261108) | 2026-11-08 | [`6384fd6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6384fd6037871b44784d78bf63369bdf05708965) | Revert "rusticl: support cl_khr_icd_unloadable" | Vulkan 1.4.367 |
 <!-- RECENT_BUILDS_END -->
 
 ---
