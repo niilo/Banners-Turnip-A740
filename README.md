@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`cc2dcf9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cc2dcf9abdc6afc093e85d48e4cfa34eed60a01e) |
+| **Commit** | [`5475a68`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5475a6866b7e9003c5006377a4c0db817b2a84c6) |
 | **Commit date** | 2026-11-10 |
-| **Commit title** | dzn: Advertise shaderSignedZeroInfNanPreserveFloat32 |
+| **Commit title** | pan/ci: remove stale xfails |
 | **Build date** | 20261110 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261110](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110) |
+| **Release** | [v27.0.0-20261110-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261110-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110-r2) | 2026-11-10 | [`5475a68`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5475a6866b7e9003c5006377a4c0db817b2a84c6) | pan/ci: remove stale xfails | Vulkan 1.4.368 |
 | [v27.0.0-20261110](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110) | 2026-11-10 | [`cc2dcf9`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cc2dcf9abdc6afc093e85d48e4cfa34eed60a01e) | dzn: Advertise shaderSignedZeroInfNanPreserveFloat32 | Vulkan 1.4.368 |
 | [v27.0.0-20261109-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261109-r3) | 2026-11-09 | [`f3454d1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f3454d1849f7acb8813a3568cbceb3aa55b681d9) | broadcom/ci: move rpi4/traces to nightly | Vulkan 1.4.368 |
-| [v27.0.0-20261109-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261109-r2) | 2026-11-09 | [`27ed298`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/27ed298845b0ae86a37c233835acfa2850ea3255) | radv: advertise VK_EXT_vertex_address_binding_unrestricted | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
