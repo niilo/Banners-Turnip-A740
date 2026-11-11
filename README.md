@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`f2ccbe6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f2ccbe6bf47e602a446998a0d8454f9c73cf6186) |
+| **Commit** | [`c4a3b5e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4a3b5e92c16c5b82c1d9f4747ee9bde26eadb39) |
 | **Commit date** | 2026-11-11 |
-| **Commit title** | intel: Exclude helper lanes for optimized divergent atomics |
+| **Commit title** | aco: consider p_end_with_regs as a POPS end export |
 | **Build date** | 20261111 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261111](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261111) |
+| **Release** | [v27.0.0-20261111-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261111-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261111-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261111-r2) | 2026-11-11 | [`c4a3b5e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4a3b5e92c16c5b82c1d9f4747ee9bde26eadb39) | aco: consider p_end_with_regs as a POPS end export | Vulkan 1.4.368 |
 | [v27.0.0-20261111](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261111) | 2026-11-11 | [`f2ccbe6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f2ccbe6bf47e602a446998a0d8454f9c73cf6186) | intel: Exclude helper lanes for optimized divergent atomics | Vulkan 1.4.368 |
 | [v27.0.0-20261110-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110-r4) | 2026-11-10 | [`5235a32`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5235a3239ac927434089418996002289cd59f494) | r300: merge component moves on R300/R400 | Vulkan 1.4.368 |
 | [v27.0.0-20261110-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110-r3) | 2026-11-10 | [`a9b55f4`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a9b55f4a7794bd978f5ca2a287fd297c2dabbc6c) | ci/meson: print objects that took the longest to build | Vulkan 1.4.368 |
-| [v27.0.0-20261110-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261110-r2) | 2026-11-10 | [`5475a68`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5475a6866b7e9003c5006377a4c0db817b2a84c6) | pan/ci: remove stale xfails | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
