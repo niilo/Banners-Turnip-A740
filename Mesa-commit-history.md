@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261112-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r2) | 2026-11-12 | [`837c671`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/837c6713afc118c4d453c2a3d05ec199887f8c3d) | anv/video: Make the AV1 BRC re-encode pass conditional. | Vulkan 1.4.368 |
 | [v27.0.0-20261112](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112) | 2026-11-12 | [`5e6b542`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5e6b5424c63daca007cc28fb0d3c44b6656a4c86) | glsl: move processing inside optimize_dead_builtin_variables() | Vulkan 1.4.368 |
 | [v27.0.0-20261111-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261111-r3) | 2026-11-11 | [`2a0c112`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/2a0c112adb43d2a3669cce44949e998a53ab7503) | ir3: read a5xx SSBO sizes with the 4d resinfo | Vulkan 1.4.368 |
 | [v27.0.0-20261111-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261111-r2) | 2026-11-11 | [`c4a3b5e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c4a3b5e92c16c5b82c1d9f4747ee9bde26eadb39) | aco: consider p_end_with_regs as a POPS end export | Vulkan 1.4.368 |
