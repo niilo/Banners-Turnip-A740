@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`31ea031`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/31ea031e07b8b29e891093c63129a68a3edd1a4f) |
-| **Commit date** | 2026-11-12 |
-| **Commit title** | intel/dev: Update Xe3P PAT entries |
-| **Build date** | 20261112 |
+| **Commit** | [`87b49c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/87b49c516b5514851dea64bb785e3ccecffe3b7d) |
+| **Commit date** | 2026-11-13 |
+| **Commit title** | gfxstream: handle WSI dummy sync objects and reset temporary state |
+| **Build date** | 20261113 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261112-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r4) |
+| **Release** | [v27.0.0-20261113](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261113](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113) | 2026-11-13 | [`87b49c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/87b49c516b5514851dea64bb785e3ccecffe3b7d) | gfxstream: handle WSI dummy sync objects and reset temporary state | Vulkan 1.4.368 |
 | [v27.0.0-20261112-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r4) | 2026-11-12 | [`31ea031`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/31ea031e07b8b29e891093c63129a68a3edd1a4f) | intel/dev: Update Xe3P PAT entries | Vulkan 1.4.368 |
 | [v27.0.0-20261112-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r3) | 2026-11-12 | [`39f9d1f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/39f9d1f8e4845bb6cd854dda5d28e61391a3937b) | kk: Use constant address space for load_global_constant_offset | Vulkan 1.4.368 |
 | [v27.0.0-20261112-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r2) | 2026-11-12 | [`837c671`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/837c6713afc118c4d453c2a3d05ec199887f8c3d) | anv/video: Make the AV1 BRC re-encode pass conditional. | Vulkan 1.4.368 |
-| [v27.0.0-20261112](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112) | 2026-11-12 | [`5e6b542`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5e6b5424c63daca007cc28fb0d3c44b6656a4c86) | glsl: move processing inside optimize_dead_builtin_variables() | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
