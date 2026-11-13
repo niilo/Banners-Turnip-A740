@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261113-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113-r2) | 2026-11-13 | [`582bd88`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/582bd880ff140bc38563eb78db6766ef3a02b7b6) | ci: uprev vkd3d | Vulkan 1.4.368 |
 | [v27.0.0-20261113](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113) | 2026-11-13 | [`87b49c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/87b49c516b5514851dea64bb785e3ccecffe3b7d) | gfxstream: handle WSI dummy sync objects and reset temporary state | Vulkan 1.4.368 |
 | [v27.0.0-20261112-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r4) | 2026-11-12 | [`31ea031`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/31ea031e07b8b29e891093c63129a68a3edd1a4f) | intel/dev: Update Xe3P PAT entries | Vulkan 1.4.368 |
 | [v27.0.0-20261112-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261112-r3) | 2026-11-12 | [`39f9d1f`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/39f9d1f8e4845bb6cd854dda5d28e61391a3937b) | kk: Use constant address space for load_global_constant_offset | Vulkan 1.4.368 |
