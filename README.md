@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`a6aacf6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a6aacf6b0fb0468b1dbe57fa34a0bba7c5ee2413) |
+| **Commit** | [`94ad3c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/94ad3c5e42a07cff1720a30555a784b42e97b3d5) |
 | **Commit date** | 2026-11-14 |
-| **Commit title** | util: avoid Windows memstream temp file leaks |
+| **Commit title** | dzn: Pass modified resource desc in dzn_BindBufferMemory2 |
 | **Build date** | 20261114 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261114](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114) |
+| **Release** | [v27.0.0-20261114-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261114-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r2) | 2026-11-14 | [`94ad3c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/94ad3c5e42a07cff1720a30555a784b42e97b3d5) | dzn: Pass modified resource desc in dzn_BindBufferMemory2 | Vulkan 1.4.368 |
 | [v27.0.0-20261114](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114) | 2026-11-14 | [`a6aacf6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a6aacf6b0fb0468b1dbe57fa34a0bba7c5ee2413) | util: avoid Windows memstream temp file leaks | Vulkan 1.4.368 |
 | [v27.0.0-20261113-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113-r3) | 2026-11-13 | [`cae0e16`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cae0e1618e0ca5d780fc289f5833446be08c9fb4) | gfxstream: bound AddressSpaceStream backoff by wall clock | Vulkan 1.4.368 |
 | [v27.0.0-20261113-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113-r2) | 2026-11-13 | [`582bd88`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/582bd880ff140bc38563eb78db6766ef3a02b7b6) | ci: uprev vkd3d | Vulkan 1.4.368 |
-| [v27.0.0-20261113](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113) | 2026-11-13 | [`87b49c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/87b49c516b5514851dea64bb785e3ccecffe3b7d) | gfxstream: handle WSI dummy sync objects and reset temporary state | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---

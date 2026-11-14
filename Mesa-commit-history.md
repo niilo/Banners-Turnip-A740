@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261114-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r2) | 2026-11-14 | [`94ad3c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/94ad3c5e42a07cff1720a30555a784b42e97b3d5) | dzn: Pass modified resource desc in dzn_BindBufferMemory2 | Vulkan 1.4.368 |
 | [v27.0.0-20261114](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114) | 2026-11-14 | [`a6aacf6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a6aacf6b0fb0468b1dbe57fa34a0bba7c5ee2413) | util: avoid Windows memstream temp file leaks | Vulkan 1.4.368 |
 | [v27.0.0-20261113-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113-r3) | 2026-11-13 | [`cae0e16`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/cae0e1618e0ca5d780fc289f5833446be08c9fb4) | gfxstream: bound AddressSpaceStream backoff by wall clock | Vulkan 1.4.368 |
 | [v27.0.0-20261113-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261113-r2) | 2026-11-13 | [`582bd88`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/582bd880ff140bc38563eb78db6766ef3a02b7b6) | ci: uprev vkd3d | Vulkan 1.4.368 |
