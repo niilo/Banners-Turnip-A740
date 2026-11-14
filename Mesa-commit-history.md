@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261114-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r4) | 2026-11-14 | [`8a9009e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8a9009e0482c8770933c7f2661872677cf013f6e) | v3d: keep compute dirty state until the next dispatch | Vulkan 1.4.368 |
 | [v27.0.0-20261114-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r3) | 2026-11-14 | [`d4d193a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d4d193a299525fa9b417120746bcd7f8af8b8407) | freedreno/ci: Drop redundant RUSTICL_ENABLE variables | Vulkan 1.4.368 |
 | [v27.0.0-20261114-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r2) | 2026-11-14 | [`94ad3c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/94ad3c5e42a07cff1720a30555a784b42e97b3d5) | dzn: Pass modified resource desc in dzn_BindBufferMemory2 | Vulkan 1.4.368 |
 | [v27.0.0-20261114](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114) | 2026-11-14 | [`a6aacf6`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a6aacf6b0fb0468b1dbe57fa34a0bba7c5ee2413) | util: avoid Windows memstream temp file leaks | Vulkan 1.4.368 |
