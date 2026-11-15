@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`9690e02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9690e0234504d63fd44ca5a93b5895b757229544) |
+| **Commit** | [`7c839c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c839c81bf20bd4772d551d0fb01383d9eeb956e) |
 | **Commit date** | 2026-11-15 |
-| **Commit title** | etnaviv/ml: Fix add/subtract input tensor operand |
+| **Commit title** | dzn: Apply all dependencies in CmdWaitEvents2 |
 | **Build date** | 20261115 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261115-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r2) |
+| **Release** | [v27.0.0-20261115-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261115-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r3) | 2026-11-15 | [`7c839c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c839c81bf20bd4772d551d0fb01383d9eeb956e) | dzn: Apply all dependencies in CmdWaitEvents2 | Vulkan 1.4.368 |
 | [v27.0.0-20261115-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r2) | 2026-11-15 | [`9690e02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9690e0234504d63fd44ca5a93b5895b757229544) | etnaviv/ml: Fix add/subtract input tensor operand | Vulkan 1.4.368 |
 | [v27.0.0-20261115](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115) | 2026-11-15 | [`c9ce420`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c9ce420e39bc5d97d3e54ef54ec9603a45772bb2) | vulkan: fix lookup of VkRenderingAttachmentLocationInfo | Vulkan 1.4.368 |
-| [v27.0.0-20261114-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r4) | 2026-11-14 | [`8a9009e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/8a9009e0482c8770933c7f2661872677cf013f6e) | v3d: keep compute dirty state until the next dispatch | Vulkan 1.4.368 |
-| [v27.0.0-20261114-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261114-r3) | 2026-11-14 | [`d4d193a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/d4d193a299525fa9b417120746bcd7f8af8b8407) | freedreno/ci: Drop redundant RUSTICL_ENABLE variables | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
