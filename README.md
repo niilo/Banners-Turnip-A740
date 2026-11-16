@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`7c839c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c839c81bf20bd4772d551d0fb01383d9eeb956e) |
+| **Commit** | [`13baeb7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/13baeb70c066a9f82d2bcfb29f06e4865212affa) |
 | **Commit date** | 2026-11-15 |
-| **Commit title** | dzn: Apply all dependencies in CmdWaitEvents2 |
-| **Build date** | 20261115 |
+| **Commit title** | d3d12: Handle shader variant compilation failures |
+| **Build date** | 20261116 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261115-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r3) |
+| **Release** | [v27.0.0-20261116](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261116](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116) | 2026-11-16 | [`13baeb7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/13baeb70c066a9f82d2bcfb29f06e4865212affa) | d3d12: Handle shader variant compilation failures | Vulkan 1.4.368 |
 | [v27.0.0-20261115-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r3) | 2026-11-15 | [`7c839c8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/7c839c81bf20bd4772d551d0fb01383d9eeb956e) | dzn: Apply all dependencies in CmdWaitEvents2 | Vulkan 1.4.368 |
 | [v27.0.0-20261115-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115-r2) | 2026-11-15 | [`9690e02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/9690e0234504d63fd44ca5a93b5895b757229544) | etnaviv/ml: Fix add/subtract input tensor operand | Vulkan 1.4.368 |
-| [v27.0.0-20261115](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261115) | 2026-11-15 | [`c9ce420`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c9ce420e39bc5d97d3e54ef54ec9603a45772bb2) | vulkan: fix lookup of VkRenderingAttachmentLocationInfo | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
