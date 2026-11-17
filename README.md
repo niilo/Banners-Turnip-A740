@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`79282c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/79282c5aa14459d3083f1fcda2d62c4c0def68dc) |
+| **Commit** | [`afdb7ad`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/afdb7ad25c43d1aa1661c89591fd7dacc2b326ca) |
 | **Commit date** | 2026-11-17 |
-| **Commit title** | jay: shrink non-transpose writes |
+| **Commit title** | pvr: advertise VK_KHR_shader_untyped_pointers |
 | **Build date** | 20261117 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261117](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117) |
+| **Release** | [v27.0.0-20261117-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261117-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117-r2) | 2026-11-17 | [`afdb7ad`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/afdb7ad25c43d1aa1661c89591fd7dacc2b326ca) | pvr: advertise VK_KHR_shader_untyped_pointers | Vulkan 1.4.368 |
 | [v27.0.0-20261117](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117) | 2026-11-17 | [`79282c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/79282c5aa14459d3083f1fcda2d62c4c0def68dc) | jay: shrink non-transpose writes | Vulkan 1.4.368 |
 | [v27.0.0-20261116-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116-r3) | 2026-11-16 | [`af3185b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af3185b93a3ea9e5062c555fd37f75365ce92863) | pan/bi: Make BIFROST_MESA_DUMP_DIR also dump disassembly | Vulkan 1.4.368 |
-| [v27.0.0-20261116-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116-r2) | 2026-11-16 | [`aa59b69`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/aa59b69ad6c8bcee1d568ab04dd6dc84b9a48abb) | radv/amdgpu: fix missing return in radv_amdgpu_cs_grow error paths | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
