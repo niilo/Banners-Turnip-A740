@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261117](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117) | 2026-11-17 | [`79282c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/79282c5aa14459d3083f1fcda2d62c4c0def68dc) | jay: shrink non-transpose writes | Vulkan 1.4.368 |
 | [v27.0.0-20261116-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116-r3) | 2026-11-16 | [`af3185b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af3185b93a3ea9e5062c555fd37f75365ce92863) | pan/bi: Make BIFROST_MESA_DUMP_DIR also dump disassembly | Vulkan 1.4.368 |
 | [v27.0.0-20261116-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116-r2) | 2026-11-16 | [`aa59b69`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/aa59b69ad6c8bcee1d568ab04dd6dc84b9a48abb) | radv/amdgpu: fix missing return in radv_amdgpu_cs_grow error paths | Vulkan 1.4.368 |
 | [v27.0.0-20261116](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116) | 2026-11-15 | [`13baeb7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/13baeb70c066a9f82d2bcfb29f06e4865212affa) | d3d12: Handle shader variant compilation failures | Vulkan 1.4.368 |
