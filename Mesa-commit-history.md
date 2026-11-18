@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261118](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118) | 2026-11-18 | [`f09f7bb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f09f7bb330eede58cd775bec8a6b5b8d91e43faa) | nouveau: Add the recent rustfmt to .git-blame-ignore-revs | Vulkan 1.4.368 |
 | [v27.0.0-20261117-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117-r2) | 2026-11-17 | [`afdb7ad`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/afdb7ad25c43d1aa1661c89591fd7dacc2b326ca) | pvr: advertise VK_KHR_shader_untyped_pointers | Vulkan 1.4.368 |
 | [v27.0.0-20261117](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261117) | 2026-11-17 | [`79282c5`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/79282c5aa14459d3083f1fcda2d62c4c0def68dc) | jay: shrink non-transpose writes | Vulkan 1.4.368 |
 | [v27.0.0-20261116-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261116-r3) | 2026-11-16 | [`af3185b`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/af3185b93a3ea9e5062c555fd37f75365ce92863) | pan/bi: Make BIFROST_MESA_DUMP_DIR also dump disassembly | Vulkan 1.4.368 |
