@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`a7b91b7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a7b91b7113e42db2bc4079830cd29c5a607aee07) |
+| **Commit** | [`baa3113`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/baa3113193c96a78535f7db8e9b8b5e48a063db8) |
 | **Commit date** | 2026-11-18 |
-| **Commit title** | nir/validate: add support color support on Windows |
+| **Commit title** | dzn: Fix collect_buffer barriers around vkCmdCopyQueryPoolResults |
 | **Build date** | 20261118 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261118-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118-r2) |
+| **Release** | [v27.0.0-20261118-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,6 +129,7 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261118-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118-r3) | 2026-11-18 | [`baa3113`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/baa3113193c96a78535f7db8e9b8b5e48a063db8) | dzn: Fix collect_buffer barriers around vkCmdCopyQueryPoolResults | Vulkan 1.4.368 |
 | [v27.0.0-20261118-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118-r2) | 2026-11-18 | [`a7b91b7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/a7b91b7113e42db2bc4079830cd29c5a607aee07) | nir/validate: add support color support on Windows | Vulkan 1.4.368 |
 | [v27.0.0-20261118](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118) | 2026-11-18 | [`f09f7bb`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f09f7bb330eede58cd775bec8a6b5b8d91e43faa) | nouveau: Add the recent rustfmt to .git-blame-ignore-revs | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
