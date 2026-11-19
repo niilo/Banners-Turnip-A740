@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261119-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261119-r3) | 2026-11-19 | [`f7c9c01`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f7c9c014845f7b6b7facc44af7c7667f6430ace0) | radv/meta: fix DCC decompression with compute and SRGB formats | Vulkan 1.4.368 |
 | [v27.0.0-20261119-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261119-r2) | 2026-11-19 | [`23ead68`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/23ead68106c0df737eae84e7c9cf613e06acd90b) | aco/sched_vopd: fix independence checks | Vulkan 1.4.368 |
 | [v27.0.0-20261119](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261119) | 2026-11-18 | [`69489e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/69489e2167b011f84c653e46adadb9cf5d20608f) | anv: pDstRange->size in vkCmdFillMemoryKHR can be 0 | Vulkan 1.4.368 |
 | [v27.0.0-20261118-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261118-r3) | 2026-11-18 | [`baa3113`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/baa3113193c96a78535f7db8e9b8b5e48a063db8) | dzn: Fix collect_buffer barriers around vkCmdCopyQueryPoolResults | Vulkan 1.4.368 |
