@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`0db4e29`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0db4e290a0a2d95709203abd45f21f464b71f24c) |
+| **Commit** | [`05eb1dc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/05eb1dc97c0aa624e28e04033dabf9792a5f40f9) |
 | **Commit date** | 2026-11-20 |
-| **Commit title** | kk: Avoid kernel panic due to out of device memory in Metal |
+| **Commit title** | mesa/st: Do not report multisampling for optional float formats |
 | **Build date** | 20261120 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261120](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120) |
+| **Release** | [v27.0.0-20261120-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261120-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r2) | 2026-11-20 | [`05eb1dc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/05eb1dc97c0aa624e28e04033dabf9792a5f40f9) | mesa/st: Do not report multisampling for optional float formats | Vulkan 1.4.368 |
 | [v27.0.0-20261120](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120) | 2026-11-20 | [`0db4e29`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0db4e290a0a2d95709203abd45f21f464b71f24c) | kk: Avoid kernel panic due to out of device memory in Metal | Vulkan 1.4.368 |
 | [v27.0.0-20261119-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261119-r3) | 2026-11-19 | [`f7c9c01`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f7c9c014845f7b6b7facc44af7c7667f6430ace0) | radv/meta: fix DCC decompression with compute and SRGB formats | Vulkan 1.4.368 |
 | [v27.0.0-20261119-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261119-r2) | 2026-11-19 | [`23ead68`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/23ead68106c0df737eae84e7c9cf613e06acd90b) | aco/sched_vopd: fix independence checks | Vulkan 1.4.368 |
-| [v27.0.0-20261119](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261119) | 2026-11-19 | [`69489e2`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/69489e2167b011f84c653e46adadb9cf5d20608f) | anv: pDstRange->size in vkCmdFillMemoryKHR can be 0 | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
