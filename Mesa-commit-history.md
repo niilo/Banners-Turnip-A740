@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261120-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r4) | 2026-11-20 | [`f1b7d02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f1b7d0273530d5f26737212479dfb0c4d4ac9258) | freedreno: fix slot indexing in fd_set_global_binding() | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r3) | 2026-11-20 | [`3a47cb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3a47cb170f3a04caec7e9233781c980307473030) | tu/ci: Update a660 trace checksums | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r2) | 2026-11-20 | [`05eb1dc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/05eb1dc97c0aa624e28e04033dabf9792a5f40f9) | mesa/st: Do not report multisampling for optional float formats | Vulkan 1.4.368 |
 | [v27.0.0-20261120](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120) | 2026-11-20 | [`0db4e29`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0db4e290a0a2d95709203abd45f21f464b71f24c) | kk: Avoid kernel panic due to out of device memory in Metal | Vulkan 1.4.368 |
