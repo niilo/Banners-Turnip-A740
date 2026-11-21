@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) |
+| **Commit** | [`ef59438`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ef594386e28b9a01ab00d2190d5960d3eee8fe04) |
 | **Commit date** | 2026-11-21 |
-| **Commit title** | jay: Uniformize invocation index for readInvocation |
+| **Commit title** | dzn: Drop the unused vk_sync reset callback |
 | **Build date** | 20261121 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) |
+| **Release** | [v27.0.0-20261121-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261121-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r3) | 2026-11-21 | [`ef59438`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ef594386e28b9a01ab00d2190d5960d3eee8fe04) | dzn: Drop the unused vk_sync reset callback | Vulkan 1.4.368 |
 | [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) | 2026-11-21 | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) | jay: Uniformize invocation index for readInvocation | Vulkan 1.4.368 |
 | [v27.0.0-20261121](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121) | 2026-11-21 | [`bcee60e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bcee60efb5778986b2cb8b3f4dc691bd17d12021) | dzn: Expose fullDrawIndexUint32 | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r4) | 2026-11-20 | [`f1b7d02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f1b7d0273530d5f26737212479dfb0c4d4ac9258) | freedreno: fix slot indexing in fd_set_global_binding() | Vulkan 1.4.368 |
-| [v27.0.0-20261120-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r3) | 2026-11-20 | [`3a47cb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3a47cb170f3a04caec7e9233781c980307473030) | tu/ci: Update a660 trace checksums | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
