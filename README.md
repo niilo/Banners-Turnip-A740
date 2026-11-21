@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`bcee60e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bcee60efb5778986b2cb8b3f4dc691bd17d12021) |
+| **Commit** | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) |
 | **Commit date** | 2026-11-21 |
-| **Commit title** | dzn: Expose fullDrawIndexUint32 |
+| **Commit title** | jay: Uniformize invocation index for readInvocation |
 | **Build date** | 20261121 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261121](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121) |
+| **Release** | [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) | 2026-11-21 | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) | jay: Uniformize invocation index for readInvocation | Vulkan 1.4.368 |
 | [v27.0.0-20261121](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121) | 2026-11-21 | [`bcee60e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bcee60efb5778986b2cb8b3f4dc691bd17d12021) | dzn: Expose fullDrawIndexUint32 | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r4) | 2026-11-20 | [`f1b7d02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f1b7d0273530d5f26737212479dfb0c4d4ac9258) | freedreno: fix slot indexing in fd_set_global_binding() | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r3) | 2026-11-20 | [`3a47cb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3a47cb170f3a04caec7e9233781c980307473030) | tu/ci: Update a660 trace checksums | Vulkan 1.4.368 |
-| [v27.0.0-20261120-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r2) | 2026-11-20 | [`05eb1dc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/05eb1dc97c0aa624e28e04033dabf9792a5f40f9) | mesa/st: Do not report multisampling for optional float formats | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---

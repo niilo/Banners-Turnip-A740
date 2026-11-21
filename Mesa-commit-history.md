@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) | 2026-11-21 | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) | jay: Uniformize invocation index for readInvocation | Vulkan 1.4.368 |
 | [v27.0.0-20261121](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121) | 2026-11-21 | [`bcee60e`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/bcee60efb5778986b2cb8b3f4dc691bd17d12021) | dzn: Expose fullDrawIndexUint32 | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r4](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r4) | 2026-11-20 | [`f1b7d02`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f1b7d0273530d5f26737212479dfb0c4d4ac9258) | freedreno: fix slot indexing in fd_set_global_binding() | Vulkan 1.4.368 |
 | [v27.0.0-20261120-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261120-r3) | 2026-11-20 | [`3a47cb1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/3a47cb170f3a04caec7e9233781c980307473030) | tu/ci: Update a660 trace checksums | Vulkan 1.4.368 |
