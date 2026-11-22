@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`604f5fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/604f5fd4f2378c8ebcacf4c22928258d2eab3ed3) |
+| **Commit** | [`22c08cc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/22c08cc53bd024a1a9f971c005a6fd862648eca6) |
 | **Commit date** | 2026-11-22 |
-| **Commit title** | Revert "anv: clear vertex & transform feedback buffer at end of command buffer" |
+| **Commit title** | nak/hw_tests: Add a basic test for TTU instructions |
 | **Build date** | 20261122 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261122-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122-r2) |
+| **Release** | [v27.0.0-20261122-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,10 +129,10 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261122-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122-r3) | 2026-11-22 | [`22c08cc`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/22c08cc53bd024a1a9f971c005a6fd862648eca6) | nak/hw_tests: Add a basic test for TTU instructions | Vulkan 1.4.368 |
 | [v27.0.0-20261122-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122-r2) | 2026-11-22 | [`604f5fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/604f5fd4f2378c8ebcacf4c22928258d2eab3ed3) | Revert "anv: clear vertex & transform feedback buffer at end of command buffer" | Vulkan 1.4.368 |
 | [v27.0.0-20261122](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122) | 2026-11-22 | [`152b9cd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/152b9cde8dbd15927b75dd064d1bb701697ebcdc) | Uprev Piglit to d2615737c1fd45325e4685819cc6ffc8316a6326 | Vulkan 1.4.368 |
 | [v27.0.0-20261121-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r3) | 2026-11-21 | [`ef59438`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ef594386e28b9a01ab00d2190d5960d3eee8fe04) | dzn: Drop the unused vk_sync reset callback | Vulkan 1.4.368 |
-| [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) | 2026-11-21 | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) | jay: Uniformize invocation index for readInvocation | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
