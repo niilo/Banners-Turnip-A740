@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261122-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122-r2) | 2026-11-22 | [`604f5fd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/604f5fd4f2378c8ebcacf4c22928258d2eab3ed3) | Revert "anv: clear vertex & transform feedback buffer at end of command buffer" | Vulkan 1.4.368 |
 | [v27.0.0-20261122](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261122) | 2026-11-22 | [`152b9cd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/152b9cde8dbd15927b75dd064d1bb701697ebcdc) | Uprev Piglit to d2615737c1fd45325e4685819cc6ffc8316a6326 | Vulkan 1.4.368 |
 | [v27.0.0-20261121-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r3) | 2026-11-21 | [`ef59438`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ef594386e28b9a01ab00d2190d5960d3eee8fe04) | dzn: Drop the unused vk_sync reset callback | Vulkan 1.4.368 |
 | [v27.0.0-20261121-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261121-r2) | 2026-11-21 | [`98fc8b8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/98fc8b8f62a5a455f5353cbe19b510f8faf88947) | jay: Uniformize invocation index for readInvocation | Vulkan 1.4.368 |
