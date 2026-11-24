@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261124-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261124-r2) | 2026-11-24 | [`6c10302`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6c1030248afd7ed6549b3f121195f2a6604ee97a) | freedreno: Fix num_ccu for A623/A621 | Vulkan 1.4.368 |
 | [v27.0.0-20261124](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261124) | 2026-11-24 | [`b810828`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b810828231d33e76fe1b9cba4d717a323cdd00ab) | intel/compiler: fix unaligned per primitive FS URB reads | Vulkan 1.4.368 |
 | [v27.0.0-20261123-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261123-r3) | 2026-11-23 | [`5274693`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/52746933b2d30c1a768bae04d2f8a99c3b1e09be) | dzn: Preserve bound descriptor heaps and dirty other bindpoint on switch | Vulkan 1.4.368 |
 | [v27.0.0-20261123-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261123-r2) | 2026-11-23 | [`c5ef4bd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c5ef4bdfabf2e1a76d5e41ab8e5d75ddbc121275) | radv: Clear image layout before filling it from metadata | Vulkan 1.4.368 |
