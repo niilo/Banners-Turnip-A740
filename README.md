@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`5274693`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/52746933b2d30c1a768bae04d2f8a99c3b1e09be) |
-| **Commit date** | 2026-11-23 |
-| **Commit title** | dzn: Preserve bound descriptor heaps and dirty other bindpoint on switch |
-| **Build date** | 20261123 |
+| **Commit** | [`b810828`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b810828231d33e76fe1b9cba4d717a323cdd00ab) |
+| **Commit date** | 2026-11-24 |
+| **Commit title** | intel/compiler: fix unaligned per primitive FS URB reads |
+| **Build date** | 20261124 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261123-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261123-r3) |
+| **Release** | [v27.0.0-20261124](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261124) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261124](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261124) | 2026-11-24 | [`b810828`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b810828231d33e76fe1b9cba4d717a323cdd00ab) | intel/compiler: fix unaligned per primitive FS URB reads | Vulkan 1.4.368 |
 | [v27.0.0-20261123-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261123-r3) | 2026-11-23 | [`5274693`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/52746933b2d30c1a768bae04d2f8a99c3b1e09be) | dzn: Preserve bound descriptor heaps and dirty other bindpoint on switch | Vulkan 1.4.368 |
 | [v27.0.0-20261123-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261123-r2) | 2026-11-23 | [`c5ef4bd`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/c5ef4bdfabf2e1a76d5e41ab8e5d75ddbc121275) | radv: Clear image layout before filling it from metadata | Vulkan 1.4.368 |
-| [v27.0.0-20261123](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261123) | 2026-11-23 | [`ccce802`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ccce8028776e46ec0bd4d67b6a5271d9f6c95ee7) | gallivm: add avx512 16xf32 -> 16xunorm8 fast path. | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
