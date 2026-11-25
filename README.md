@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`ffb5da1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ffb5da1b93551a848b0a05a1ffa7357a339347a0) |
+| **Commit** | [`92c4f96`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/92c4f9603bab5019ef8c3f8653bcd300649a5e74) |
 | **Commit date** | 2026-11-25 |
-| **Commit title** | bin/drm-shim.py: take the adreno targets from the device table |
+| **Commit title** | nir/algebraic: Fix a syntax error with Python < 3.12 |
 | **Build date** | 20261125 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261125](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125) |
+| **Release** | [v27.0.0-20261125-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261125-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r2) | 2026-11-25 | [`92c4f96`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/92c4f9603bab5019ef8c3f8653bcd300649a5e74) | nir/algebraic: Fix a syntax error with Python &lt; 3.12 | Vulkan 1.4.368 |
 | [v27.0.0-20261125](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125) | 2026-11-25 | [`ffb5da1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ffb5da1b93551a848b0a05a1ffa7357a339347a0) | bin/drm-shim.py: take the adreno targets from the device table | Vulkan 1.4.368 |
 | [v27.0.0-20261124-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261124-r2) | 2026-11-24 | [`6c10302`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/6c1030248afd7ed6549b3f121195f2a6604ee97a) | freedreno: Fix num_ccu for A623/A621 | Vulkan 1.4.368 |
-| [v27.0.0-20261124](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261124) | 2026-11-24 | [`b810828`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b810828231d33e76fe1b9cba4d717a323cdd00ab) | intel/compiler: fix unaligned per primitive FS URB reads | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
