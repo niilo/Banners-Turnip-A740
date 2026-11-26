@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`edce88a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/edce88a39ed49284ad18b2745eb1b592fd5d0440) |
-| **Commit date** | 2026-11-25 |
-| **Commit title** | nouveau/winsys: Deallocate CEL subchannel in fail path for nouveau_ws_video_context_init |
-| **Build date** | 20261125 |
+| **Commit** | [`df84ca3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/df84ca3e695f2bcebd02a5b3420bb5a6d789592d) |
+| **Commit date** | 2026-11-26 |
+| **Commit title** | ir3/array_to_ssa: don't resolve readers to deleted phis |
+| **Build date** | 20261126 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261125-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r3) |
+| **Release** | [v27.0.0-20261126](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,8 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261126](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126) | 2026-11-26 | [`df84ca3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/df84ca3e695f2bcebd02a5b3420bb5a6d789592d) | ir3/array_to_ssa: don't resolve readers to deleted phis | Vulkan 1.4.368 |
 | [v27.0.0-20261125-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r3) | 2026-11-25 | [`edce88a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/edce88a39ed49284ad18b2745eb1b592fd5d0440) | nouveau/winsys: Deallocate CEL subchannel in fail path for nouveau_ws_video_context_init | Vulkan 1.4.368 |
-| [v27.0.0-20261125-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r2) | 2026-11-25 | [`92c4f96`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/92c4f9603bab5019ef8c3f8653bcd300649a5e74) | nir/algebraic: Fix a syntax error with Python &lt; 3.12 | Vulkan 1.4.368 |
-| [v27.0.0-20261125](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125) | 2026-11-25 | [`ffb5da1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ffb5da1b93551a848b0a05a1ffa7357a339347a0) | bin/drm-shim.py: take the adreno targets from the device table | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---

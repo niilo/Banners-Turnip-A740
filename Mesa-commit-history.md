@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261126](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126) | 2026-11-26 | [`df84ca3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/df84ca3e695f2bcebd02a5b3420bb5a6d789592d) | ir3/array_to_ssa: don't resolve readers to deleted phis | Vulkan 1.4.368 |
 | [v27.0.0-20261125-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r3) | 2026-11-25 | [`edce88a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/edce88a39ed49284ad18b2745eb1b592fd5d0440) | nouveau/winsys: Deallocate CEL subchannel in fail path for nouveau_ws_video_context_init | Vulkan 1.4.368 |
 | [v27.0.0-20261125-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r2) | 2026-11-25 | [`92c4f96`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/92c4f9603bab5019ef8c3f8653bcd300649a5e74) | nir/algebraic: Fix a syntax error with Python < 3.12 | Vulkan 1.4.368 |
 | [v27.0.0-20261125](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125) | 2026-11-25 | [`ffb5da1`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/ffb5da1b93551a848b0a05a1ffa7357a339347a0) | bin/drm-shim.py: take the adreno targets from the device table | Vulkan 1.4.368 |
