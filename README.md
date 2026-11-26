@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`df84ca3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/df84ca3e695f2bcebd02a5b3420bb5a6d789592d) |
+| **Commit** | [`b937c52`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b937c520f1ffcd11bebc28f0efa9302d4f43dfdc) |
 | **Commit date** | 2026-11-26 |
-| **Commit title** | ir3/array_to_ssa: don't resolve readers to deleted phis |
+| **Commit title** | llvmpipe: Fix memory leak in resource_from_handle error path |
 | **Build date** | 20261126 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261126](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126) |
+| **Release** | [v27.0.0-20261126-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126-r2) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,8 +129,8 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261126-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126-r2) | 2026-11-26 | [`b937c52`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b937c520f1ffcd11bebc28f0efa9302d4f43dfdc) | llvmpipe: Fix memory leak in resource_from_handle error path | Vulkan 1.4.368 |
 | [v27.0.0-20261126](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126) | 2026-11-26 | [`df84ca3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/df84ca3e695f2bcebd02a5b3420bb5a6d789592d) | ir3/array_to_ssa: don't resolve readers to deleted phis | Vulkan 1.4.368 |
-| [v27.0.0-20261125-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261125-r3) | 2026-11-25 | [`edce88a`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/edce88a39ed49284ad18b2745eb1b592fd5d0440) | nouveau/winsys: Deallocate CEL subchannel in fail path for nouveau_ws_video_context_init | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
