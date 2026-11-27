@@ -5,6 +5,7 @@ A complete log of every Banners-Turnip release — newest first. Each entry link
 <!-- BUILDS_TABLE_START -->
 | Tag | Date | Mesa Commit | Commit Title | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261127-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261127-r2) | 2026-11-27 | [`0880005`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0880005d7b1307e1d1a5f9a879bc91ce69becd71) | nir/opt_algebraic: generalize some IO addr patterns | Vulkan 1.4.368 |
 | [v27.0.0-20261127](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261127) | 2026-11-27 | [`268dce7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/268dce7bc11e4780723a9cb0a6c2a41e1058dd4a) | nvk: Return INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT | Vulkan 1.4.368 |
 | [v27.0.0-20261126-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126-r2) | 2026-11-26 | [`b937c52`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b937c520f1ffcd11bebc28f0efa9302d4f43dfdc) | llvmpipe: Fix memory leak in resource_from_handle error path | Vulkan 1.4.368 |
 | [v27.0.0-20261126](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126) | 2026-11-26 | [`df84ca3`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/df84ca3e695f2bcebd02a5b3420bb5a6d789592d) | ir3/array_to_ssa: don't resolve readers to deleted phis | Vulkan 1.4.368 |
