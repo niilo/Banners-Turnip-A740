@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`f71656c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f71656c6cd9d1a4fbf7ac840418785245b490107) |
+| **Commit** | [`5c5eae8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c5eae896aa88f31be8681518295f824a7cdddea) |
 | **Commit date** | 2026-11-28 |
-| **Commit title** | glx/apple: Work around SkyLight placing an OpenGL surface at the window bottom |
+| **Commit title** | nvk: Advertise R32_G32_B32 formats |
 | **Build date** | 20261128 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261128-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128-r2) |
+| **Release** | [v27.0.0-20261128-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128-r3) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261128-r3](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128-r3) | 2026-11-28 | [`5c5eae8`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/5c5eae896aa88f31be8681518295f824a7cdddea) | nvk: Advertise R32_G32_B32 formats | Vulkan 1.4.368 |
 | [v27.0.0-20261128-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128-r2) | 2026-11-28 | [`f71656c`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/f71656c6cd9d1a4fbf7ac840418785245b490107) | glx/apple: Work around SkyLight placing an OpenGL surface at the window bottom | Vulkan 1.4.368 |
 | [v27.0.0-20261128](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128) | 2026-11-28 | [`86cc732`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/86cc7324f655e06718cfefaf7582a467680d5ffb) | d3d12: fix predication flush hazard and buffer ref leaks in compute transforms | Vulkan 1.4.368 |
-| [v27.0.0-20261127-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261127-r2) | 2026-11-27 | [`0880005`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0880005d7b1307e1d1a5f9a879bc91ce69becd71) | nir/opt_algebraic: generalize some IO addr patterns | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
