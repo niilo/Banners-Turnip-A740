@@ -114,12 +114,12 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 | :--- | :--- |
 | **Mesa version** | 27.0.0 |
 | **Vulkan version** | Vulkan 1.4.368 |
-| **Commit** | [`0880005`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0880005d7b1307e1d1a5f9a879bc91ce69becd71) |
-| **Commit date** | 2026-11-27 |
-| **Commit title** | nir/opt_algebraic: generalize some IO addr patterns |
-| **Build date** | 20261127 |
+| **Commit** | [`86cc732`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/86cc7324f655e06718cfefaf7582a467680d5ffb) |
+| **Commit date** | 2026-11-28 |
+| **Commit title** | d3d12: fix predication flush hazard and buffer ref leaks in compute transforms |
+| **Build date** | 20261128 |
 | **Downloads** | X11 / AdrenoTools: 2 ZIPs · Bannerlator Wayland: 0 ZIPs · Linux runtime: 0 ZIPs |
-| **Release** | [v27.0.0-20261127-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261127-r2) |
+| **Release** | [v27.0.0-20261128](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128) |
 <!-- LATEST_BUILD_END -->
 
 ---
@@ -129,9 +129,9 @@ Tips: `TU_DEBUG=sysmem` if an A830 looks glitchy; `TU_DEBUG=deck_emu` if a game 
 <!-- RECENT_BUILDS_START -->
 | Tag | Date | Commit | Description | Vulkan |
 | :--- | :--- | :--- | :--- | :--- |
+| [v27.0.0-20261128](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261128) | 2026-11-28 | [`86cc732`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/86cc7324f655e06718cfefaf7582a467680d5ffb) | d3d12: fix predication flush hazard and buffer ref leaks in compute transforms | Vulkan 1.4.368 |
 | [v27.0.0-20261127-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261127-r2) | 2026-11-27 | [`0880005`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/0880005d7b1307e1d1a5f9a879bc91ce69becd71) | nir/opt_algebraic: generalize some IO addr patterns | Vulkan 1.4.368 |
 | [v27.0.0-20261127](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261127) | 2026-11-27 | [`268dce7`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/268dce7bc11e4780723a9cb0a6c2a41e1058dd4a) | nvk: Return INVALID_DRM_FORMAT_MODIFIER_PLANE_LAYOUT | Vulkan 1.4.368 |
-| [v27.0.0-20261126-r2](https://github.com/niilo/Banners-Turnip-A740/releases/tag/v27.0.0-20261126-r2) | 2026-11-26 | [`b937c52`](https://gitlab.freedesktop.org/mesa/mesa/-/commit/b937c520f1ffcd11bebc28f0efa9302d4f43dfdc) | llvmpipe: Fix memory leak in resource_from_handle error path | Vulkan 1.4.368 |
 <!-- RECENT_BUILDS_END -->
 
 ---
